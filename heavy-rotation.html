@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavy Rotation — Blackbeard's Little Music Library</title>
+    <link rel="stylesheet" href="assets/theme.css">
+    <style>
+        .hero-art { width: 84px; height: 84px; margin: 0 auto 12px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.6em; box-shadow: 0 6px 16px rgba(0,0,0,0.35), 0 0 0 3px #2e1a08; background: linear-gradient(135deg,#e63946,#c1121f); }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon-64.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
+    <meta property="og:title"       content="Heavy Rotation — Blackbeard's Little Music Library">
+    <meta property="og:description" content="What's been on repeat at Blackbeard's. The crew can't stop listening.">
+    <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/heavy-rotation.html">
+    <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Heavy Rotation — Blackbeard's Little Music Library">
+    <meta name="twitter:description" content="What's been on repeat at Blackbeard's. The crew can't stop listening.">
+    <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+</head>
+<body>
+    <!-- Full-page floating flag background -->
+    <div class="flag-bg" aria-hidden="true">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
+    </div>
+    <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
+    <div class="container wide">
+        <div class="header">
+            <div class="hero-art"></div>
+            <h1>Blackbeard's Little Music Library</h1>
+            <p class="subtitle">Heavy Rotation</p>
+            <p class="desc-line">What's been on repeat at Blackbeard's — the crew can't stop listening</p>
+        </div>
+        <div class="embed-wrapper">
+            <iframe
+                allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                frameborder="0"
+                height="450"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/playlist/heavy-rotation/pl.pm-20e9f373919da080accd43a4a4f11ac1">
+            </iframe>
+        </div>
+        <div class="page-actions">
+            <a href="index.html" class="back-btn">← Back to the Library</a>
+            <button class="share-link-btn" onclick="sharePlaylist('Heavy Rotation', 'heavy-rotation.html', event)">Share</button>
+        </div>
+        <div class="footer">
+            <p>Share the music, share the joy.</p>
+        </div>
+    </div>
+    <script src="assets/site.js"></script>
+</body>
+</html>
