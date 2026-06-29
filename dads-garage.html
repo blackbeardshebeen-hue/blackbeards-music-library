@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad's Garage — Blackbeard's Little Music Library</title>
+    <link rel="stylesheet" href="assets/theme.css">
+    <style>
+        .art-island    { background: linear-gradient(135deg,#1a8a8a,#0a5050); }
+        .art-raccoon   { background: linear-gradient(135deg,#6a3abf,#2a6a3a); }
+        .art-walking   { background: linear-gradient(135deg,#4a6a2a,#2a1a0a); }
+        .art-loud      { background: linear-gradient(135deg,#c0183a,#c05010); }
+        .art-garage    { background: linear-gradient(135deg,#505050,#802020); }
+        .art-saturdaze { background: linear-gradient(135deg,#c09020,#c05010); }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon-64.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
+    <meta property="og:title"       content="Dad's Garage — Blackbeard's Little Music Library">
+    <meta property="og:description" content="Classic rock and workbench anthems.">
+    <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/dads-garage.html">
+    <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Dad's Garage — Blackbeard's Little Music Library">
+    <meta name="twitter:description" content="Classic rock and workbench anthems.">
+    <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+</head>
+<body>
+    <!-- Full-page floating flag background -->
+    <div class="flag-bg" aria-hidden="true">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
+    </div>
+    <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
+
+    <div class="container wide">
+        <div class="header">
+            <div class="hero-art art-garage"></div>
+            <h1>Blackbeard's Little Music Library</h1>
+            <p class="subtitle">Dad's Garage</p>
+            <p class="desc-line">Classic rock and workbench anthems</p>
+        </div>
+        <div class="embed-wrapper">
+            <iframe
+                allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                frameborder="0"
+                height="450"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/playlist/dads-garage/pl.u-WabZZvPtvrv5Jy">
+            </iframe>
+        </div>
+        <div class="page-actions">
+            <a href="index.html" class="back-btn">← Back to the Library</a>
+            <button class="share-link-btn" onclick="sharePlaylist(&quot;Dad's Garage&quot;, 'dads-garage.html', event)">Share</button>
+        </div>
+        <div class="footer">
+            <p>Share the music, share the joy.</p>
+        </div>
+    </div>
+
+    <script src="assets/site.js"></script>
+</body>
+</html>
