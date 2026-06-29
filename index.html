@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackbeard's Little Music Library</title>
+    <link rel="stylesheet" href="assets/theme.css">
+    <style>
+        .art-island    { background: linear-gradient(135deg,#1a8a8a,#0a5050); }
+        .art-raccoon   { background: linear-gradient(135deg,#6a3abf,#2a6a3a); }
+        .art-walking   { background: linear-gradient(135deg,#4a6a2a,#2a1a0a); }
+        .art-loud      { background: linear-gradient(135deg,#c0183a,#c05010); }
+        .art-garage    { background: linear-gradient(135deg,#505050,#802020); }
+        .art-saturdaze { background: linear-gradient(135deg,#c09020,#c05010); }
+        .playlist-card { text-decoration: none; }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon-64.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
+    <meta property="og:title"       content="Blackbeard's Little Music Library">
+    <meta property="og:description" content="A neighborhood collection of sound, anchored in Alameda. Pull up a chair and chart a course through the playlists.">
+    <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/">
+    <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Blackbeard's Little Music Library">
+    <meta name="twitter:description" content="A neighborhood collection of sound, anchored in Alameda. Pull up a chair and chart a course through the playlists.">
+    <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+</head>
+<body>
+    <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
+
+    <!-- Full-page floating flag background -->
+    <div class="flag-bg" aria-hidden="true">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
+    </div>
+
+    <img class="jolly-roger"
+         src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg"
+         alt="Blackbeard's Jolly Roger — skeleton with hourglass and spear through a heart"
+         width="200">
+
+    <div class="container">
+        <div class="header">
+            <h1>Blackbeard's Little Music Library</h1>
+            <p class="subtitle">A neighborhood collection of sound, anchored in Alameda</p>
+        </div>
+        <div class="welcome">
+            <p>Pull up a seat and chart a course through the library. These playlists are here for the whole crew — share freely, no walking the plank required.</p>
+        </div>
+
+        <div class="surprise-wrap">
+            <button class="surprise-btn" id="surprise-btn">
+                <span class="surprise-icon">⚓</span> Surprise Me
+            </button>
+        </div>
+
+        <div class="captains-pick">
+            <div class="cp-label">Heavy Rotation</div>
+            <a class="cp-body" href="heavy-rotation.html">
+                <div class="cp-art" style="background: linear-gradient(135deg,#8a0f1a,#c4182a)"></div>
+                <div class="cp-text">
+                    <div class="cp-title">Heavy Rotation</div>
+                    <div class="cp-desc">What's been on repeat at Blackbeard's — the crew can't stop listening</div>
+                </div>
+            </a>
+            <a class="cp-go" href="heavy-rotation.html">Listen Now</a>
+        </div>
+
+        <div class="playlists">
+            <div class="section-title">The Playlists</div>
+            <div class="playlist-grid">
+                <div class="playlist-card">
+                    <div class="art art-island"></div>
+                    <a class="info" href="island-bliss.html">
+                        <div class="title-row">Island Bliss</div>
+                        <div class="desc">Steel drums, sea breeze &amp; slow steel-string grooves for kicking back</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Island Bliss', 'island-bliss.html', event)">↗</button>
+                </div>
+                <div class="playlist-card">
+                    <div class="art art-raccoon"></div>
+                    <a class="info" href="raccoon-jams.html">
+                        <div class="title-row">Raccoon Jams</div>
+                        <div class="desc">Scrappy, quirky tunes for late-night snack raids and good times</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Raccoon Jams', 'raccoon-jams.html', event)">↗</button>
+                </div>
+                <div class="playlist-card">
+                    <div class="art art-walking"></div>
+                    <a class="info" href="walking.html">
+                        <div class="title-row">Walking</div>
+                        <div class="desc">Steady-beat tracks to match your stride around the block</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Walking', 'walking.html', event)">↗</button>
+                </div>
+                <div class="playlist-card">
+                    <div class="art art-loud"></div>
+                    <a class="info" href="new-loud.html">
+                        <div class="title-row">New Loud</div>
+                        <div class="desc">Fresh, high-energy new releases — turn it up</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('New Loud', 'new-loud.html', event)">↗</button>
+                </div>
+                <div class="playlist-card">
+                    <div class="art art-garage"></div>
+                    <a class="info" href="dads-garage.html">
+                        <div class="title-row">Dad's Garage</div>
+                        <div class="desc">Classic rock and workbench anthems</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist(&quot;Dad's Garage&quot;, 'dads-garage.html', event)">↗</button>
+                </div>
+                <div class="playlist-card">
+                    <div class="art art-saturdaze"></div>
+                    <a class="info" href="saturdaze.html">
+                        <div class="title-row">Saturdaze</div>
+                        <div class="desc">Lazy weekend vibes for slow mornings</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Saturdaze', 'saturdaze.html', event)">↗</button>
+                </div>
+                <div class="playlist-card">
+                    <div class="art" style="background:linear-gradient(135deg,#8a0f1a,#c4182a)"></div>
+                    <a class="info" href="heavy-rotation.html">
+                        <div class="title-row">Heavy Rotation</div>
+                        <div class="desc">What's been on repeat at Blackbeard's — the crew can't stop listening</div>
+                    </a>
+                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Heavy Rotation', 'heavy-rotation.html', event)">↗</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discoveries teaser -->
+        <div style="position:relative;z-index:1;margin-bottom:28px;">
+            <div class="section-title">Discoveries</div>
+            <a href="discoveries.html" style="
+                display:flex;align-items:center;gap:16px;
+                padding:16px 18px;
+                background:rgba(4,0,0,0.60);
+                border:1px solid rgba(255,255,255,0.09);
+                border-top-color:rgba(255,255,255,0.14);
+                border-radius:14px;
+                text-decoration:none;color:var(--ink);
+                transition:all 0.2s ease;
+                backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+            " onmouseover="this.style.background='rgba(10,2,2,0.80)';this.style.transform='translateY(-2px)'"
+               onmouseout="this.style.background='rgba(4,0,0,0.60)';this.style.transform='translateY(0)'">
+                <div style="flex:1;text-align:center">
+                    <div style="font-weight:700;font-size:0.93em;color:var(--ink-strong)">Artists, Videos &amp; Local Finds</div>
+                    <div style="font-size:0.77em;color:var(--ink-soft);margin-top:3px">Artists I love, YouTube picks, and Alameda's own</div>
+                </div>
+                <span style="color:var(--accent);font-size:1em;font-weight:700">→</span>
+            </a>
+        </div>
+
+        <div class="suggestion-box">
+            <div class="section-title" style="justify-content:center;">Drop a Line</div>
+            <p>Got a song recommendation? A playlist idea? Want to share what you're listening to?</p>
+
+            <form class="suggestion-form" action="https://api.web3forms.com/submit" method="POST" name="suggestion" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="8a6d25d0-1e80-4568-af3a-b2b553439765">
+                <input type="hidden" name="subject" value="New message — Blackbeard's Library">
+                <input type="hidden" name="form-name" value="suggestion">
+                <p class="form-honey"><label>Skip this: <input name="bot-field"></label></p>
+                <div class="form-row">
+                    <input type="text"  name="name"    class="form-input" placeholder="Your name (optional)">
+                    <input type="email" name="email"   class="form-input" placeholder="Your email (optional)">
+                </div>
+                <textarea name="message" class="form-input form-textarea" placeholder="What are you listening to? Drop a song, a vibe, a recommendation..." required></textarea>
+                <button type="submit" class="form-submit">Send It</button>
+            </form>
+
+            <div class="form-success" id="form-success" hidden>
+                <div class="form-success-icon">✦</div>
+                <p>Message received — thanks, crew.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Share the music, share the joy.</p>
+            <p style="margin-top: 8px;">Note: some playlists may contain explicit lyrics. Listener discretion advised.</p>
+            <p style="margin-top: 10px;"><a href="about.html">About this Library</a></p>
+        </div>
+    </div>
+
+    <script src="assets/site.js"></script>
+</body>
+</html>
