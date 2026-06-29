@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- black background -->
+  <rect width="32" height="32" rx="5" fill="#000000"/>
+
+  <!-- skull -->
+  <ellipse cx="16" cy="9.5" rx="5" ry="5" fill="#ffffff"/>
+  <!-- jaw -->
+  <rect x="13" y="13" width="6" height="3" rx="1" fill="#ffffff"/>
+  <!-- eyes (cut out of skull) -->
+  <circle cx="14.2" cy="9" r="1.4" fill="#000000"/>
+  <circle cx="17.8" cy="9" r="1.4" fill="#000000"/>
+
+  <!-- body -->
+  <rect x="14.5" y="16" width="3" height="5" rx="1" fill="#ffffff"/>
+
+  <!-- left arm: holding hourglass up -->
+  <line x1="14.5" y1="17.5" x2="10" y2="14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- hourglass -->
+  <polygon points="9,12 12,12 10.5,14 12,16 9,16" fill="#ffffff" opacity="0.8"/>
+
+  <!-- right arm: spear pointing at heart -->
+  <line x1="17.5" y1="17.5" x2="24" y2="20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- spear tip -->
+  <polygon points="24,20 26,19 26,21" fill="#ffffff"/>
+
+  <!-- legs -->
+  <line x1="15.2" y1="21" x2="14" y2="26" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="16.8" y1="21" x2="18" y2="26" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- red heart (being stabbed) -->
+  <path d="M27.5,20.5 C27.5,19.5 26,18.5 25.5,19.5 C25,18.5 23.5,19.5 23.5,20.5 C23.5,21.8 25.5,23 25.5,23 C25.5,23 27.5,21.8 27.5,20.5 Z" fill="#c4182a"/>
+</svg>
