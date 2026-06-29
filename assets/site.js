@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { href: 'dads-garage.html',    label: "Dad's Garage",   group: null },
         { href: 'saturdaze.html',      label: 'Saturdaze',      group: null },
         { href: 'discoveries.html',    label: 'Discoveries',    group: 'Explore' },
+        { href: 'events.html',         label: 'Local Events',   group: null },
         { href: 'about.html',          label: 'About',          group: null },
     ];
 
@@ -415,6 +416,166 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         skull.style.cursor = 'pointer';
     }
+});
+
+// ===== Playlist accent colors (glow-up per page) =====
+document.addEventListener('DOMContentLoaded', () => {
+    const PLAYLIST_COLORS = {
+        'heavy-rotation.html': { accent: '#e63946', glow: 'rgba(230,57,70,0.28)' },
+        'island-bliss.html':   { accent: '#2ec4b6', glow: 'rgba(46,196,182,0.28)' },
+        'raccoon-jams.html':   { accent: '#9d4edd', glow: 'rgba(157,78,221,0.28)' },
+        'walking.html':        { accent: '#52b788', glow: 'rgba(82,183,136,0.28)' },
+        'new-loud.html':       { accent: '#f4801a', glow: 'rgba(244,128,26,0.28)' },
+        'dads-garage.html':    { accent: '#4895ef', glow: 'rgba(72,149,239,0.28)' },
+        'saturdaze.html':      { accent: '#f4c542', glow: 'rgba(244,197,66,0.28)' },
+    };
+    const page = window.location.pathname.split('/').pop() || '';
+    const theme = PLAYLIST_COLORS[page];
+    if (!theme) return;
+
+    document.documentElement.style.setProperty('--playlist-accent', theme.accent);
+    document.documentElement.style.setProperty('--playlist-glow', theme.glow);
+    document.body.classList.add('is-playlist-page');
+
+    // Inject animated waveform under the subtitle
+    const header = document.querySelector('.header');
+    if (header) {
+        const waveform = document.createElement('div');
+        waveform.className = 'waveform';
+        waveform.setAttribute('aria-hidden', 'true');
+        waveform.innerHTML = '<span></span><span></span><span></span><span></span><span></span><span></span><span></span>';
+        // Insert after .desc-line or at end of header
+        const desc = header.querySelector('.desc-line');
+        if (desc) desc.after(waveform);
+        else header.appendChild(waveform);
+    }
+});
+
+// ===== Scroll entrance animations =====
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll(
+        '.playlist-card, .section-head, .embed-wrapper, .hero-art, .suggestion-box, .captain-pick, .captains-pick'
+    );
+    if (!targets.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('visible'));
+        return;
+    }
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                const idx = Array.from(targets).indexOf(entry.target);
+                setTimeout(() => entry.target.classList.add('visible'), idx * 55);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+    targets.forEach(el => {
+        el.classList.add('anim-entry');
+        obs.observe(el);
+    });
+});
+
+// ===== 3D card tilt on hover =====
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.playlist-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width  - 0.5;
+            const y = (e.clientY - rect.top)  / rect.height - 0.5;
+            card.style.transform = `perspective(700px) rotateY(${x * 16}deg) rotateX(${-y * 11}deg) translateY(-6px) scale(1.04)`;
+            card.style.transition = 'transform 0.08s ease';
+            card.style.zIndex = '3';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+            card.style.transition = 'transform 0.45s cubic-bezier(.34,1.56,.64,1)';
+            card.style.zIndex = '';
+            setTimeout(() => { card.style.transition = ''; }, 450);
+        });
+    });
+});
+
+// ===== Skull cursor trail =====
+document.addEventListener('DOMContentLoaded', () => {
+    let lastTrail = 0;
+    document.addEventListener('mousemove', (e) => {
+        const now = Date.now();
+        if (now - lastTrail < 100) return;
+        lastTrail = now;
+        const s = document.createElement('span');
+        s.className = 'cursor-skull';
+        s.textContent = '☠';
+        s.style.left = e.clientX + 'px';
+        s.style.top  = e.clientY + 'px';
+        document.body.appendChild(s);
+        s.addEventListener('animationend', () => s.remove());
+    });
+});
+
+// ===== "AHOY" Easter egg — type "ahoy" anywhere =====
+document.addEventListener('DOMContentLoaded', () => {
+    let buf = '';
+    document.addEventListener('keydown', (e) => {
+        if (e.target.matches('input, textarea, select, [contenteditable]')) return;
+        buf = (buf + e.key).toLowerCase().slice(-4);
+        if (buf === 'ahoy') {
+            buf = '';
+            fireAhoy();
+        }
+    });
+
+    function fireAhoy() {
+        // Big AHOY! text
+        const blast = document.createElement('div');
+        blast.className = 'cannon-blast';
+        blast.innerHTML = '💥 <span>AHOY!</span> 💥';
+        document.body.appendChild(blast);
+        blast.addEventListener('animationend', () => blast.remove());
+
+        // Scatter skulls
+        for (let i = 0; i < 14; i++) {
+            const s = document.createElement('span');
+            s.className = 'cannon-skull';
+            s.textContent = '☠️';
+            s.style.left = (10 + Math.random() * 80) + 'vw';
+            s.style.animationDelay    = (Math.random() * 0.35) + 's';
+            s.style.animationDuration = (0.7 + Math.random() * 0.7) + 's';
+            document.body.appendChild(s);
+            s.addEventListener('animationend', () => s.remove());
+        }
+    }
+});
+
+// ===== Idle ghost ship (appears after 2 minutes of no movement) =====
+document.addEventListener('DOMContentLoaded', () => {
+    let idleTimer;
+    let shipShown = false;
+
+    function resetIdle() {
+        clearTimeout(idleTimer);
+        shipShown = false;
+        idleTimer = setTimeout(showShip, 2 * 60 * 1000);
+    }
+
+    function showShip() {
+        if (shipShown) return;
+        shipShown = true;
+        const ship = document.createElement('div');
+        ship.className = 'ghost-ship';
+        ship.setAttribute('aria-hidden', 'true');
+        ship.textContent = '⛵';
+        document.body.appendChild(ship);
+        ship.addEventListener('animationend', () => { ship.remove(); resetIdle(); });
+    }
+
+    document.addEventListener('mousemove', resetIdle, { passive: true });
+    document.addEventListener('keydown', resetIdle, { passive: true });
+    document.addEventListener('touchstart', resetIdle, { passive: true });
+    resetIdle();
 });
 
 // ===== Playlist registry =====
