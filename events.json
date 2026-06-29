@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Jazz Night at Rhythmix",
+    "date": "2026-07-11",
+    "time": "7:30 PM",
+    "venue": "Rhythmix Cultural Works",
+    "address": "2513 Blanding Ave, Alameda",
+    "description": "Live jazz with local Alameda musicians. Great vibes, all ages welcome, bring a blanket.",
+    "link": "https://rhythmix.org",
+    "tag": "live music"
+  },
+  {
+    "title": "First Friday Art Walk",
+    "date": "2026-07-03",
+    "time": "6:00 PM",
+    "venue": "Park Street Arts District",
+    "address": "Park St, Alameda",
+    "description": "Monthly art walk through Park Street galleries. Live music at several stops.",
+    "link": "",
+    "tag": "arts"
+  },
+  {
+    "title": "Alameda Summer Concert Series",
+    "date": "2026-07-18",
+    "time": "5:00 PM",
+    "venue": "Crab Cove",
+    "address": "1252 McKay Ave, Alameda",
+    "description": "Free outdoor concerts on the bay. Bring a chair and snacks.",
+    "link": "",
+    "tag": "free"
+  }
+]
