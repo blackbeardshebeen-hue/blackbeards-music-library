@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Events — Blackbeard's Little Music Library</title>
+    <link rel="stylesheet" href="assets/theme.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon-64.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
+    <meta property="og:title"       content="Local Events — Blackbeard's Little Music Library">
+    <meta property="og:description" content="Things happening around Alameda worth showing up for.">
+    <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/events.html">
+    <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+
+    <style>
+        .events-header {
+            text-align: center;
+            padding: 48px 0 32px;
+        }
+        .events-header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .events-header p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.95em;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        html.day .events-header p { color: rgba(0,0,0,0.5); }
+
+        /* ===== Event cards ===== */
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 680px;
+            margin: 0 auto 60px;
+            padding: 0 4px;
+        }
+
+        .event-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 16px;
+            padding: 24px 28px;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 0 20px;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+        .event-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(196,24,42,0.35);
+            transform: translateY(-2px);
+        }
+        html.day .event-card {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.1);
+        }
+        html.day .event-card:hover {
+            background: rgba(196,24,42,0.06);
+            border-color: rgba(196,24,42,0.3);
+        }
+
+        /* Date block */
+        .event-date-block {
+            grid-row: 1 / 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 3px;
+            text-align: center;
+        }
+        .event-month {
+            font-size: 0.65em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--red-bright);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+        .event-day {
+            font-family: 'Pirata One', serif;
+            font-size: 2.2em;
+            line-height: 1;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        html.day .event-day { color: #111; }
+        .event-weekday {
+            font-size: 0.6em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.4);
+        }
+        html.day .event-weekday { color: rgba(0,0,0,0.4); }
+
+        /* Event info */
+        .event-title {
+            font-family: 'Pirata One', serif;
+            font-size: 1.25em;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+        html.day .event-title { color: #111; }
+
+        .event-meta {
+            font-size: 0.78em;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 12px;
+        }
+        html.day .event-meta { color: rgba(0,0,0,0.45); }
+        .event-meta span::before { content: '· '; }
+        .event-meta span:first-child::before { content: ''; }
+
+        .event-desc {
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        html.day .event-desc { color: rgba(0,0,0,0.55); }
+
+        .event-footer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .event-tag {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: rgba(196,24,42,0.18);
+            color: var(--red-bright);
+            border: 1px solid rgba(196,24,42,0.3);
+            border-radius: 100px;
+            padding: 3px 10px;
+        }
+        .event-link {
+            font-size: 0.8em;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 1px;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+        .event-link:hover { color: #fff; border-color: #fff; }
+        html.day .event-link { color: rgba(0,0,0,0.5); border-color: rgba(0,0,0,0.2); }
+        html.day .event-link:hover { color: #111; border-color: #111; }
+
+        /* Past event */
+        .event-card.past {
+            opacity: 0.42;
+        }
+        .event-card.past .event-title::after {
+            content: ' (past)';
+            font-size: 0.65em;
+            color: rgba(255,255,255,0.4);
+            font-family: 'IM Fell English', serif;
+        }
+
+        /* Empty / loading states */
+        .events-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: rgba(255,255,255,0.35);
+        }
+        html.day .events-empty { color: rgba(0,0,0,0.35); }
+        .events-empty .skull { font-size: 3em; display: block; margin-bottom: 16px; }
+        .events-empty p { font-size: 0.9em; line-height: 1.7; }
+
+        .events-loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.9em;
+        }
+
+        /* Edit hint */
+        .events-edit-hint {
+            text-align: center;
+            font-size: 0.72em;
+            color: rgba(255,255,255,0.2);
+            margin-top: -40px;
+            margin-bottom: 60px;
+            letter-spacing: 0.5px;
+        }
+        html.day .events-edit-hint { color: rgba(0,0,0,0.2); }
+
+        /* Back link */
+        .events-back {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 480px) {
+            .event-card {
+                grid-template-columns: 52px 1fr;
+                gap: 0 14px;
+                padding: 18px 16px;
+            }
+            .event-day { font-size: 1.8em; }
+            .event-title { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flag-bg" aria-hidden="true">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
+    </div>
+    <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
+
+    <div class="container wide">
+        <div class="events-header">
+            <h1>Blackbeard's Little Music Library</h1>
+            <p class="subtitle">Local Events</p>
+            <p>Things happening around Alameda worth showing up for.</p>
+        </div>
+
+        <div id="events-container" class="events-list">
+            <div class="events-loading">Loading events…</div>
+        </div>
+
+        <p class="events-edit-hint">⚓ Events managed via events.json in the GitHub repo</p>
+
+        <div class="events-back page-actions">
+            <a href="index.html" class="back-btn">← Back to the Library</a>
+        </div>
+
+        <div class="footer">
+            <p>Share the music, share the joy.</p>
+        </div>
+    </div>
+
+    <script src="assets/site.js"></script>
+    <script>
+    (function() {
+        const container = document.getElementById('events-container');
+
+        const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        const DAYS   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+        function parseLocalDate(str) {
+            // Parse YYYY-MM-DD as local date (not UTC)
+            const [y, m, d] = str.split('-').map(Number);
+            return new Date(y, m - 1, d);
+        }
+
+        function renderEvents(events) {
+            if (!events || events.length === 0) {
+                container.innerHTML = `
+                    <div class="events-empty">
+                        <span class="skull">☠️</span>
+                        <p>No events on the horizon right now.<br>Check back soon — the crew's always up to something.</p>
+                    </div>`;
+                return;
+            }
+
+            const today = new Date();
+            today.setHours(0,0,0,0);
+
+            // Sort by date
+            events.sort((a, b) => parseLocalDate(a.date) - parseLocalDate(b.date));
+
+            const html = events.map(ev => {
+                const d = parseLocalDate(ev.date);
+                const isPast = d < today;
+                const month = MONTHS[d.getMonth()];
+                const day   = d.getDate();
+                const weekday = DAYS[d.getDay()];
+
+                const linkHTML = ev.link
+                    ? `<a class="event-link" href="${ev.link}" target="_blank" rel="noopener">More info ↗</a>`
+                    : '';
+                const tagHTML = ev.tag
+                    ? `<span class="event-tag">${ev.tag}</span>`
+                    : '';
+                const timeVenue = [ev.time, ev.venue].filter(Boolean).join(' · ');
+                const address = ev.address ? `<span>${ev.address}</span>` : '';
+
+                return `
+                <div class="event-card anim-entry${isPast ? ' past' : ''}">
+                    <div class="event-date-block">
+                        <div class="event-month">${month}</div>
+                        <div class="event-day">${day}</div>
+                        <div class="event-weekday">${weekday}</div>
+                    </div>
+                    <div>
+                        <div class="event-title">${ev.title}</div>
+                        <div class="event-meta">
+                            <span>${timeVenue}</span>
+                            ${address}
+                        </div>
+                        <div class="event-desc">${ev.description}</div>
+                        <div class="event-footer">
+                            ${tagHTML}
+                            ${linkHTML}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            container.innerHTML = html;
+
+            // Trigger entrance animations
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.event-card.anim-entry').forEach((card, i) => {
+                    setTimeout(() => card.classList.add('visible'), i * 80);
+                });
+            });
+        }
+
+        fetch('events.json')
+            .then(r => r.json())
+            .then(renderEvents)
+            .catch(() => {
+                container.innerHTML = `
+                    <div class="events-empty">
+                        <span class="skull">⚓</span>
+                        <p>Couldn't load events right now. Try refreshing.</p>
+                    </div>`;
+            });
+    })();
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cf8e8fdf48e04f3580098a99d7e1c1ec"}'></script>
+</body>
+</html>
