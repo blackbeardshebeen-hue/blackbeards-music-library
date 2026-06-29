@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Blackbeard's Little Music Library</title>
+    <link rel="stylesheet" href="assets/theme.css">
+    <style>
+        .about-section {
+            position: relative; z-index: 1;
+            background: rgba(4,0,0,0.60);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-top-color: rgba(255,255,255,0.14);
+            border-radius: 16px;
+            padding: 24px 22px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            text-align: left;
+        }
+        html.day .about-section {
+            background: rgba(255,248,246,0.80);
+            border-color: rgba(0,0,0,0.08);
+        }
+        .about-section-label {
+            font-size: 0.58em; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--accent); font-weight: 700; margin-bottom: 14px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .about-section-label::after {
+            content: ''; flex: 1; height: 1px; background: var(--red-border);
+        }
+        .about-section p {
+            font-size: 0.94em; line-height: 1.85;
+            color: var(--ink); margin-bottom: 14px;
+        }
+        .about-section p:last-child { margin-bottom: 0; }
+        .about-section p.placeholder {
+            color: var(--ink-soft); font-style: italic;
+        }
+        .about-stat-row {
+            display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px;
+        }
+        .about-stat {
+            flex: 1; min-width: 80px;
+            background: rgba(196,24,42,0.08);
+            border: 1px solid rgba(196,24,42,0.18);
+            border-radius: 12px; padding: 14px 16px; text-align: center;
+        }
+        html.day .about-stat { background: rgba(160,16,32,0.06); border-color: rgba(160,16,32,0.15); }
+        .about-stat-num {
+            font-family: 'Pirata One', serif;
+            font-size: 1.8em; color: var(--heading-color);
+            line-height: 1; margin-bottom: 4px;
+        }
+        .about-stat-label {
+            font-size: 0.65em; letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--ink-soft); font-weight: 600;
+        }
+        .captain-sig {
+            text-align: center; margin: 8px 0 4px;
+            font-family: 'Pirata One', serif;
+            font-size: 1.5em; color: var(--heading-color);
+            letter-spacing: 2px; position: relative; z-index: 1;
+        }
+        .captain-title {
+            text-align: center; font-size: 0.75em;
+            color: var(--ink-soft); letter-spacing: 1px;
+            font-style: italic; position: relative; z-index: 1;
+        }
+        .location-tag {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--accent-dim); border: 1px solid var(--accent-border);
+            border-radius: 100px; padding: 5px 14px;
+            font-size: 0.78em; font-weight: 600; color: var(--accent);
+            margin-bottom: 20px; letter-spacing: 0.5px;
+            position: relative; z-index: 1;
+        }
+        .about-divider {
+            text-align: center; color: var(--accent);
+            margin: 6px 0 16px; font-size: 0.9em; letter-spacing: 5px;
+            position: relative; z-index: 1;
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon-64.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
+    <meta property="og:title"       content="About — Blackbeard's Little Music Library">
+    <meta property="og:description" content="A few words from the Captain. Anchored in Alameda, California.">
+    <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/about.html">
+    <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="About — Blackbeard's Little Music Library">
+    <meta name="twitter:description" content="A few words from the Captain. Anchored in Alameda, California.">
+    <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+</head>
+<body>
+    <div class="flag-bg" aria-hidden="true">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
+    </div>
+    <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
+
+    <div class="container">
+        <div class="header">
+            <h1>About the Library</h1>
+            <p class="subtitle">A few words from the Captain</p>
+        </div>
+
+        <div style="text-align:center; position:relative; z-index:1; margin-bottom:20px;">
+            <span class="location-tag">Alameda, California</span>
+        </div>
+
+        <!-- By the numbers -->
+        <div class="about-section">
+            <div class="about-section-label">By the Numbers</div>
+            <div class="about-stat-row">
+                <div class="about-stat">
+                    <div class="about-stat-num">7</div>
+                    <div class="about-stat-label">Playlists</div>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-num">∞</div>
+                    <div class="about-stat-label">Good Songs</div>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-num">1</div>
+                    <div class="about-stat-label">Island</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How it started -->
+        <div class="about-section">
+            <div class="about-section-label">How It Started</div>
+            <p class="placeholder">
+                This is your story to tell — replace this paragraph with whatever feels right. How did the library start? Who are you? What's your relationship to music and Alameda?
+            </p>
+            <p class="placeholder">
+                Maybe something about the name, the stickers, a record that kicked the whole thing off, or just why you wanted to share playlists with your neighbors.
+            </p>
+        </div>
+
+        <div class="about-divider">· · ·</div>
+
+        <!-- The vibe -->
+        <div class="about-section">
+            <div class="about-section-label">The Vibe</div>
+            <p class="placeholder">
+                What's the philosophy here? What kind of music lover are you? What does Blackbeard's feel like — a late-night listening session, a sunny Saturday, something else entirely?
+            </p>
+            <p>Pull up a seat. These playlists are for the whole crew — share freely, no walking the plank required.</p>
+        </div>
+
+        <div class="about-divider">· · ·</div>
+
+        <!-- Get in touch -->
+        <div class="about-section">
+            <div class="about-section-label">Get in Touch</div>
+            <p>Got a song recommendation, a playlist idea, or just want to share what you've been listening to? Drop a note.</p>
+
+            <form class="suggestion-form" action="https://api.web3forms.com/submit" method="POST" name="contact" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="8a6d25d0-1e80-4568-af3a-b2b553439765">
+                <input type="hidden" name="subject" value="New message — Blackbeard's Library">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="form-honey"><label>Skip this: <input name="bot-field"></label></p>
+                <div class="form-row">
+                    <input type="text"  name="name"  class="form-input" placeholder="Your name (optional)">
+                    <input type="email" name="email" class="form-input" placeholder="Your email (optional)">
+                </div>
+                <textarea name="message" class="form-input form-textarea" placeholder="What are you listening to?" required></textarea>
+                <button type="submit" class="form-submit">Send It</button>
+            </form>
+            <div class="form-success" id="form-success" hidden>
+                <div class="form-success-icon">✦</div>
+                <p>Message received — thanks, crew.</p>
+            </div>
+        </div>
+
+        <!-- Sign-off -->
+        <div style="padding:20px 0 8px;">
+            <div class="captain-sig">— Blackbeard</div>
+            <div class="captain-title">Captain, Alameda Island</div>
+        </div>
+
+        <div class="page-actions" style="margin-top:16px;">
+            <a href="index.html" class="back-btn">← Back to the Library</a>
+        </div>
+
+        <div class="footer">
+            <p>Share the music, share the joy.</p>
+        </div>
+    </div>
+
+    <script src="assets/site.js"></script>
+</body>
+</html>
