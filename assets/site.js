@@ -659,3 +659,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Back-to-home link on subpages
+(function(){
+  var isHome = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('/');
+  if (isHome) return;
+  var container = document.querySelector('.container');
+  if (!container) return;
+  var crumb = document.createElement('div');
+  crumb.className = 'page-back-crumb';
+  crumb.innerHTML = '<a href="index.html">&larr; Home</a>';
+  container.insertBefore(crumb, container.firstChild);
+})();
