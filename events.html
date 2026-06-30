@@ -15,82 +15,82 @@
     <meta property="og:url" content="https://blackbeards-music-library.pages.dev/events.html">
     <meta property="og:image" content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
     <style>
-        .events-header { text-align:center; padding:48px 0 28px; }
-        .events-header h1 { font-size:2.2em; margin-bottom:8px; }
-        .events-header .subtitle { margin-bottom:6px; }
-        .events-header .tagline { color:rgba(255,255,255,0.5); font-size:0.9em; }
-        html.day .events-header .tagline { color:rgba(0,0,0,0.45); }
-        .filters-wrap { max-width:720px; margin:0 auto 36px; padding:0 8px; }
-        .search-wrap { position:relative; margin-bottom:18px; }
-        .search-icon { position:absolute; left:14px; top:50%; transform:translateY(-50%); font-size:0.95em; opacity:0.4; pointer-events:none; }
-        .events-search { width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px 16px 12px 40px; color:#fff; font-size:0.9em; font-family:inherit; outline:none; transition:border-color 0.2s,background 0.2s; box-sizing:border-box; }
-        .events-search::placeholder { color:rgba(255,255,255,0.3); }
-        .events-search:focus { border-color:rgba(196,24,42,0.5); background:rgba(255,255,255,0.09); }
-        html.day .events-search { background:rgba(0,0,0,0.04); border-color:rgba(0,0,0,0.12); color:#111; }
-        html.day .events-search::placeholder { color:rgba(0,0,0,0.3); }
-        html.day .events-search:focus { border-color:rgba(196,24,42,0.4); background:rgba(0,0,0,0.07); }
-        .filter-row { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
-        .filter-label { font-size:0.65em; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.3); white-space:nowrap; min-width:54px; }
-        html.day .filter-label { color:rgba(0,0,0,0.3); }
-        .filter-pills { display:flex; flex-wrap:wrap; gap:6px; }
-        .pill { font-size:0.72em; padding:5px 12px; border-radius:100px; border:1px solid rgba(255,255,255,0.12); background:transparent; color:rgba(255,255,255,0.5); cursor:pointer; white-space:nowrap; transition:all 0.15s; font-family:inherit; }
-        .pill:hover { border-color:rgba(255,255,255,0.25); color:rgba(255,255,255,0.8); }
-        .pill.active { background:var(--red-bright); border-color:var(--red-bright); color:#fff; }
-        html.day .pill { border-color:rgba(0,0,0,0.15); color:rgba(0,0,0,0.45); }
-        html.day .pill:hover { border-color:rgba(0,0,0,0.3); color:rgba(0,0,0,0.7); }
-        html.day .pill.active { background:var(--red-bright); border-color:var(--red-bright); color:#fff; }
-        .results-meta { display:flex; align-items:center; justify-content:space-between; max-width:720px; margin:0 auto 20px; padding:0 8px; font-size:0.75em; color:rgba(255,255,255,0.35); }
-        html.day .results-meta { color:rgba(0,0,0,0.35); }
-        .clear-btn { font-size:0.85em; color:var(--red-bright); background:none; border:none; cursor:pointer; padding:4px 8px; border-radius:6px; font-family:inherit; display:none; transition:background 0.15s; }
-        .clear-btn:hover { background:rgba(196,24,42,0.12); }
-        .clear-btn.visible { display:inline; }
-        .geo-section { margin-bottom:44px; }
-        .geo-header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto 16px; padding:0 8px; }
-        .geo-title { font-family:'Pirata One',serif; font-size:1.3em; color:#fff; letter-spacing:0.5px; }
-        html.day .geo-title { color:#111; }
-        .geo-count { font-size:0.7em; color:rgba(255,255,255,0.3); background:rgba(255,255,255,0.06); border-radius:100px; padding:2px 9px; }
-        html.day .geo-count { color:rgba(0,0,0,0.35); background:rgba(0,0,0,0.05); }
-        .geo-line { flex:1; height:1px; background:rgba(255,255,255,0.07); }
-        html.day .geo-line { background:rgba(0,0,0,0.08); }
-        .events-list { display:flex; flex-direction:column; gap:12px; max-width:720px; margin:0 auto; padding:0 8px; }
-        .event-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:20px 22px; display:grid; grid-template-columns:58px 1fr auto; gap:0 16px; align-items:start; transition:background 0.2s,border-color 0.2s,transform 0.2s; }
-        .event-card:hover { background:rgba(255,255,255,0.07); border-color:rgba(196,24,42,0.3); transform:translateY(-1px); }
-        html.day .event-card { background:rgba(0,0,0,0.03); border-color:rgba(0,0,0,0.08); }
-        html.day .event-card:hover { background:rgba(196,24,42,0.05); border-color:rgba(196,24,42,0.25); }
-        .event-date-block { display:flex; flex-direction:column; align-items:center; text-align:center; padding-top:2px; }
-        .event-month { font-size:0.58em; text-transform:uppercase; letter-spacing:2px; color:var(--red-bright); font-weight:700; line-height:1; margin-bottom:1px; }
-        .event-day { font-family:'Pirata One',serif; font-size:2em; line-height:1; color:#fff; margin-bottom:1px; }
-        html.day .event-day { color:#111; }
-        .event-weekday { font-size:0.55em; text-transform:uppercase; letter-spacing:1.5px; color:rgba(255,255,255,0.35); }
-        html.day .event-weekday { color:rgba(0,0,0,0.35); }
-        .event-info { min-width:0; }
-        .event-title { font-family:'Pirata One',serif; font-size:1.15em; color:#fff; line-height:1.2; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        html.day .event-title { color:#111; }
-        .event-meta { font-size:0.74em; color:rgba(255,255,255,0.4); margin-bottom:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        html.day .event-meta { color:rgba(0,0,0,0.4); }
-        .event-desc { font-size:0.8em; color:rgba(255,255,255,0.55); line-height:1.55; }
-        html.day .event-desc { color:rgba(0,0,0,0.5); }
-        .event-right { display:flex; flex-direction:column; align-items:flex-end; gap:8px; padding-top:2px; flex-shrink:0; }
-        .event-badge { font-size:0.62em; text-transform:uppercase; letter-spacing:1.2px; background:rgba(196,24,42,0.15); color:var(--red-bright); border:1px solid rgba(196,24,42,0.28); border-radius:100px; padding:3px 9px; white-space:nowrap; }
-        .event-link-btn { font-size:0.72em; color:rgba(255,255,255,0.4); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:1px; transition:color 0.15s,border-color 0.15s; white-space:nowrap; }
-        .event-link-btn:hover { color:#fff; border-color:#fff; }
-        html.day .event-link-btn { color:rgba(0,0,0,0.4); border-color:rgba(0,0,0,0.18); }
-        html.day .event-link-btn:hover { color:#111; border-color:#111; }
-        .event-card.past { opacity:0.38; }
-        .events-empty { text-align:center; padding:60px 20px; color:rgba(255,255,255,0.3); max-width:720px; margin:0 auto; }
-        html.day .events-empty { color:rgba(0,0,0,0.3); }
-        .events-empty .skull { font-size:2.8em; display:block; margin-bottom:14px; }
-        .events-empty p { font-size:0.9em; line-height:1.7; }
-        .events-loading { text-align:center; padding:60px 20px; color:rgba(255,255,255,0.25); font-size:0.9em; }
-        .events-edit-hint { text-align:center; font-size:0.68em; color:rgba(255,255,255,0.18); margin:20px 0 60px; letter-spacing:0.5px; }
-        html.day .events-edit-hint { color:rgba(0,0,0,0.18); }
-        .events-back { text-align:center; margin-bottom:60px; }
-        @media (max-width:560px) {
-            .event-card { grid-template-columns:48px 1fr; grid-template-rows:auto auto; gap:0 12px; padding:16px 14px; }
-            .event-right { grid-column:2; flex-direction:row; align-items:center; flex-wrap:wrap; gap:6px; margin-top:8px; }
-            .event-day { font-size:1.7em; }
-            .event-title { font-size:1em; }
-            .filter-label { display:none; }
+        .events-header{text-align:center;padding:48px 0 28px}
+        .events-header h1{font-size:2.2em;margin-bottom:8px}
+        .events-header .subtitle{margin-bottom:6px}
+        .events-header .tagline{color:rgba(255,255,255,.5);font-size:.9em}
+        html.day .events-header .tagline{color:rgba(0,0,0,.45)}
+        .filters-wrap{max-width:720px;margin:0 auto 36px;padding:0 8px}
+        .search-wrap{position:relative;margin-bottom:18px}
+        .search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:.95em;opacity:.4;pointer-events:none}
+        .events-search{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 16px 12px 40px;color:#fff;font-size:.9em;font-family:inherit;outline:none;transition:border-color .2s,background .2s;box-sizing:border-box}
+        .events-search::placeholder{color:rgba(255,255,255,.3)}
+        .events-search:focus{border-color:rgba(196,24,42,.5);background:rgba(255,255,255,.09)}
+        html.day .events-search{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.12);color:#111}
+        html.day .events-search::placeholder{color:rgba(0,0,0,.3)}
+        html.day .events-search:focus{border-color:rgba(196,24,42,.4);background:rgba(0,0,0,.07)}
+        .filter-row{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+        .filter-label{font-size:.65em;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.3);white-space:nowrap;min-width:54px}
+        html.day .filter-label{color:rgba(0,0,0,.3)}
+        .filter-pills{display:flex;flex-wrap:wrap;gap:6px}
+        .pill{font-size:.72em;padding:5px 12px;border-radius:100px;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;transition:all .15s;font-family:inherit}
+        .pill:hover{border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.8)}
+        .pill.active{background:var(--red-bright);border-color:var(--red-bright);color:#fff}
+        html.day .pill{border-color:rgba(0,0,0,.15);color:rgba(0,0,0,.45)}
+        html.day .pill:hover{border-color:rgba(0,0,0,.3);color:rgba(0,0,0,.7)}
+        html.day .pill.active{background:var(--red-bright);border-color:var(--red-bright);color:#fff}
+        .results-meta{display:flex;align-items:center;justify-content:space-between;max-width:720px;margin:0 auto 20px;padding:0 8px;font-size:.75em;color:rgba(255,255,255,.35)}
+        html.day .results-meta{color:rgba(0,0,0,.35)}
+        .clear-btn{font-size:.85em;color:var(--red-bright);background:none;border:none;cursor:pointer;padding:4px 8px;border-radius:6px;font-family:inherit;display:none;transition:background .15s}
+        .clear-btn:hover{background:rgba(196,24,42,.12)}
+        .clear-btn.visible{display:inline}
+        .geo-section{margin-bottom:44px}
+        .geo-header{display:flex;align-items:center;gap:10px;max-width:720px;margin:0 auto 16px;padding:0 8px}
+        .geo-title{font-family:'Pirata One',serif;font-size:1.3em;color:#fff;letter-spacing:.5px}
+        html.day .geo-title{color:#111}
+        .geo-count{font-size:.7em;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border-radius:100px;padding:2px 9px}
+        html.day .geo-count{color:rgba(0,0,0,.35);background:rgba(0,0,0,.05)}
+        .geo-line{flex:1;height:1px;background:rgba(255,255,255,.07)}
+        html.day .geo-line{background:rgba(0,0,0,.08)}
+        .events-list{display:flex;flex-direction:column;gap:12px;max-width:720px;margin:0 auto;padding:0 8px}
+        .event-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;display:grid;grid-template-columns:58px 1fr auto;gap:0 16px;align-items:start;transition:background .2s,border-color .2s,transform .2s}
+        .event-card:hover{background:rgba(255,255,255,.07);border-color:rgba(196,24,42,.3);transform:translateY(-1px)}
+        html.day .event-card{background:rgba(0,0,0,.03);border-color:rgba(0,0,0,.08)}
+        html.day .event-card:hover{background:rgba(196,24,42,.05);border-color:rgba(196,24,42,.25)}
+        .event-date-block{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:2px}
+        .event-month{font-size:.58em;text-transform:uppercase;letter-spacing:2px;color:var(--red-bright);font-weight:700;line-height:1;margin-bottom:1px}
+        .event-day{font-family:'Pirata One',serif;font-size:2em;line-height:1;color:#fff;margin-bottom:1px}
+        html.day .event-day{color:#111}
+        .event-weekday{font-size:.55em;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35)}
+        html.day .event-weekday{color:rgba(0,0,0,.35)}
+        .event-info{min-width:0}
+        .event-title{font-family:'Pirata One',serif;font-size:1.15em;color:#fff;line-height:1.2;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        html.day .event-title{color:#111}
+        .event-meta{font-size:.74em;color:rgba(255,255,255,.4);margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        html.day .event-meta{color:rgba(0,0,0,.4)}
+        .event-desc{font-size:.8em;color:rgba(255,255,255,.55);line-height:1.55}
+        html.day .event-desc{color:rgba(0,0,0,.5)}
+        .event-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;padding-top:2px;flex-shrink:0}
+        .event-badge{font-size:.62em;text-transform:uppercase;letter-spacing:1.2px;background:rgba(196,24,42,.15);color:var(--red-bright);border:1px solid rgba(196,24,42,.28);border-radius:100px;padding:3px 9px;white-space:nowrap}
+        .event-link-btn{font-size:.72em;color:rgba(255,255,255,.4);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:1px;transition:color .15s,border-color .15s;white-space:nowrap}
+        .event-link-btn:hover{color:#fff;border-color:#fff}
+        html.day .event-link-btn{color:rgba(0,0,0,.4);border-color:rgba(0,0,0,.18)}
+        html.day .event-link-btn:hover{color:#111;border-color:#111}
+        .event-card.past{opacity:.38}
+        .events-empty{text-align:center;padding:60px 20px;color:rgba(255,255,255,.3);max-width:720px;margin:0 auto}
+        html.day .events-empty{color:rgba(0,0,0,.3)}
+        .events-empty .skull{font-size:2.8em;display:block;margin-bottom:14px}
+        .events-empty p{font-size:.9em;line-height:1.7}
+        .events-loading{text-align:center;padding:60px 20px;color:rgba(255,255,255,.25);font-size:.9em}
+        .events-edit-hint{text-align:center;font-size:.68em;color:rgba(255,255,255,.18);margin:20px 0 60px;letter-spacing:.5px}
+        html.day .events-edit-hint{color:rgba(0,0,0,.18)}
+        .events-back{text-align:center;margin-bottom:60px}
+        @media(max-width:560px){
+            .event-card{grid-template-columns:48px 1fr;grid-template-rows:auto auto;gap:0 12px;padding:16px 14px}
+            .event-right{grid-column:2;flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px;margin-top:8px}
+            .event-day{font-size:1.7em}
+            .event-title{font-size:1em}
+            .filter-label{display:none}
         }
     </style>
 </head>
@@ -141,95 +141,7 @@
         <div class="footer"><p>Share the music, share the joy.</p></div>
     </div>
     <script src="assets/site.js"></script>
-    <script>
-    (function(){
-        var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-        var DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-        var CITY_LABELS={'alameda':'🏴 Alameda','oakland':'🎸 Oakland','berkeley':'🏫 Berkeley','san francisco':'🌉 San Francisco'};
-        var CITY_ORDER=['alameda','oakland','berkeley','san francisco'];
-        var allEvents=[],activeCity='all',activeGenre='all',activeWhen='all',searchQuery='';
-        var root=document.getElementById('events-root');
-        var countEl=document.getElementById('results-count');
-        var clearBtn=document.getElementById('clear-btn');
-        var searchEl=document.getElementById('events-search');
-        var cityPills=document.getElementById('city-pills');
-        var genrePills=document.getElementById('genre-pills');
-        var whenPills=document.getElementById('when-pills');
-        function parseLocalDate(s){var p=s.split('-').map(Number);return new Date(p[0],p[1]-1,p[2]);}
-        function isFiltered(){return activeCity!=='all'||activeGenre!=='all'||activeWhen!=='all'||searchQuery.length>0;}
-        function filterEvents(){
-            var today=new Date();today.setHours(0,0,0,0);
-            var weekEnd=new Date(today);weekEnd.setDate(today.getDate()+7);
-            var monthEnd=new Date(today.getFullYear(),today.getMonth()+1,0);
-            return allEvents.filter(function(ev){
-                var d=parseLocalDate(ev.date);
-                if(activeCity!=='all'&&ev.city!==activeCity)return false;
-                if(activeGenre!=='all'&&ev.genre!==activeGenre)return false;
-                if(activeWhen==='week'&&(d<today||d>weekEnd))return false;
-                if(activeWhen==='month'&&(d<today||d>monthEnd))return false;
-                if(activeWhen==='july'&&d.getMonth()!==6)return false;
-                if(activeWhen==='august'&&d.getMonth()!==7)return false;
-                if(searchQuery){var q=searchQuery.toLowerCase();var hay=[ev.title,ev.venue,ev.description,ev.city,ev.genre,ev.address].join(' ').toLowerCase();if(hay.indexOf(q)===-1)return false;}
-                return true;
-            });
-        }
-        function cardHTML(ev){
-            var d=parseLocalDate(ev.date);var today=new Date();today.setHours(0,0,0,0);
-            var isPast=d<today;
-            var meta=[ev.time,ev.venue].filter(Boolean).join(' · ');
-            var linkBtn=ev.link?'<a class="event-link-btn" href="'+ev.link+'" target="_blank" rel="noopener">Info ↗</a>':'';
-            var badge=ev.genre?'<span class="event-badge">'+ev.genre+'</span>':'';
-            return '<div class="event-card anim-entry'+(isPast?' past':'')+'">'+
-                '<div class="event-date-block"><div class="event-month">'+MONTHS[d.getMonth()]+'</div><div class="event-day">'+d.getDate()+'</div><div class="event-weekday">'+DAYS[d.getDay()]+'</div></div>'+
-                '<div class="event-info"><div class="event-title">'+ev.title+'</div><div class="event-meta">'+meta+'</div><div class="event-desc">'+ev.description+'</div></div>'+
-                '<div class="event-right">'+badge+linkBtn+'</div></div>';
-        }
-        function render(){
-            var filtered=filterEvents();
-            countEl.textContent=filtered.length===allEvents.length?filtered.length+' events':filtered.length+' of '+allEvents.length+' events';
-            clearBtn.classList.toggle('visible',isFiltered());
-            if(!filtered.length){root.innerHTML='<div class="events-empty"><span class="skull">☠️</span><p>No shows match those filters.<br>Try broadening your search.</p></div>';return;}
-            var html='';
-            if(activeCity!=='all'||searchQuery){
-                filtered.sort(function(a,b){return parseLocalDate(a.date)-parseLocalDate(b.date);});
-                html='<div class="events-list">'+filtered.map(cardHTML).join('')+'</div>';
-            } else {
-                var byCiy={};CITY_ORDER.forEach(function(c){byCiy[c]=[];});
-                filtered.forEach(function(ev){if(byCiy[ev.city])byCiy[ev.city].push(ev);});
-                CITY_ORDER.forEach(function(city){
-                    var evs=byCiy[city];if(!evs.length)return;
-                    evs.sort(function(a,b){return parseLocalDate(a.date)-parseLocalDate(b.date);});
-                    html+='<div class="geo-section"><div class="geo-header"><div class="geo-title">'+(CITY_LABELS[city]||city)+'</div><span class="geo-count">'+evs.length+'</span><div class="geo-line"></div></div><div class="events-list">'+evs.map(cardHTML).join('')+'</div></div>';
-                });
-            }
-            root.innerHTML=html;
-            requestAnimationFrame(function(){
-                var cards=document.querySelectorAll('.event-card.anim-entry');
-                cards.forEach(function(c,i){setTimeout(function(){c.classList.add('visible');},i*50);});
-            });
-        }
-        function buildCityPills(cities){
-            var all=['all'].concat(CITY_ORDER.filter(function(c){return cities.has(c);}));
-            cityPills.innerHTML=all.map(function(c){return '<button class="pill'+(c===activeCity?' active':'')+'" data-city="'+c+'">'+(c==='all'?'All':(CITY_LABELS[c]||c))+'</button>';}).join('');
-            cityPills.querySelectorAll('.pill').forEach(function(btn){btn.addEventListener('click',function(){activeCity=btn.dataset.city;cityPills.querySelectorAll('.pill').forEach(function(b){b.classList.toggle('active',b.dataset.city===activeCity);});render();});});
-        }
-        function buildGenrePills(genres){
-            var sorted=['all'].concat(Array.from(genres).sort());
-            genrePills.innerHTML=sorted.map(function(g){return '<button class="pill'+(g===activeGenre?' active':'')+'" data-genre="'+g+'">'+(g==='all'?'All':g)+'</button>';}).join('');
-            genrePills.querySelectorAll('.pill').forEach(function(btn){btn.addEventListener('click',function(){activeGenre=btn.dataset.genre;genrePills.querySelectorAll('.pill').forEach(function(b){b.classList.toggle('active',b.dataset.genre===activeGenre);});render();});});
-        }
-        whenPills.querySelectorAll('.pill').forEach(function(btn){btn.addEventListener('click',function(){activeWhen=btn.dataset.when;whenPills.querySelectorAll('.pill').forEach(function(b){b.classList.toggle('active',b.dataset.when===activeWhen);});render();});});
-        var searchTimer;
-        searchEl.addEventListener('input',function(e){clearTimeout(searchTimer);searchTimer=setTimeout(function(){searchQuery=e.target.value.trim();render();},120);});
-        clearBtn.addEventListener('click',function(){activeCity='all';activeGenre='all';activeWhen='all';searchQuery='';searchEl.value='';cityPills.querySelectorAll('.pill').forEach(function(b){b.classList.toggle('active',b.dataset.city==='all');});genrePills.querySelectorAll('.pill').forEach(function(b){b.classList.toggle('active',b.dataset.genre==='all');});whenPills.querySelectorAll('.pill').forEach(function(b){b.classList.toggle('active',b.dataset.when==='all');});render();});
-        fetch('events.json').then(function(r){return r.json();}).then(function(data){
-            allEvents=data.sort(function(a,b){return parseLocalDate(a.date)-parseLocalDate(b.date);});
-            buildCityPills(new Set(data.map(function(e){return e.city;})));
-            buildGenrePills(new Set(data.map(function(e){return e.genre;}).filter(Boolean)));
-            render();
-        }).catch(function(){root.innerHTML='<div class="events-empty"><span class="skull">⚓</span><p>Couldn't load events. Try refreshing.</p></div>';});
-    })();
-    </script>
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"cf8e8fdf48e04f3580098a99d7e1c1ec"}'></script>
+    <script src="assets/events.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"cf8e8fdf48e04f3580098a99d7e1c1ec"}'></script>
 </body>
 </html>
