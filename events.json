@@ -1,32 +1,62 @@
 [
   {
-    "title": "Jazz Night at Rhythmix",
-    "date": "2026-07-11",
-    "time": "7:30 PM",
-    "venue": "Rhythmix Cultural Works",
-    "address": "2513 Blanding Ave, Alameda",
-    "description": "Live jazz with local Alameda musicians. Great vibes, all ages welcome, bring a blanket.",
-    "link": "https://rhythmix.org",
-    "tag": "live music"
+    "title": "Alameda's 4th of July Parade",
+    "date": "2026-07-04",
+    "time": "10:00 AM",
+    "venue": "Park Street",
+    "address": "Park St, Alameda",
+    "description": "The longest hometown parade in the nation — 3.3 miles down Park Street. Bands, floats, and the whole island shows up.",
+    "link": "https://downtownalameda.com/calendar/alamedas-4th-of-july-parade-2026/",
+    "tag": "free"
   },
   {
-    "title": "First Friday Art Walk",
-    "date": "2026-07-03",
+    "title": "Soul of Our Nation — Art Opening at Rhythmix",
+    "date": "2026-07-10",
     "time": "6:00 PM",
-    "venue": "Park Street Arts District",
-    "address": "Park St, Alameda",
-    "description": "Monthly art walk through Park Street galleries. Live music at several stops.",
-    "link": "",
+    "venue": "Rhythmix Cultural Works",
+    "address": "2513 Blanding Ave, Alameda",
+    "description": "Opening reception for a new exhibition exploring the soul of American identity. Live music, art, good people.",
+    "link": "https://rhythmix.org/events",
     "tag": "arts"
   },
   {
-    "title": "Alameda Summer Concert Series",
-    "date": "2026-07-18",
-    "time": "5:00 PM",
-    "venue": "Crab Cove",
-    "address": "1252 McKay Ave, Alameda",
-    "description": "Free outdoor concerts on the bay. Bring a chair and snacks.",
-    "link": "",
+    "title": "Rhythmix in the Parks: Sekhou Senegal",
+    "date": "2026-07-20",
+    "time": "TBD",
+    "venue": "Tillman Park",
+    "address": "Tillman Park, Alameda",
+    "description": "West African music and dance from Sekhou Senegal — twin brothers from a long line of griots. Bring chairs and blankets, all ages welcome.",
+    "link": "https://rhythmix.org/events",
     "tag": "free"
+  },
+  {
+    "title": "39th Art & Wine Faire — Day 1",
+    "date": "2026-07-25",
+    "time": "10:00 AM",
+    "venue": "Park Street Arts District",
+    "address": "Park St, Alameda",
+    "description": "200+ art and craft vendors, live music on three stages, craft beer and wine, festival food. One of the best street fairs in the East Bay.",
+    "link": "https://downtownalameda.com/artandwine/",
+    "tag": "live music"
+  },
+  {
+    "title": "39th Art & Wine Faire — Day 2",
+    "date": "2026-07-26",
+    "time": "10:00 AM",
+    "venue": "Park Street Arts District",
+    "address": "Park St, Alameda",
+    "description": "Day two of the big one. Three music stages, 200+ vendors, wine and craft beer all day on Park Street.",
+    "link": "https://downtownalameda.com/artandwine/",
+    "tag": "live music"
+  },
+  {
+    "title": "Pour Your HeART Out — Benefit for the Arts",
+    "date": "2026-08-01",
+    "time": "2:00 PM",
+    "venue": "Rhythmix Cultural Works",
+    "address": "2513 Blanding Ave, Alameda",
+    "description": "An afternoon fundraiser for local arts programming. Good cause, good vibes, good people.",
+    "link": "https://rhythmix.org/events",
+    "tag": "arts"
   }
 ]
