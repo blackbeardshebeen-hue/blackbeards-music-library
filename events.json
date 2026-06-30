@@ -3,21 +3,41 @@
     "title": "Alameda's 4th of July Parade",
     "date": "2026-07-04",
     "time": "10:00 AM",
-    "venue": "Park Street",
+    "venue": "Park Street, Alameda",
     "address": "Park St, Alameda",
-    "description": "The longest hometown parade in the nation — 3.3 miles down Park Street. Bands, floats, and the whole island shows up.",
+    "description": "The longest hometown parade in the nation — 3.3 miles down Park Street. Bands, floats, the whole island shows up.",
     "link": "https://downtownalameda.com/calendar/alamedas-4th-of-july-parade-2026/",
-    "tag": "free"
+    "tag": "free · alameda"
   },
   {
-    "title": "Soul of Our Nation — Art Opening at Rhythmix",
+    "title": "Marcus King Band",
+    "date": "2026-07-07",
+    "time": "8:00 PM",
+    "venue": "Fox Theater",
+    "address": "1807 Telegraph Ave, Oakland",
+    "description": "Darling Blue Tour Pt. 2. Marcus King's southern soul and blues rock in one of Oakland's most beautiful rooms.",
+    "link": "https://thefoxoakland.com/events/marcus-king-band-260707",
+    "tag": "oakland"
+  },
+  {
+    "title": "Soul of Our Nation — Opening Reception",
     "date": "2026-07-10",
     "time": "6:00 PM",
     "venue": "Rhythmix Cultural Works",
     "address": "2513 Blanding Ave, Alameda",
-    "description": "Opening reception for a new exhibition exploring the soul of American identity. Live music, art, good people.",
+    "description": "Opening reception for a new exhibition exploring American identity. Live music, art, good people.",
     "link": "https://rhythmix.org/events",
-    "tag": "arts"
+    "tag": "arts · alameda"
+  },
+  {
+    "title": "Widespread Panic",
+    "date": "2026-07-16",
+    "time": "8:00 PM",
+    "venue": "Fox Theater",
+    "address": "1807 Telegraph Ave, Oakland",
+    "description": "Three nights at the Fox. Widespread Panic doing what they do — long, loose, and loud. Jul 16–18.",
+    "link": "https://thefoxoakland.com/events/widespread-panic-260717",
+    "tag": "oakland"
   },
   {
     "title": "Rhythmix in the Parks: Sekhou Senegal",
@@ -25,38 +45,98 @@
     "time": "TBD",
     "venue": "Tillman Park",
     "address": "Tillman Park, Alameda",
-    "description": "West African music and dance from Sekhou Senegal — twin brothers from a long line of griots. Bring chairs and blankets, all ages welcome.",
+    "description": "West African music and dance from twin brothers from a long line of griots. Bring chairs and blankets, all ages welcome.",
     "link": "https://rhythmix.org/events",
-    "tag": "free"
+    "tag": "free · alameda"
   },
   {
-    "title": "39th Art & Wine Faire — Day 1",
+    "title": "39th Art & Wine Faire",
     "date": "2026-07-25",
     "time": "10:00 AM",
     "venue": "Park Street Arts District",
     "address": "Park St, Alameda",
-    "description": "200+ art and craft vendors, live music on three stages, craft beer and wine, festival food. One of the best street fairs in the East Bay.",
+    "description": "200+ vendors, live music on three stages, craft beer and wine. Two days (Jul 25–26). One of the best street fairs in the East Bay.",
     "link": "https://downtownalameda.com/artandwine/",
-    "tag": "live music"
+    "tag": "live music · alameda"
   },
   {
-    "title": "39th Art & Wine Faire — Day 2",
-    "date": "2026-07-26",
-    "time": "10:00 AM",
-    "venue": "Park Street Arts District",
-    "address": "Park St, Alameda",
-    "description": "Day two of the big one. Three music stages, 200+ vendors, wine and craft beer all day on Park Street.",
-    "link": "https://downtownalameda.com/artandwine/",
-    "tag": "live music"
+    "title": "The Woggles + Hot Laundry",
+    "date": "2026-07-31",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco",
+    "description": "Garage rock and punk at one of SF's best small venues. $15 at the door, $12 advance.",
+    "link": "https://bottomofthehill.com",
+    "tag": "san francisco"
   },
   {
-    "title": "Pour Your HeART Out — Benefit for the Arts",
+    "title": "Peter Rowan & Sam Grisman Project — Rex Foundation Benefit",
+    "date": "2026-08-01",
+    "time": "5:00 PM",
+    "venue": "Greek Theatre, UC Berkeley",
+    "address": "2001 Gayley Rd, Berkeley",
+    "description": "A benefit for the Rex Foundation performing music from Old & In The Way. Outdoor amphitheater, bring a layer.",
+    "link": "https://thegreekberkeley.com",
+    "tag": "berkeley"
+  },
+  {
+    "title": "Pour Your HeART Out — Arts Benefit",
     "date": "2026-08-01",
     "time": "2:00 PM",
     "venue": "Rhythmix Cultural Works",
     "address": "2513 Blanding Ave, Alameda",
-    "description": "An afternoon fundraiser for local arts programming. Good cause, good vibes, good people.",
+    "description": "Afternoon fundraiser for local arts programming. Good cause, good vibes.",
     "link": "https://rhythmix.org/events",
-    "tag": "arts"
+    "tag": "arts · alameda"
+  },
+  {
+    "title": "Widowspeak + Dead Gowns",
+    "date": "2026-08-04",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco",
+    "description": "Dreamy indie from Widowspeak with Dead Gowns opening. Perfect small-venue night.",
+    "link": "https://bottomofthehill.com",
+    "tag": "indie · san francisco"
+  },
+  {
+    "title": "Poppy",
+    "date": "2026-08-05",
+    "time": "8:00 PM",
+    "venue": "Fox Theater",
+    "address": "1807 Telegraph Ave, Oakland",
+    "description": "Genre-defying pop-meets-metal from one of the most interesting artists working right now.",
+    "link": "https://thefoxoakland.com/events/poppy-260805",
+    "tag": "oakland"
+  },
+  {
+    "title": "Lukas Nelson — Future Soul 2026 Tour",
+    "date": "2026-08-12",
+    "time": "6:00 PM",
+    "venue": "Greek Theatre, UC Berkeley",
+    "address": "2001 Gayley Rd, Berkeley",
+    "description": "Son of Willie, voice of his own. Lukas Nelson brings his country soul to the outdoor Greek.",
+    "link": "https://thegreekberkeley.com",
+    "tag": "berkeley"
+  },
+  {
+    "title": "PLOSIVS, Tijuana Panthers, Minus Numbers",
+    "date": "2026-08-14",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco",
+    "description": "Three-band punk and garage rock blowout. PLOSIVS features members of Rocket From the Crypt.",
+    "link": "https://bottomofthehill.com",
+    "tag": "punk · san francisco"
+  },
+  {
+    "title": "Bartees Strange — In Times of Dragons Tour",
+    "date": "2026-08-29",
+    "time": "8:00 PM",
+    "venue": "Greek Theatre, UC Berkeley",
+    "address": "2001 Gayley Rd, Berkeley",
+    "description": "Bartees Strange plays indie rock that sounds like nothing else. One of the best live acts going right now.",
+    "link": "https://thegreekberkeley.com",
+    "tag": "indie · berkeley"
   }
 ]
