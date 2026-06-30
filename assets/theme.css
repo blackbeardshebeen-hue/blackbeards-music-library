@@ -998,3 +998,90 @@ html.day .page-back-crumb a:hover {
   color: rgba(0,0,0,0.7);
   border-color: rgba(0,0,0,0.35);
 }
+
+/* Event action buttons */
+.event-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.event-action-btn {
+  font-size: 0.68em;
+  padding: 4px 11px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.event-action-btn:hover {
+  border-color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.05);
+}
+html.day .event-action-btn {
+  border-color: rgba(0,0,0,0.12);
+  color: rgba(0,0,0,0.4);
+}
+html.day .event-action-btn:hover {
+  border-color: rgba(0,0,0,0.28);
+  color: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.04);
+}
+.event-link-btn {
+  font-size: 0.68em;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.event-link-btn:hover { color: #fff; border-color: #fff; }
+html.day .event-link-btn { color: rgba(0,0,0,0.4); border-color: rgba(0,0,0,0.18); }
+html.day .event-link-btn:hover { color: #111; border-color: #111; }
+
+/* Calendar dropdown */
+.cal-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.cal-menu {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 100;
+  min-width: 160px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.cal-menu.open { display: block; }
+.cal-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.78em;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+.cal-menu a:hover {
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+}
+html.day .cal-menu {
+  background: #fff;
+  border-color: rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+html.day .cal-menu a { color: rgba(0,0,0,0.6); }
+html.day .cal-menu a:hover { background: rgba(0,0,0,0.04); color: #111; }
