@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ===================================================
-   BLACKBEARD'S LITTLE MUSIC LIBRARY — v2 theme
-   Palette: black · white · crimson (Jolly Roger)
+   BLACKBEARD'S LITTLE MUSIC LIBRARY â v2 theme
+   Palette: black Â· white Â· crimson (Jolly Roger)
    =================================================== */
 
 :root {
@@ -80,7 +80,7 @@ html.day {
 /* ===== Reset ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ===== Background — pure black ===== */
+/* ===== Background â pure black ===== */
 body {
     font-family: 'DM Sans', system-ui, sans-serif;
     background-color: #000000;
@@ -95,7 +95,7 @@ body {
 }
 html.day body { background-color: #f0e6e0; color: var(--ink); }
 
-/* ===== Large floating flag — fixed so it stays behind you as you scroll ===== */
+/* ===== Large floating flag â fixed so it stays behind you as you scroll ===== */
 .flag-bg {
     position: fixed; inset: 0;
     z-index: 0; pointer-events: none;
@@ -109,20 +109,20 @@ html.day body { background-color: #f0e6e0; color: var(--ink); }
 }
 html.day .flag-bg img { opacity: 0.06; mix-blend-mode: multiply; }
 
-/* ── Day mode text (hardcoded rgba whites need dark overrides) ── */
+/* ââ Day mode text (hardcoded rgba whites need dark overrides) ââ */
 html.day .subtitle    { color: rgba(60, 20, 20, 0.72); }
 html.day .welcome     { color: rgba(50, 15, 15, 0.65); }
 html.day .desc-line   { color: var(--ink-soft); }
 html.day h1 { text-shadow: none; }
 
-/* ── Day mode jolly roger: screen blend vanishes on light bg, use normal + rounded box ── */
+/* ââ Day mode jolly roger: screen blend vanishes on light bg, use normal + rounded box ââ */
 html.day .jolly-roger {
     mix-blend-mode: normal;
     border-radius: 14px;
     filter: drop-shadow(0 4px 16px rgba(0,0,0,0.25));
 }
 
-/* ── Day mode Captain's Pick ── */
+/* ââ Day mode Captain's Pick ââ */
 html.day .captains-pick {
     background: linear-gradient(135deg, rgba(160,16,32,0.1) 0%, rgba(255,242,240,0.88) 100%);
     border-color: rgba(160,16,32,0.2);
@@ -132,10 +132,10 @@ html.day .captains-pick .cp-label { color: #a01020; }
 html.day .captains-pick .cp-go { background: #a01020; }
 html.day .captains-pick .cp-go:hover { background: #c4182a; }
 
-/* ── Day mode header ── */
+/* ââ Day mode header ââ */
 html.day .header { border-bottom-color: rgba(160,16,32,0.18); }
 
-/* ── Day mode playlist cards ── */
+/* ââ Day mode playlist cards ââ */
 html.day .playlist-card {
     background: rgba(255,248,246,0.82);
     border-color: rgba(0,0,0,0.08);
@@ -148,20 +148,20 @@ html.day .playlist-card .share-btn {
     color: rgba(40,10,10,0.5);
 }
 
-/* ── Day mode embed page hero art ── */
+/* ââ Day mode embed page hero art ââ */
 html.day .hero-art { box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
 
-/* ── Day mode suggestion box ── */
+/* ââ Day mode suggestion box ââ */
 html.day .suggestion-box {
     background: rgba(255,248,246,0.82);
     border-color: rgba(0,0,0,0.07);
 }
 
-/* ── Day mode section title rules ── */
+/* ââ Day mode section title rules ââ */
 html.day .section-title::before,
 html.day .section-title::after { background: rgba(160,16,32,0.22); }
 
-/* ── Day mode nav drawer ── */
+/* ââ Day mode nav drawer ââ */
 html.day .nav-toggle {
     background: rgba(255,255,255,0.72);
     border-color: rgba(0,0,0,0.12);
@@ -207,13 +207,13 @@ html.day .nav-link.active {
 }
 html.day .nav-no-results { color: rgba(0,0,0,0.28); }
 
-/* ── Day mode toast ── */
+/* ââ Day mode toast ââ */
 html.day .toast { background: #200a0a; color: #fff; }
 
-/* ===== Scenery stripped — pure black background does the work ===== */
+/* ===== Scenery stripped â pure black background does the work ===== */
 .scenery, .moon, .seagull, .palm { display: none; }
 
-/* ===== Theme toggle — text labels, no emoji ===== */
+/* ===== Theme toggle â text labels, no emoji ===== */
 .theme-toggle {
     position: fixed; top: 16px; right: 16px; z-index: 100;
     height: 34px; padding: 0 14px;
@@ -232,7 +232,7 @@ html.day .toast { background: #200a0a; color: #fff; }
 html.day .theme-toggle { background: rgba(255,255,255,0.65); color: var(--ink-soft); border-color: rgba(0,0,0,0.12); }
 html.day .theme-toggle:hover { background: rgba(255,255,255,0.88); color: var(--ink-strong); }
 
-/* ===== Jolly Roger — Blackbeard's actual flag ===== */
+/* ===== Jolly Roger â Blackbeard's actual flag ===== */
 /* mix-blend-mode: screen dissolves the black flag background into the dark
    photo behind it, leaving just the white skeleton + red heart floating */
 .jolly-roger {
@@ -248,11 +248,11 @@ html.day .theme-toggle:hover { background: rgba(255,255,255,0.88); color: var(--
     50%       { transform: translateY(-10px); }
 }
 
-/* ===== Main container — frameless, content floats on photo ===== */
+/* ===== Main container â frameless, content floats on photo ===== */
 .container {
     max-width: 540px; margin: 0 auto;
     position: relative; z-index: 1;
-    /* No background, no border, no box — let the world show through */
+    /* No background, no border, no box â let the world show through */
     background: transparent;
     padding: 0 4px;
 }
@@ -328,7 +328,7 @@ h1 {
     background: var(--red-bright);
 }
 
-/* ===== Section title — centered with short rules either side ===== */
+/* ===== Section title â centered with short rules either side ===== */
 .section-title {
     font-size: 0.62em; letter-spacing: 3.5px; text-transform: uppercase;
     color: var(--accent); font-weight: 700; margin-bottom: 16px;
@@ -455,7 +455,7 @@ html.day .form-submit:hover { background: #c4182a; }
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.38) 100%);
 }
-/* Subtle diagonal highlight — makes gradients feel more textured */
+/* Subtle diagonal highlight â makes gradients feel more textured */
 .playlist-card .art::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
     background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%, rgba(0,0,0,0.15) 100%);
@@ -759,7 +759,7 @@ html.day #playlist-switcher { background: rgba(255,248,248,0.88); border-top-col
     font-style: italic; display: none;
 }
 
-/* ===== Responsive — mobile ===== */
+/* ===== Responsive â mobile ===== */
 @media (max-width: 480px) {
     body { padding: 20px 12px 48px; }
 
@@ -771,35 +771,35 @@ html.day #playlist-switcher { background: rgba(255,248,248,0.88); border-top-col
 
     .header { margin-bottom: 16px; padding-bottom: 14px; }
 
-    /* Captain's pick — stack vertically */
+    /* Captain's pick â stack vertically */
     .captains-pick { padding: 14px; }
     .captains-pick .cp-body { flex-direction: column; gap: 10px; }
     .captains-pick .cp-text { text-align: center; }
     .captains-pick .cp-art { width: 52px; height: 52px; }
 
-    /* Playlist grid — slightly narrower cards, larger touch targets */
+    /* Playlist grid â slightly narrower cards, larger touch targets */
     .playlist-card { width: 132px; }
     .playlist-card .art { height: 82px; }
     .playlist-card .info { padding: 8px 10px 10px; }
     .playlist-card .title-row { font-size: 0.84em; }
     .playlist-card .desc { font-size: 0.68em; }
 
-    /* Bottom nav — more compact */
+    /* Bottom nav â more compact */
     #playlist-switcher { padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); }
     .switcher-pill { padding: 5px 8px; min-width: 42px; }
     .pill-label { font-size: 0.52em; }
 
-    /* Form — stack name/email fields */
+    /* Form â stack name/email fields */
     .form-row { flex-direction: column; gap: 8px; }
     .form-row .form-input { min-width: unset; }
 
-    /* Hamburger — slightly smaller */
+    /* Hamburger â slightly smaller */
     .nav-toggle { width: 40px; height: 40px; top: 12px; left: 12px; }
 
-    /* Theme toggle — tuck in tighter */
+    /* Theme toggle â tuck in tighter */
     .theme-toggle { top: 12px; right: 12px; height: 30px; padding: 0 12px; font-size: 0.65em; }
 
-    /* Side nav — full width on very small screens */
+    /* Side nav â full width on very small screens */
     .side-nav { width: min(240px, 85vw); }
 
     /* Suggestion box */
@@ -810,7 +810,7 @@ html.day #playlist-switcher { background: rgba(255,248,248,0.88); border-top-col
     .back-btn, .share-link-btn { padding: 9px 16px; font-size: 0.83em; }
 }
 
-/* Slightly wider mobile — 481–640px */
+/* Slightly wider mobile â 481â640px */
 @media (min-width: 481px) and (max-width: 640px) {
     .playlist-card { width: 142px; }
     h1 { font-size: 1.85em; }
@@ -867,7 +867,7 @@ html.day .surprise-btn { background: var(--red); }
 html.day .surprise-btn:hover { background: var(--red-bright); }
 
 /* ===================================================
-   PLAYLIST CARD — SWAY ON HOVER
+   PLAYLIST CARD â SWAY ON HOVER
    =================================================== */
 .playlist-card {
     transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s ease !important;
@@ -935,7 +935,7 @@ html.day .surprise-btn:hover { background: var(--red-bright); }
     padding-left: 0;
 }
 .egg-manifesto li::before {
-    content: '⚓ ';
+    content: 'â ';
     color: var(--red-bright);
 }
 .egg-close {
@@ -1085,3 +1085,66 @@ html.day .cal-menu {
 }
 html.day .cal-menu a { color: rgba(0,0,0,0.6); }
 html.day .cal-menu a:hover { background: rgba(0,0,0,0.04); color: #111; }
+
+
+/* ═══════════════════════════════════════════
+   Events Page Visual Redesign
+   ═══════════════════════════════════════════ */
+
+/* Left-align all card content */
+.event-card { text-align: left; }
+.event-info { text-align: left; }
+
+/* Allow titles to wrap naturally */
+.event-title { white-space: normal; font-size: 1.2em; line-height: 1.3; }
+
+/* Wider date column, bigger day number */
+.event-card { grid-template-columns: 66px 1fr auto; gap: 0 18px; }
+.event-day  { font-size: 2.6em; line-height: 1; }
+
+/* Description: slightly more visible */
+.event-desc { color: rgba(255,255,255,0.52); line-height: 1.5; margin-top: 4px; }
+html.day .event-desc { color: rgba(0,0,0,0.48); }
+
+/* City-tinted left border accents on cards */
+.event-card[data-city="alameda"]       { border-left: 3px solid #60a5fa; }
+.event-card[data-city="oakland"]       { border-left: 3px solid #fb923c; }
+.event-card[data-city="berkeley"]      { border-left: 3px solid #fbbf24; }
+.event-card[data-city="san francisco"] { border-left: 3px solid #c4182a; }
+
+/* City-colored geo-section titles */
+.geo-section[data-city="alameda"]       .geo-title { color: #60a5fa; }
+.geo-section[data-city="oakland"]       .geo-title { color: #fb923c; }
+.geo-section[data-city="berkeley"]      .geo-title { color: #fbbf24; }
+.geo-section[data-city="san francisco"] .geo-title { color: #c4182a; }
+
+/* Upgraded geo header: heavier underline, no trailing line */
+.geo-header  { padding: 14px 8px 14px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.09); }
+.geo-title   { font-size: 1.4em; letter-spacing: 1px; }
+.geo-count   { font-size: 0.65em; padding: 3px 10px; }
+.geo-line    { display: none; }
+
+/* Better hover glow */
+.event-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+
+/* Genre badge: uppercase, tighter */
+.event-badge { font-size: 0.58em; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; align-self: start; margin-top: 2px; }
+
+/* Action buttons: slightly more visible */
+.event-action-btn { font-size: 0.72em; padding: 5px 13px; color: rgba(255,255,255,0.55); }
+.event-link-btn   { font-size: 0.72em; color: rgba(255,255,255,0.5); }
+
+/* event-right: top-aligned */
+.event-right { align-self: start; }
+
+/* Day mode city overrides */
+html.day .geo-section[data-city="alameda"]       .geo-title { color: #2563eb; }
+html.day .geo-section[data-city="oakland"]       .geo-title { color: #ea580c; }
+html.day .geo-section[data-city="berkeley"]      .geo-title { color: #d97706; }
+html.day .geo-section[data-city="san francisco"] .geo-title { color: var(--red); }
+html.day .event-card[data-city="alameda"]       { border-left-color: #3b82f6; }
+html.day .event-card[data-city="oakland"]       { border-left-color: #f97316; }
+html.day .event-card[data-city="berkeley"]      { border-left-color: #f59e0b; }
+html.day .event-card[data-city="san francisco"] { border-left-color: var(--red); }
+html.day .event-action-btn { color: rgba(0,0,0,0.5); }
+html.day .event-link-btn   { color: rgba(0,0,0,0.45); }
