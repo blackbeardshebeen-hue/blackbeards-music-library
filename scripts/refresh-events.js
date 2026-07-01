@@ -10,30 +10,32 @@ function today() { return new Date().toISOString().slice(0, 10); }
 function slug(t, d) { return (t + '|' + d).toLowerCase().trim(); }
 function clean(s) { return (s || '').replace(/\s+/g, ' ').trim(); }
 
-function isBandName(str) {
-  if (!str || str.length < 3 || str.length > 120) return false;
-  // Reject if it contains show-detail patterns
-  if (/\d+:\d+\s*[ap]m|doors|advance|at the door|ages|\$\d|••+|sold out|tickets|presented by|^(mon|tue|wed|thu|fri|sat|sun|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/i.test(str)) return false;
-  // Must have at least 2 real word chars
-  if (!/[a-z]{2}/i.test(str)) return false;
-  return true;
-}
-
 function parseDate(str) {
   if (!str) return null;
   str = clean(str);
   const yr = new Date().getFullYear();
+  // Already ISO
   if (/^\d{4}-\d{2}-\d{2}$/.test(str)) return str;
-  const m1 = str.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2}),?\s*(\d{4})?/i);
-  if (m1) {
-    const mo = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12}[m1[1].toLowerCase().slice(0,3)];
-    const dy = parseInt(m1[2]);
-    const y = m1[3] ? parseInt(m1[3]) : yr;
+  // "Monday July 1 2026" or "July 1, 2026"
+  const m = str.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2}),?\s*(\d{4})?/i);
+  if (m) {
+    const mo = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12}[m[1].toLowerCase().slice(0,3)];
+    const dy = parseInt(m[2]);
+    const y = m[3] ? parseInt(m[3]) : yr;
     if (mo && dy) return y+'-'+String(mo).padStart(2,'0')+'-'+String(dy).padStart(2,'0');
   }
-  const m2 = str.match(/(\d{4})-(\d{2})-(\d{2})/);
-  if (m2) return m2[0];
   return null;
+}
+
+function isBogus(name) {
+  if (!name || name.length < 2) return true;
+  // Presenter/intro text ends with "..." or "featuring"
+  if (/\.\.\.\s*$|^featuring\s*$|^featuring$/i.test(name)) return true;
+  // Contains newlines (multi-line = merged promo text)
+  if (/\n/.test(name)) return true;
+  // Only punctuation / numbers / whitespace
+  if (!/[a-zA-Z]{2}/.test(name)) return true;
+  return false;
 }
 
 async function safeFetch(url) {
@@ -50,45 +52,38 @@ async function scrapeBottomOfTheHill() {
   const $ = cheerio.load(html);
   const events = [];
   const cutoff = today();
-  let currentDate = null;
 
-  // Walk all elements in order, tracking the current date context
-  $('*').each((i, el) => {
-    if (el.children && el.children.length > 1) return; // skip containers, only leaf-ish nodes
-    const text = clean($(el).text());
-    if (!text || text.length < 2) return;
+  $('p').each((i, para) => {
+    // Extract date from the paragraph's full text
+    const paraText = clean($(para).text());
+    const dateStr = parseDate(paraText);
+    if (!dateStr || dateStr < cutoff) return;
 
-    // Check if this is a date line
-    const dateMatch = text.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}/i);
-    if (dateMatch) {
-      const d = parseDate(text);
-      if (d && d >= cutoff) currentDate = d;
-      else if (d) currentDate = null;
-      return;
-    }
+    // Show URL: link matching YYYYMMDD.html pattern
+    let showLink = 'https://www.bottomofthehill.com/calendar.html';
+    $(para).find('a').each((j, a) => {
+      const href = $(a).attr('href') || '';
+      if (/\d{8}\.html/.test(href)) showLink = href;
+    });
 
-    if (!currentDate) return;
-
-    // Check if text looks like a band name (from strong/b/a tags specifically)
-    const tag = (el.name || '').toLowerCase();
-    if (!['strong','b','a','span','font'].includes(tag)) return;
-
-    const title = clean($(el).text());
-    if (!isBandName(title)) return;
-
-    const link = tag === 'a' ? $(el).attr('href') : $(el).closest('p,div,tr').find('a').first().attr('href');
-    const fullLink = link ? (link.startsWith('http') ? link : 'https://www.bottomofthehill.com/' + link) : 'https://www.bottomofthehill.com/calendar.html';
-
-    events.push({
-      title: title.slice(0, 100),
-      date: currentDate,
-      time: '9:00 PM',
-      venue: 'Bottom of the Hill',
-      address: '1233 17th St, San Francisco, CA 94107',
-      city: 'san francisco',
-      genre: 'live music',
-      description: title + ' live at Bottom of the Hill, SF.',
-      link: fullLink
+    // Band names are in <big> tags
+    $(para).find('big').each((j, big) => {
+      const name = clean($(big).text());
+      if (isBogus(name)) return;
+      // Genre hint from next sibling span
+      const nextSpan = $(big).next('span');
+      const genre = nextSpan.length ? clean(nextSpan.text()) : 'live music';
+      events.push({
+        title: name.slice(0, 100),
+        date: dateStr,
+        time: '9:00 PM',
+        venue: 'Bottom of the Hill',
+        address: '1233 17th St, San Francisco, CA 94107',
+        city: 'san francisco',
+        genre: genre.slice(0, 50) || 'live music',
+        description: name + ' live at Bottom of the Hill, SF.',
+        link: showLink.startsWith('http') ? showLink : 'https://www.bottomofthehill.com/' + showLink
+      });
     });
   });
 
@@ -174,7 +169,7 @@ async function main() {
   let added = 0;
 
   for (const ev of scraped) {
-    if (!ev.date || ev.date < cutoff || !ev.title || ev.title.length < 4) continue;
+    if (!ev.date || ev.date < cutoff || !ev.title || ev.title.length < 2) continue;
     const k = slug(ev.title, ev.date);
     if (!existingSlugs.has(k)) {
       kept.push(ev); existingSlugs.add(k); added++;
