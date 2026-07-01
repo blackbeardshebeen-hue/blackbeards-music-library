@@ -1,16 +1,5 @@
 [
   {
-    "title": "4th of July Parade & Celebration",
-    "date": "2026-07-04",
-    "time": "10:00 AM",
-    "venue": "Lincoln Ave",
-    "address": "Lincoln Ave, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "free",
-    "description": "Alameda's beloved 4th of July Parade — one of the largest and oldest in the Bay Area. Free and family-friendly.",
-    "link": "https://www.alamedainfo.com/4th-of-July.html"
-  },
-  {
     "title": "Oakland First Fridays",
     "date": "2026-07-03",
     "time": "5:00 PM",
@@ -22,6 +11,17 @@
     "link": "https://www.oaklandfirstfridays.org"
   },
   {
+    "title": "4th of July Parade & Celebration",
+    "date": "2026-07-04",
+    "time": "10:00 AM",
+    "venue": "Lincoln Ave",
+    "address": "Lincoln Ave, Alameda, CA 94501",
+    "city": "alameda",
+    "genre": "free",
+    "description": "Alameda's beloved 4th of July Parade — one of the largest and oldest in the Bay Area. Free and family-friendly.",
+    "link": "https://www.alamedainfo.com/4th-of-July.html"
+  },
+  {
     "title": "Stern Grove Festival",
     "date": "2026-07-05",
     "time": "2:00 PM",
@@ -31,28 +31,6 @@
     "genre": "free",
     "description": "Free outdoor concert series in a beautiful eucalyptus grove. World-class performers every Sunday.",
     "link": "https://www.sterngrove.org"
-  },
-  {
-    "title": "Berkeley World Music Festival",
-    "date": "2026-07-11",
-    "time": "12:00 PM",
-    "venue": "Civic Center Park",
-    "address": "2180 Milvia St, Berkeley, CA 94704",
-    "city": "berkeley",
-    "genre": "world",
-    "description": "A day of free world music performances featuring artists from Africa, Latin America, Asia, and beyond.",
-    "link": "https://www.cityofberkeley.info"
-  },
-  {
-    "title": "Alameda Summer Concert Series",
-    "date": "2026-07-12",
-    "time": "5:00 PM",
-    "venue": "Alameda Point Antiques Faire",
-    "address": "2900 Navy Way, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "free",
-    "description": "Free outdoor concert at the Alameda Point Antiques Faire. Bring a blanket and enjoy live music by the bay.",
-    "link": "https://www.alamedapointantiquesfaire.com"
   },
   {
     "title": "Freight & Salvage — Old-Time Jam",
@@ -75,6 +53,28 @@
     "genre": "world",
     "description": "Vibrant queer Latinx dance party with live DJs and community vibes at El Rio.",
     "link": "https://www.elriosf.com"
+  },
+  {
+    "title": "Berkeley World Music Festival",
+    "date": "2026-07-11",
+    "time": "12:00 PM",
+    "venue": "Civic Center Park",
+    "address": "2180 Milvia St, Berkeley, CA 94704",
+    "city": "berkeley",
+    "genre": "world",
+    "description": "A day of free world music performances featuring artists from Africa, Latin America, Asia, and beyond.",
+    "link": "https://www.cityofberkeley.info"
+  },
+  {
+    "title": "Alameda Summer Concert Series",
+    "date": "2026-07-12",
+    "time": "5:00 PM",
+    "venue": "Alameda Point Antiques Faire",
+    "address": "2900 Navy Way, Alameda, CA 94501",
+    "city": "alameda",
+    "genre": "free",
+    "description": "Free outdoor concert at the Alameda Point Antiques Faire. Bring a blanket and enjoy live music by the bay.",
+    "link": "https://www.alamedapointantiquesfaire.com"
   },
   {
     "title": "Yoshis Jazz Showcase — Late Night",
