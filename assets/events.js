@@ -65,9 +65,9 @@ function shareEvent(ev){
     navigator.share({title:ev.title,text:text,url:url}).catch(function(){});
   } else {
     navigator.clipboard.writeText(text+' '+url).then(function(){
-      var btn=document.querySelector('[data-share="'+ev.title.replace(/"/g,'')+'"]');
+      var btn=document.querySelector('[data-sharetitle="'+CSS.escape(ev.title)+'"]');
       if(btn){var orig=btn.textContent;btn.textContent='Copied!';setTimeout(function(){btn.textContent=orig;},1800);}
-    });
+    }).catch(function(){});
   }
 }
 
@@ -78,6 +78,7 @@ function cardHTML(ev){
   var meta=[ev.time,ev.venue].filter(Boolean).join(' · ');
   var badge=ev.genre?'<span class="event-badge">'+ev.genre+'</span>':'';
   var infoLink=ev.link?'<a class="event-link-btn" href="'+ev.link+'" target="_blank" rel="noopener">Info ↗</a>':'';
+  var safeTitle=ev.title.replace(/"/g,'&quot;');
   var calDropdown=!isPast?
     '<div class="cal-dropdown">'+
       '<button class="event-action-btn cal-trigger" aria-label="Add to calendar">📅 Save</button>'+
@@ -86,8 +87,8 @@ function cardHTML(ev){
         '<a href="#" class="ics-download" data-title="'+encodeURIComponent(ev.title)+'">Apple / iCal</a>'+
       '</div>'+
     '</div>':'';
-  var shareBtn='<button class="event-action-btn" data-share="'+ev.title.replace(/"/g,'&quot;')+'" onclick="window.__shareEv&&window.__shareEv(''+ev.title.replace(/'/g,"\'")+'')">🔗 Share</button>';
-  return '<div class="event-card anim-entry'+(isPast?' past'  :'')+'" data-evtitle="'+ev.title.replace(/"/g,'&quot;')+'">'+
+  var shareBtn='<button class="event-action-btn share-btn" data-sharetitle="'+safeTitle+'">🔗 Share</button>';
+  return '<div class="event-card anim-entry'+(isPast?' past':'')+'" data-evtitle="'+safeTitle+'">'+
     '<div class="event-date-block">'+
       '<div class="event-month">'+MONTHS[d.getMonth()]+'</div>'+
       '<div class="event-day">'+d.getDate()+'</div>'+
@@ -103,6 +104,46 @@ function cardHTML(ev){
   '</div>';
 }
 
+function wireCards(){
+  root.querySelectorAll('.ics-download').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var title=decodeURIComponent(a.dataset.title);
+      var ev=allEvents.find(function(x){return x.title===title;});
+      if(!ev)return;
+      var blob=new Blob([makeICS(ev)],{type:'text/calendar'});
+      var url=URL.createObjectURL(blob);
+      var tmp=document.createElement('a');
+      tmp.href=url;tmp.download=title.replace(/[^a-z0-9]/gi,'-').toLowerCase()+'.ics';
+      tmp.click();URL.revokeObjectURL(url);
+    });
+  });
+  root.querySelectorAll('.cal-trigger').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var menu=btn.nextElementSibling;
+      var open=menu.classList.contains('open');
+      document.querySelectorAll('.cal-menu.open').forEach(function(m){m.classList.remove('open');});
+      if(!open)menu.classList.add('open');
+    });
+  });
+  root.querySelectorAll('.share-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var title=btn.dataset.sharetitle;
+      var ev=allEvents.find(function(x){return x.title===title;});
+      if(ev)shareEvent(ev);
+    });
+  });
+  document.addEventListener('click',function(){
+    document.querySelectorAll('.cal-menu.open').forEach(function(m){m.classList.remove('open');});
+  },{once:false});
+  requestAnimationFrame(function(){
+    root.querySelectorAll('.event-card.anim-entry').forEach(function(c,i){
+      setTimeout(function(){c.classList.add('visible');},i*40);
+    });
+  });
+}
+
 function render(){
   var filtered=filterEvents();
   countEl.textContent=filtered.length===allEvents.length?filtered.length+' events':filtered.length+' of '+allEvents.length+' events';
@@ -116,11 +157,11 @@ function render(){
     filtered.sort(function(a,b){return parseLocalDate(a.date)-parseLocalDate(b.date);});
     html='<div class="events-list">'+filtered.map(cardHTML).join('')+'</div>';
   } else {
-    var byCiy={};
-    CITY_ORDER.forEach(function(c){byCiy[c]=[];});
-    filtered.forEach(function(ev){if(byCiy[ev.city])byCiy[ev.city].push(ev);});
+    var byCity={};
+    CITY_ORDER.forEach(function(c){byCity[c]=[];});
+    filtered.forEach(function(ev){if(byCity[ev.city])byCity[ev.city].push(ev);});
     CITY_ORDER.forEach(function(city){
-      var evs=byCiy[city];if(!evs.length)return;
+      var evs=byCity[city];if(!evs.length)return;
       evs.sort(function(a,b){return parseLocalDate(a.date)-parseLocalDate(b.date);});
       html+='<div class="geo-section">'+
         '<div class="geo-header">'+
@@ -133,47 +174,7 @@ function render(){
     });
   }
   root.innerHTML=html;
-
-  // Wire up ICS downloads and share buttons
-  root.querySelectorAll('.ics-download').forEach(function(a){
-    a.addEventListener('click',function(e){
-      e.preventDefault();
-      var title=decodeURIComponent(a.dataset.title);
-      var ev=allEvents.find(function(x){return x.title===title;});
-      if(!ev)return;
-      var ics=makeICS(ev);
-      var blob=new Blob([ics],{type:'text/calendar'});
-      var url=URL.createObjectURL(blob);
-      var tmp=document.createElement('a');
-      tmp.href=url;tmp.download=title.replace(/[^a-z0-9]/gi,'-').toLowerCase()+'.ics';
-      tmp.click();URL.revokeObjectURL(url);
-    });
-  });
-
-  // Cal dropdown toggles
-  root.querySelectorAll('.cal-trigger').forEach(function(btn){
-    btn.addEventListener('click',function(e){
-      e.stopPropagation();
-      var menu=btn.nextElementSibling;
-      var open=menu.classList.contains('open');
-      document.querySelectorAll('.cal-menu.open').forEach(function(m){m.classList.remove('open');});
-      if(!open)menu.classList.add('open');
-    });
-  });
-  document.addEventListener('click',function(){
-    document.querySelectorAll('.cal-menu.open').forEach(function(m){m.classList.remove('open');});
-  });
-
-  // Share wiring
-  window.__shareEv=function(title){
-    var ev=allEvents.find(function(x){return x.title===title;});
-    if(ev)shareEvent(ev);
-  };
-
-  requestAnimationFrame(function(){
-    var cards=document.querySelectorAll('.event-card.anim-entry');
-    cards.forEach(function(c,i){setTimeout(function(){c.classList.add('visible');},i*50);});
-  });
+  wireCards();
 }
 
 function buildCityPills(cities){
