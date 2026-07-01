@@ -1,0 +1,27 @@
+name: Refresh Bay Area Events
+
+on:
+  schedule:
+    - cron: '0 16 * * 1'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm install node-fetch@2 cheerio
+      - name: Run scraper
+        run: node scripts/refresh-events.js
+      - name: Commit if changed
+        run: |
+          git config user.name "Blackbeard Bot"
+          git config user.email "bot@blackbeards.dev"
+          git add events.json
+          git diff --staged --quiet || (git commit -m "chore: auto-refresh Bay Area events [skip ci]" && git push)
