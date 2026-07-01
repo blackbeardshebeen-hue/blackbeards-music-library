@@ -13,15 +13,12 @@ function clean(s) { return (s || '').replace(/\s+/g, ' ').trim(); }
 function parseDate(str) {
   if (!str) return null;
   str = clean(str);
-  const yr = new Date().getFullYear();
-  // Already ISO
   if (/^\d{4}-\d{2}-\d{2}$/.test(str)) return str;
-  // "Monday July 1 2026" or "July 1, 2026"
   const m = str.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2}),?\s*(\d{4})?/i);
   if (m) {
     const mo = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12}[m[1].toLowerCase().slice(0,3)];
     const dy = parseInt(m[2]);
-    const y = m[3] ? parseInt(m[3]) : yr;
+    const y = m[3] ? parseInt(m[3]) : new Date().getFullYear();
     if (mo && dy) return y+'-'+String(mo).padStart(2,'0')+'-'+String(dy).padStart(2,'0');
   }
   return null;
@@ -29,18 +26,27 @@ function parseDate(str) {
 
 function isBogus(name) {
   if (!name || name.length < 2) return true;
-  // Presenter/intro text ends with "..." or "featuring"
-  if (/\.\.\.\s*$|^featuring\s*$|^featuring$/i.test(name)) return true;
-  // Contains newlines (multi-line = merged promo text)
+  // Presenter/promo text
+  if (/\.\.\.\s*$/.test(name)) return true;
+  // Parenthetical descriptions like "(tribute to KISS)"
+  if (/^\(/.test(name)) return true;
+  // Clarification text like "not the Canadian indie pop band..."
+  if (/^(not the|performing |featuring$|^featuring\b)/i.test(name)) return true;
+  // Contains newlines (multi-line = merged text)
   if (/\n/.test(name)) return true;
   // Only punctuation / numbers / whitespace
   if (!/[a-zA-Z]{2}/.test(name)) return true;
+  // Very long = description, not a name
+  if (name.length > 80) return true;
   return false;
 }
 
 async function safeFetch(url) {
   try {
-    const r = await fetch(url, { headers: {'User-Agent':'Mozilla/5.0'}, timeout: 12000 });
+    const r = await fetch(url, {
+      headers: {'User-Agent':'Mozilla/5.0'},
+      timeout: 12000
+    });
     return r.ok ? await r.text() : null;
   } catch(e) { console.warn('Fetch failed:', url, e.message); return null; }
 }
@@ -54,45 +60,50 @@ async function scrapeBottomOfTheHill() {
   const cutoff = today();
 
   $('p').each((i, para) => {
-    // Extract date from the paragraph's full text
-    const paraText = clean($(para).text());
-    const dateStr = parseDate(paraText);
+    const dateStr = parseDate(clean($(para).text()));
     if (!dateStr || dateStr < cutoff) return;
 
-    // Show URL: link matching YYYYMMDD.html pattern
+    // Show URL from date-based link
     let showLink = 'https://www.bottomofthehill.com/calendar.html';
     $(para).find('a').each((j, a) => {
       const href = $(a).attr('href') || '';
       if (/\d{8}\.html/.test(href)) showLink = href;
     });
 
-    // Band names are in <big> tags
+    // Collect all valid band names from <big> tags
+    const bands = [];
     $(para).find('big').each((j, big) => {
       const name = clean($(big).text());
-      if (isBogus(name)) return;
-      // Genre hint from next sibling span
-      const nextSpan = $(big).next('span');
-      const genre = nextSpan.length ? clean(nextSpan.text()) : 'live music';
-      events.push({
-        title: name.slice(0, 100),
-        date: dateStr,
-        time: '9:00 PM',
-        venue: 'Bottom of the Hill',
-        address: '1233 17th St, San Francisco, CA 94107',
-        city: 'san francisco',
-        genre: genre.slice(0, 50) || 'live music',
-        description: name + ' live at Bottom of the Hill, SF.',
-        link: showLink.startsWith('http') ? showLink : 'https://www.bottomofthehill.com/' + showLink
-      });
+      if (!isBogus(name)) bands.push(name);
+    });
+
+    if (bands.length === 0) return;
+
+    // Headliner = first valid band; rest are support acts
+    const headliner = bands[0];
+    const support = bands.slice(1);
+    const desc = support.length > 0
+      ? headliner + ' w/ ' + support.join(', ') + ' — live at Bottom of the Hill, SF.'
+      : headliner + ' live at Bottom of the Hill, SF.';
+
+    events.push({
+      title: headliner.slice(0, 100),
+      date: dateStr,
+      time: '9:00 PM',
+      venue: 'Bottom of the Hill',
+      address: '1233 17th St, San Francisco, CA 94107',
+      city: 'san francisco',
+      genre: 'live music',
+      description: desc.slice(0, 250),
+      link: showLink.startsWith('http') ? showLink : 'https://www.bottomofthehill.com/' + showLink
     });
   });
 
-  // Dedup within batch
+  // Dedup by date (one entry per night)
   const seen = new Set();
   const deduped = events.filter(e => {
-    const k = slug(e.title, e.date);
-    if (seen.has(k)) return false;
-    seen.add(k); return true;
+    if (seen.has(e.date)) return false;
+    seen.add(e.date); return true;
   });
   console.log('BoTH found:', deduped.length);
   return deduped;
