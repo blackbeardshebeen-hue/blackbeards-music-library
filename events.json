@@ -1,14 +1,25 @@
 [
   {
-    "title": "4th of July Parade & Celebration",
-    "date": "2026-07-04",
-    "time": "10:00 AM",
-    "venue": "Lincoln Ave",
-    "address": "Lincoln Ave, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "free",
-    "description": "Alameda's beloved 4th of July Parade — one of the largest and oldest in the Bay Area. Free and family-friendly.",
-    "link": "https://www.alamedainfo.com/4th-of-July.html"
+    "title": "Black Furies",
+    "date": "2026-07-01",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Black Furies w/ Party Force, Class of '77 — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260701.html"
+  },
+  {
+    "title": "Atomic Tide",
+    "date": "2026-07-02",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Atomic Tide w/ Cut-Rate Druggist, Lethal Limits — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260702.html"
   },
   {
     "title": "Oakland First Fridays",
@@ -22,6 +33,28 @@
     "link": "https://www.oaklandfirstfridays.org"
   },
   {
+    "title": "The Vesuvians",
+    "date": "2026-07-03",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Vesuvians w/ Karina Denike, This Train Don't Stop, Tectonics, TheSelecterDJKirk — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260703.html"
+  },
+  {
+    "title": "4th of July Parade & Celebration",
+    "date": "2026-07-04",
+    "time": "10:00 AM",
+    "venue": "Lincoln Ave",
+    "address": "Lincoln Ave, Alameda, CA 94501",
+    "city": "alameda",
+    "genre": "free",
+    "description": "Alameda's beloved 4th of July Parade — one of the largest and oldest in the Bay Area. Free and family-friendly.",
+    "link": "https://www.alamedainfo.com/4th-of-July.html"
+  },
+  {
     "title": "Stern Grove Festival",
     "date": "2026-07-05",
     "time": "2:00 PM",
@@ -33,26 +66,15 @@
     "link": "https://www.sterngrove.org"
   },
   {
-    "title": "Berkeley World Music Festival",
-    "date": "2026-07-11",
-    "time": "12:00 PM",
-    "venue": "Civic Center Park",
-    "address": "2180 Milvia St, Berkeley, CA 94704",
-    "city": "berkeley",
-    "genre": "world",
-    "description": "A day of free world music performances featuring artists from Africa, Latin America, Asia, and beyond.",
-    "link": "https://www.cityofberkeley.info"
-  },
-  {
-    "title": "Alameda Summer Concert Series",
-    "date": "2026-07-12",
-    "time": "5:00 PM",
-    "venue": "Alameda Point Antiques Faire",
-    "address": "2900 Navy Way, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "free",
-    "description": "Free outdoor concert at the Alameda Point Antiques Faire. Bring a blanket and enjoy live music by the bay.",
-    "link": "https://www.alamedapointantiquesfaire.com"
+    "title": "Destroyer",
+    "date": "2026-07-05",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Destroyer w/ Modern Monsters, D�msurf — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260705.html"
   },
   {
     "title": "Freight & Salvage — Old-Time Jam",
@@ -66,6 +88,17 @@
     "link": "https://www.thefreight.org"
   },
   {
+    "title": "Ted Leo and the Pharmacists",
+    "date": "2026-07-09",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Ted Leo and the Pharmacists w/ Rip Room — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260709.html"
+  },
+  {
     "title": "El Rio Queer Latinx Dance Night",
     "date": "2026-07-10",
     "time": "9:00 PM",
@@ -75,6 +108,72 @@
     "genre": "world",
     "description": "Vibrant queer Latinx dance party with live DJs and community vibes at El Rio.",
     "link": "https://www.elriosf.com"
+  },
+  {
+    "title": "Ted Leo and the Pharmacists",
+    "date": "2026-07-10",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Ted Leo and the Pharmacists w/ Pork Belly — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260710.html"
+  },
+  {
+    "title": "Berkeley World Music Festival",
+    "date": "2026-07-11",
+    "time": "12:00 PM",
+    "venue": "Civic Center Park",
+    "address": "2180 Milvia St, Berkeley, CA 94704",
+    "city": "berkeley",
+    "genre": "world",
+    "description": "A day of free world music performances featuring artists from Africa, Latin America, Asia, and beyond.",
+    "link": "https://www.cityofberkeley.info"
+  },
+  {
+    "title": "Ted Leo and the Pharmacists",
+    "date": "2026-07-11",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Ted Leo and the Pharmacists w/ Local Bylaws — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260711.html"
+  },
+  {
+    "title": "Alameda Summer Concert Series",
+    "date": "2026-07-12",
+    "time": "5:00 PM",
+    "venue": "Alameda Point Antiques Faire",
+    "address": "2900 Navy Way, Alameda, CA 94501",
+    "city": "alameda",
+    "genre": "free",
+    "description": "Free outdoor concert at the Alameda Point Antiques Faire. Bring a blanket and enjoy live music by the bay.",
+    "link": "https://www.alamedapointantiquesfaire.com"
+  },
+  {
+    "title": "Kelley Stoltz",
+    "date": "2026-07-12",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Kelley Stoltz w/ Secret Family, Richard Tripps — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260712.html"
+  },
+  {
+    "title": "Floral",
+    "date": "2026-07-14",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Floral w/ Gumby's Junk, Quarter Conscious — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260714.html"
   },
   {
     "title": "Yoshi's Jazz Showcase — Late Night",
@@ -88,6 +187,28 @@
     "link": "https://www.yoshis.com"
   },
   {
+    "title": "Wife",
+    "date": "2026-07-15",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Wife w/ Teenage Sex, Flounder, Triple Thousand, Toxic Rhelm, members of, George Crustanza, Doc and the Parasites, Drugs, , and more — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260715.html"
+  },
+  {
+    "title": "The Probable Claws Tour",
+    "date": "2026-07-16",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Probable Claws Tour w/ Sincere Engineer, Ways Away, SMUG LLC — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260716.html"
+  },
+  {
     "title": "The Chapel — Indie Spotlight",
     "date": "2026-07-17",
     "time": "8:00 PM",
@@ -97,6 +218,28 @@
     "genre": "indie",
     "description": "An indie music showcase at The Chapel featuring up-and-coming Bay Area artists.",
     "link": "https://www.thechapelsf.com"
+  },
+  {
+    "title": "My Dog Jack",
+    "date": "2026-07-17",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "My Dog Jack w/ Joe Kaplow, Rob Summerlin — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260717.html"
+  },
+  {
+    "title": "The Good Luck Thrift Store Outfit",
+    "date": "2026-07-18",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Good Luck Thrift Store Outfit w/ Noelle and the Deserters, Honey Run — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260718.html"
   },
   {
     "title": "Cornerstone Berkeley — Punk Night",
@@ -121,6 +264,28 @@
     "link": "https://www.rhythmix.org"
   },
   {
+    "title": "Pigeon Pit",
+    "date": "2026-07-22",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Pigeon Pit w/ Propolis, Pacing, -------Star 99, off the bill — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260722.html"
+  },
+  {
+    "title": "Bear vs Shark",
+    "date": "2026-07-23",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Bear vs Shark w/ awakebutstillinbed — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260723.html"
+  },
+  {
     "title": "Fox Theater — Rock Revival",
     "date": "2026-07-24",
     "time": "8:00 PM",
@@ -130,6 +295,17 @@
     "genre": "rock",
     "description": "Rock revival night at the iconic Fox Theater in Oakland. Classic sounds, modern energy.",
     "link": "https://www.thefoxoakland.com"
+  },
+  {
+    "title": "Scissors For Lefty",
+    "date": "2026-07-24",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Scissors For Lefty w/ My First Earthquake, Stefan Aronsen — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260724.html"
   },
   {
     "title": "Bottom of the Hill — Local Bands Night",
@@ -143,6 +319,17 @@
     "link": "https://www.bottomofthehill.com"
   },
   {
+    "title": "KXSF Benefit Show",
+    "date": "2026-07-25",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "KXSF Benefit Show w/ MCM and the Monster, The Boneless Ones, Barbara Manning — live at Bottom of the Hill, SF.",
+    "link": "https://www.bottomofthehill.com/calendar.html"
+  },
+  {
     "title": "Berkeley Farmers Market Live Music",
     "date": "2026-07-26",
     "time": "10:00 AM",
@@ -152,5 +339,698 @@
     "genre": "free",
     "description": "Free live music at the Berkeley Farmers Market every Saturday morning. Local performers, fresh produce.",
     "link": "https://www.ecologycenter.org/farmers-market"
+  },
+  {
+    "title": "Parts and Labor",
+    "date": "2026-07-26",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Parts and Labor w/ Evicshen, HLLLYH, ex-, The Mae Shi — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260726.html"
+  },
+  {
+    "title": "Jesse Malin",
+    "date": "2026-07-28",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Jesse Malin w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260728.html"
+  },
+  {
+    "title": "Toro Y Moi",
+    "date": "2026-07-29",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Toro Y Moi live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260729.html"
+  },
+  {
+    "title": "Dark Satellite",
+    "date": "2026-07-30",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Dark Satellite w/ Alvie & the Breakfast Pigs, bloodsugar — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260730.html"
+  },
+  {
+    "title": "The Woggles",
+    "date": "2026-07-31",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Woggles w/ Hot Laundry, The Gum Tree Girls — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260731.html"
+  },
+  {
+    "title": "Cannons & Clouds",
+    "date": "2026-08-01",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Cannons & Clouds w/ Build Us Airplanes, Noonmoon — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260801.html"
+  },
+  {
+    "title": "Unconditional Arms",
+    "date": "2026-08-02",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Unconditional Arms w/ No Lights — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260802.html"
+  },
+  {
+    "title": "Widowspeak",
+    "date": "2026-08-04",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Widowspeak w/ Dead Gowns — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260804.html"
+  },
+  {
+    "title": "Prewn",
+    "date": "2026-08-06",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Prewn w/ Whitney's Playland, The New Trust — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260806.html"
+  },
+  {
+    "title": "Kid Congo and the Pink Monkey Birds",
+    "date": "2026-08-07",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Kid Congo and the Pink Monkey Birds w/ The Wind-Ups, Universal Beat — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260807.html"
+  },
+  {
+    "title": "MC Chris",
+    "date": "2026-08-08",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "MC Chris w/ 25th anniversary, Mega Ran — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260808.html"
+  },
+  {
+    "title": "Caravan 222",
+    "date": "2026-08-13",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Caravan 222 w/ Country Risqu�, The Ugly — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260813.html"
+  },
+  {
+    "title": "-------Plosivs",
+    "date": "2026-08-14",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "-------Plosivs w/ off the bill, Tijuana Panthers, TBA, Minus Numbers — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260814.html"
+  },
+  {
+    "title": "Dillinger Four",
+    "date": "2026-08-15",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Dillinger Four w/ Off With Their Heads, Middle Aged Queers — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260815.html"
+  },
+  {
+    "title": "Dillinger Four",
+    "date": "2026-08-16",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Dillinger Four w/ Off With Their Heads, Mermaid Island — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260816.html"
+  },
+  {
+    "title": "Ida",
+    "date": "2026-08-18",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Ida w/ Tara Jane O'Neil, Storey Littleton — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260818.html"
+  },
+  {
+    "title": "Silkworm",
+    "date": "2026-08-19",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Silkworm w/ Nina Nastasia — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260819.html"
+  },
+  {
+    "title": "SF Bay Pop Fest -------individual shows on sale 4/10",
+    "date": "2026-08-20",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "SF Bay Pop Fest -------individual shows on sale 4/10 w/ SF Bay Pop Fest -------individual shows on sale 4/10, SF Bay Pop Fest — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/2026082023.html"
+  },
+  {
+    "title": "SF Bay Pop Fest",
+    "date": "2026-08-21",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, The Aislers Set, Kids On a Crime Spree, Lightheaded, Wifey — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260821.html"
+  },
+  {
+    "title": "SF Bay Pop Fest",
+    "date": "2026-08-22",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, Dear Nora, Jeanines, The Kitchenettes, Pillow Fight — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260822.html"
+  },
+  {
+    "title": "SF Bay Pop Fest",
+    "date": "2026-08-23",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, The Umbrellas, Artsick, WUT, Remedy & Wren — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260823.html"
+  },
+  {
+    "title": "Brainstory",
+    "date": "2026-08-25",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Brainstory w/ BOLERO!, Radio Veloso — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260825.html"
+  },
+  {
+    "title": "The Hot Takes",
+    "date": "2026-08-26",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Hot Takes w/ The DisRespectors, Neon Ships — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260826.html"
+  },
+  {
+    "title": "Nerf Herder",
+    "date": "2026-08-27",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Nerf Herder w/ playing greatest hits, Pulsars, Dog Party — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260827.html"
+  },
+  {
+    "title": "Nerf Herder",
+    "date": "2026-08-28",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Nerf Herder w/ playing S/T album, and more!, Ridel High, The Kegels — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260828.html"
+  },
+  {
+    "title": "Arnocorps",
+    "date": "2026-08-29",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Arnocorps w/ 25th anniversary, FleXx Bronco, 25th anniversary, The Memphis Murder Men — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260829.html"
+  },
+  {
+    "title": "Tom Kenny & the Hi Seas",
+    "date": "2026-08-30",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Tom Kenny & the Hi Seas w/ Michael Michael Motorcycle, Cape Fury — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260830.html"
+  },
+  {
+    "title": "Summer Salt",
+    "date": "2026-08-31",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Summer Salt w/ TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260831.html"
+  },
+  {
+    "title": "Asian Man Records 30 Anniversary Celebration",
+    "date": "2026-09-02",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260902.html"
+  },
+  {
+    "title": "Asian Man Records 30 Anniversary Celebration",
+    "date": "2026-09-03",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260903.html"
+  },
+  {
+    "title": "Asian Man Records 30 Anniversary Celebration",
+    "date": "2026-09-04",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260904.html"
+  },
+  {
+    "title": "Asian Man Records 30 Anniversary Celebration",
+    "date": "2026-09-05",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260905.html"
+  },
+  {
+    "title": "Mad Caddies",
+    "date": "2026-09-07",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Mad Caddies w/ Diesel Boy, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260907.html"
+  },
+  {
+    "title": "The Kofy Brown Band",
+    "date": "2026-09-09",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Kofy Brown Band w/ Skip The Needle, Black Gold Sun — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260909.html"
+  },
+  {
+    "title": "Bratmobile",
+    "date": "2026-09-11",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Bratmobile w/ The Okmonics — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260911.html"
+  },
+  {
+    "title": "Bratmobile",
+    "date": "2026-09-12",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Bratmobile w/ A La Tata, formerly — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260912.html"
+  },
+  {
+    "title": "Unsane",
+    "date": "2026-09-17",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Unsane w/ CNTS, Facet — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260917.html"
+  },
+  {
+    "title": "Steel Pole Bath Tub",
+    "date": "2026-09-18",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Steel Pole Bath Tub w/ Ovarian Trolley, Wife — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260918.html"
+  },
+  {
+    "title": "Cola",
+    "date": "2026-09-23",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Cola w/ Artificial Go — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260923.html"
+  },
+  {
+    "title": "The Sam Chase & the Untraditional",
+    "date": "2026-09-24",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Sam Chase & the Untraditional w/ Ginger Molasses — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260924.html"
+  },
+  {
+    "title": "The Quiet Men",
+    "date": "2026-09-29",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Quiet Men w/ Greg Hoy & the Boys, Fast & Vengefully — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260929.html"
+  },
+  {
+    "title": "Deerhoof",
+    "date": "2026-10-02",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Deerhoof w/ Greyhound, Etch — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261002.html"
+  },
+  {
+    "title": "Deerhoof",
+    "date": "2026-10-03",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Deerhoof w/ Las Sucias, Otioxi — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261003.html"
+  },
+  {
+    "title": "Acid Mothers Temple",
+    "date": "2026-10-04",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Acid Mothers Temple w/ Cotton Casino, Magick Potion, The Green Door, Krisa Cupcake — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261004.html"
+  },
+  {
+    "title": "Casa Sue�o",
+    "date": "2026-10-08",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Casa Sue�o w/ Ray Yeh, Rituals of Mine — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261008.html"
+  },
+  {
+    "title": "Wolves of Glendale",
+    "date": "2026-10-13",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Wolves of Glendale w/ TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261013.html"
+  },
+  {
+    "title": "The Seshen",
+    "date": "2026-10-16",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Seshen w/ Sweet Lew, Cardboard People — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261016.html"
+  },
+  {
+    "title": "heavens to betsy",
+    "date": "2026-10-17",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "heavens to betsy w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261017.html"
+  },
+  {
+    "title": "Fabio Frizzi",
+    "date": "2026-10-22",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Fabio Frizzi w/ Ethan McCarthy — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261022.html"
+  },
+  {
+    "title": "Castle",
+    "date": "2026-10-25",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Castle w/ Nite, Three Towers — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261025.html"
+  },
+  {
+    "title": "The Dystopian Theatre Tour",
+    "date": "2026-10-27",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Dystopian Theatre Tour w/ Slothrust, Um, Jennifer? — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261027.html"
+  },
+  {
+    "title": "The Dystopian Theatre Tour",
+    "date": "2026-10-28",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Dystopian Theatre Tour w/ Slothrust, Um, Jennifer? — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261028.html"
+  },
+  {
+    "title": "Team Dresch",
+    "date": "2026-11-04",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Team Dresch w/ The Third Sex, Longstocking — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261104.html"
+  },
+  {
+    "title": "Team Dresch",
+    "date": "2026-11-05",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Team Dresch w/ The Third Sex, Longstocking — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261105.html"
+  },
+  {
+    "title": "Southern Culture On The Skids",
+    "date": "2026-11-07",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Southern Culture On The Skids w/ Van Goat — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261107.html"
+  },
+  {
+    "title": "Armand Hammer",
+    "date": "2026-11-08",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Armand Hammer w/ TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261108.html"
+  },
+  {
+    "title": "Hit The Lights",
+    "date": "2026-11-10",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Hit The Lights w/ Forever Came Calling, Fox Royale — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261110.html"
+  },
+  {
+    "title": "Jon Spencer",
+    "date": "2026-11-13",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Jon Spencer w/ TBA, Fuckwolf — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261113.html"
+  },
+  {
+    "title": "The Avengers",
+    "date": "2026-11-14",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Avengers w/ Pansy Division — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261114.html"
+  },
+  {
+    "title": "Earthless",
+    "date": "2026-11-20",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Earthless w/ Terry Gross, Carlton Melton, Sasquatch Borracho — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261120.html"
+  },
+  {
+    "title": "Frightwig",
+    "date": "2026-11-21",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Frightwig w/ Class of '77 — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261121.html"
+  },
+  {
+    "title": "Emo Night Karaoke",
+    "date": "2026-12-02",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Emo Night Karaoke live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261202.html"
+  },
+  {
+    "title": "Andre Nickatina",
+    "date": "2026-12-11",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Andre Nickatina w/ plus special guests, plus special guests, plus special guests — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261211.html"
   }
 ]
