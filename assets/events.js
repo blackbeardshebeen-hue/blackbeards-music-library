@@ -1,7 +1,7 @@
 (function(){
 var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 var DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-var CITY_LABELS={'alameda':'🏴 Alameda','oakland':'🎸 Oakland','berkeley':'🏫 Berkeley','san francisco':'🌉 San Francisco'};
+var CITY_LABELS={'alameda':'ð´ Alameda','oakland':'ð¸ Oakland','berkeley':'ð« Berkeley','san francisco':'ð San Francisco'};
 var CITY_ORDER=['alameda','oakland','berkeley','san francisco'];
 var allEvents=[],activeCity='all',activeGenre='all',activeWhen='all',searchQuery='';
 var root,countEl,clearBtn,searchEl,cityPills,genrePills,whenPills;
@@ -59,7 +59,7 @@ function gcalURL(ev){
 }
 
 function shareEvent(ev){
-  var text=ev.title+' — '+ev.venue+', '+(ev.city||'Bay Area')+' ('+ev.date+')';
+  var text=ev.title+' â '+ev.venue+', '+(ev.city||'Bay Area')+' ('+ev.date+')';
   var url='https://blackbeards-music-library.pages.dev/events';
   if(navigator.share){
     navigator.share({title:ev.title,text:text,url:url}).catch(function(){});
@@ -75,20 +75,20 @@ function cardHTML(ev){
   var d=parseLocalDate(ev.date);
   var today=new Date();today.setHours(0,0,0,0);
   var isPast=d<today;
-  var meta=[ev.time,ev.venue].filter(Boolean).join(' · ');
+  var meta=[ev.time,ev.venue].filter(Boolean).join(' Â· ');
   var badge=ev.genre?'<span class="event-badge">'+ev.genre+'</span>':'';
-  var infoLink=ev.link?'<a class="event-link-btn" href="'+ev.link+'" target="_blank" rel="noopener">Info ↗</a>':'';
+  var infoLink=ev.link?'<a class="event-link-btn" href="'+ev.link+'" target="_blank" rel="noopener">Info â</a>':'';
   var safeTitle=ev.title.replace(/"/g,'&quot;');
   var calDropdown=!isPast?
     '<div class="cal-dropdown">'+
-      '<button class="event-action-btn cal-trigger" aria-label="Add to calendar">📅 Save</button>'+
+      '<button class="event-action-btn cal-trigger" aria-label="Add to calendar">ð Save</button>'+
       '<div class="cal-menu">'+
         '<a href="'+gcalURL(ev)+'" target="_blank" rel="noopener">Google Calendar</a>'+
         '<a href="#" class="ics-download" data-title="'+encodeURIComponent(ev.title)+'">Apple / iCal</a>'+
       '</div>'+
     '</div>':'';
-  var shareBtn='<button class="event-action-btn share-btn" data-sharetitle="'+safeTitle+'">🔗 Share</button>';
-  return '<div class="event-card anim-entry'+(isPast?' past':'')+'" data-evtitle="'+safeTitle+'">'+
+  var shareBtn='<button class="event-action-btn share-btn" data-sharetitle="'+safeTitle+'">ð Share</button>';
+  return '<div class="event-card anim-entry'+(isPast?' past':'')+'" data-evtitle="'+safeTitle+'" data-city="'+ev.city+'">'+
     '<div class="event-date-block">'+
       '<div class="event-month">'+MONTHS[d.getMonth()]+'</div>'+
       '<div class="event-day">'+d.getDate()+'</div>'+
@@ -149,7 +149,7 @@ function render(){
   countEl.textContent=filtered.length===allEvents.length?filtered.length+' events':filtered.length+' of '+allEvents.length+' events';
   clearBtn.classList.toggle('visible',isFiltered());
   if(!filtered.length){
-    root.innerHTML='<div class="events-empty"><span class="skull">☠️</span><p>No shows match those filters.<br>Try broadening your search.</p></div>';
+    root.innerHTML='<div class="events-empty"><span class="skull">â ï¸</span><p>No shows match those filters.<br>Try broadening your search.</p></div>';
     return;
   }
   var html='';
@@ -163,7 +163,7 @@ function render(){
     CITY_ORDER.forEach(function(city){
       var evs=byCity[city];if(!evs.length)return;
       evs.sort(function(a,b){return parseLocalDate(a.date)-parseLocalDate(b.date);});
-      html+='<div class="geo-section">'+
+      html+='<div class="geo-section" data-city="'+city+'">'+
         '<div class="geo-header">'+
           '<div class="geo-title">'+(CITY_LABELS[city]||city)+'</div>'+
           '<span class="geo-count">'+evs.length+'</span>'+
@@ -219,7 +219,7 @@ function init(){
       buildGenrePills(new Set(data.map(function(e){return e.genre;}).filter(Boolean)));
       render();
     })
-    .catch(function(){root.innerHTML='<div class="events-empty"><span class="skull">⚓</span><p>Could not load events. Try refreshing.</p></div>';});
+    .catch(function(){root.innerHTML='<div class="events-empty"><span class="skull">â</span><p>Could not load events. Try refreshing.</p></div>';});
 }
 
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
