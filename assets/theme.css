@@ -1148,3 +1148,17 @@ html.day .event-card[data-city="berkeley"]      { border-left-color: #f59e0b; }
 html.day .event-card[data-city="san francisco"] { border-left-color: var(--red); }
 html.day .event-action-btn { color: rgba(0,0,0,0.5); }
 html.day .event-link-btn   { color: rgba(0,0,0,0.45); }
+
+
+/* Homepage Est. label */
+.est-label {
+  font-size: 0.72em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--red-bright);
+  margin-top: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  opacity: 0.85;
+}
+html.day .est-label { color: var(--red); }
