@@ -1282,3 +1282,35 @@ html.day .est-label { color: var(--red); }
   letter-spacing: 0.02em;
 }
 .teaser-all-link:hover { text-decoration: underline; }
+
+
+/* ── Button specificity fixes ─────────────────────────────── */
+.captains-pick .cp-go,
+a.cp-go {
+  display: inline;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--red-bright, #c4182a) !important;
+  font-size: 0.87em !important;
+  padding: 2px 0 !important;
+  border-radius: 0 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  width: auto;
+  letter-spacing: 0 !important;
+}
+.captains-pick .cp-go:hover {
+  background: transparent !important;
+  color: #e8374a !important;
+}
+
+.suggestion-box .form-submit,
+button.form-submit {
+  width: auto !important;
+  align-self: flex-end;
+  font-size: 0.82em !important;
+  padding: 8px 22px !important;
+  border-radius: 20px !important;
+}
