@@ -138,6 +138,14 @@
                 </div>
             </div>
         </div>
+        <!-- Events teaser -->
+        <div class="events-teaser anim-entry">
+            <div class="section-title">Upcoming Shows</div>
+            <div id="home-teaser-list"></div>
+            <a href="events.html" class="teaser-all-link">See all Bay Area shows →</a>
+        </div>
+
+
 
         <!-- Discoveries teaser -->
         <div style="position:relative;z-index:1;margin-bottom:28px;">
@@ -171,10 +179,6 @@
                 <input type="hidden" name="subject" value="New message — Blackbeard's Library">
                 <input type="hidden" name="form-name" value="suggestion">
                 <p class="form-honey"><label>Skip this: <input name="bot-field"></label></p>
-                <div class="form-row">
-                    <input type="text"  name="name"    class="form-input" placeholder="Your name (optional)">
-                    <input type="email" name="email"   class="form-input" placeholder="Your email (optional)">
-                </div>
                 <textarea name="message" class="form-input form-textarea" placeholder="What are you listening to? Drop a song, a vibe, a recommendation..." required></textarea>
                 <button type="submit" class="form-submit">Send It</button>
             </form>
@@ -193,5 +197,27 @@
     </div>
 
     <script src="assets/site.js"></script>
+
+    <script>
+    (function(){
+      var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      fetch('events.json').then(function(r){return r.json();}).then(function(data){
+        var today=new Date();today.setHours(0,0,0,0);
+        var upcoming=data.filter(function(e){return new Date(e.date+'T00:00:00')>=today;})
+          .sort(function(a,b){return a.date.localeCompare(b.date);}).slice(0,3);
+        var list=document.getElementById('home-teaser-list');
+        if(!list)return;
+        list.innerHTML=upcoming.map(function(ev){
+          var d=new Date(ev.date+'T00:00:00');
+          return '<a class="teaser-item" href="events.html">'+
+            '<div class="teaser-date"><span class="teaser-mon">'+MONTHS[d.getMonth()]+'</span><span class="teaser-day">'+d.getDate()+'</span></div>'+
+            '<div class="teaser-info"><div class="teaser-title">'+ev.title+'</div><div class="teaser-venue">'+ev.venue+' · '+ev.city+'</div></div>'+
+            '<span class="teaser-arrow">→</span>'+
+          '</a>';
+        }).join('');
+      }).catch(function(){});
+    })();
+    </script>
+
 </body>
 </html>
