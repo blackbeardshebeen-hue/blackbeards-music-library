@@ -1,82 +1,5 @@
 [
   {
-    "title": "Black Furies",
-    "date": "2026-07-01",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Black Furies w/ Party Force, Class of '77 — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260701.html"
-  },
-  {
-    "title": "Atomic Tide",
-    "date": "2026-07-02",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Atomic Tide w/ Cut-Rate Druggist, Lethal Limits — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260702.html"
-  },
-  {
-    "title": "Oakland First Fridays",
-    "date": "2026-07-03",
-    "time": "5:00 PM",
-    "venue": "Telegraph Ave",
-    "address": "Telegraph Ave & 23rd St, Oakland, CA 94612",
-    "city": "oakland",
-    "genre": "arts",
-    "description": "Monthly street festival on Telegraph Ave with local art, food, music, and culture. Free to attend.",
-    "link": "https://www.oaklandfirstfridays.org"
-  },
-  {
-    "title": "The Vesuvians",
-    "date": "2026-07-03",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Vesuvians w/ Karina Denike, This Train Don't Stop, Tectonics, TheSelecterDJKirk — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260703.html"
-  },
-  {
-    "title": "4th of July Parade & Celebration",
-    "date": "2026-07-04",
-    "time": "10:00 AM",
-    "venue": "Lincoln Ave",
-    "address": "Lincoln Ave, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "free",
-    "description": "Alameda's beloved 4th of July Parade — one of the largest and oldest in the Bay Area. Free and family-friendly.",
-    "link": "https://www.alamedainfo.com/4th-of-July.html"
-  },
-  {
-    "title": "Stern Grove Festival",
-    "date": "2026-07-05",
-    "time": "2:00 PM",
-    "venue": "Stern Grove",
-    "address": "19th Ave & Sloat Blvd, San Francisco, CA 94132",
-    "city": "san francisco",
-    "genre": "free",
-    "description": "Free outdoor concert series in a beautiful eucalyptus grove. World-class performers every Sunday.",
-    "link": "https://www.sterngrove.org"
-  },
-  {
-    "title": "Destroyer",
-    "date": "2026-07-05",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Destroyer w/ Modern Monsters, D�msurf — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260705.html"
-  },
-  {
     "title": "Freight & Salvage — Old-Time Jam",
     "date": "2026-07-08",
     "time": "7:30 PM",
@@ -427,6 +350,17 @@
     "genre": "live music",
     "description": "Widowspeak w/ Dead Gowns — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20260804.html"
+  },
+  {
+    "title": "Thunder Boys",
+    "date": "2026-08-05",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Thunder Boys w/ The Pranks, Adam Faucett — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260805.html"
   },
   {
     "title": "Prewn",
@@ -867,6 +801,17 @@
     "genre": "live music",
     "description": "heavens to betsy w/ TBA, TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261017.html"
+  },
+  {
+    "title": "heavens to betsy",
+    "date": "2026-10-18",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "heavens to betsy w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261018.html"
   },
   {
     "title": "Fabio Frizzi",
