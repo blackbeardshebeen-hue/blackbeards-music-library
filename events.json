@@ -1,93 +1,5 @@
 [
   {
-    "title": "Freight & Salvage — Old-Time Jam",
-    "date": "2026-07-08",
-    "time": "7:30 PM",
-    "venue": "Freight & Salvage",
-    "address": "2020 Addison St, Berkeley, CA 94704",
-    "city": "berkeley",
-    "genre": "folk",
-    "description": "Community old-time jam session at the legendary Freight & Salvage. All skill levels welcome.",
-    "link": "https://www.thefreight.org"
-  },
-  {
-    "title": "Ted Leo and the Pharmacists",
-    "date": "2026-07-09",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Ted Leo and the Pharmacists w/ Rip Room — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260709.html"
-  },
-  {
-    "title": "El Rio Queer Latinx Dance Night",
-    "date": "2026-07-10",
-    "time": "9:00 PM",
-    "venue": "El Rio",
-    "address": "3158 Mission St, San Francisco, CA 94110",
-    "city": "san francisco",
-    "genre": "world",
-    "description": "Vibrant queer Latinx dance party with live DJs and community vibes at El Rio.",
-    "link": "https://www.elriosf.com"
-  },
-  {
-    "title": "Ted Leo and the Pharmacists",
-    "date": "2026-07-10",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Ted Leo and the Pharmacists w/ Pork Belly — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260710.html"
-  },
-  {
-    "title": "Berkeley World Music Festival",
-    "date": "2026-07-11",
-    "time": "12:00 PM",
-    "venue": "Civic Center Park",
-    "address": "2180 Milvia St, Berkeley, CA 94704",
-    "city": "berkeley",
-    "genre": "world",
-    "description": "A day of free world music performances featuring artists from Africa, Latin America, Asia, and beyond.",
-    "link": "https://www.cityofberkeley.info"
-  },
-  {
-    "title": "Ted Leo and the Pharmacists",
-    "date": "2026-07-11",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Ted Leo and the Pharmacists w/ Local Bylaws — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260711.html"
-  },
-  {
-    "title": "Alameda Summer Concert Series",
-    "date": "2026-07-12",
-    "time": "5:00 PM",
-    "venue": "Alameda Point Antiques Faire",
-    "address": "2900 Navy Way, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "free",
-    "description": "Free outdoor concert at the Alameda Point Antiques Faire. Bring a blanket and enjoy live music by the bay.",
-    "link": "https://www.alamedapointantiquesfaire.com"
-  },
-  {
-    "title": "Kelley Stoltz",
-    "date": "2026-07-12",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Kelley Stoltz w/ Secret Family, Richard Tripps — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260712.html"
-  },
-  {
     "title": "Floral",
     "date": "2026-07-14",
     "time": "9:00 PM",
@@ -396,6 +308,17 @@
     "link": "http://www.bottomofthehill.com/20260808.html"
   },
   {
+    "title": "Qualia",
+    "date": "2026-08-11",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Qualia w/ Cave Clove, See Night (solo) — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260811.html"
+  },
+  {
     "title": "Caravan 222",
     "date": "2026-08-13",
     "time": "9:00 PM",
@@ -583,6 +506,17 @@
     "link": "http://www.bottomofthehill.com/20260831.html"
   },
   {
+    "title": "Black Lips",
+    "date": "2026-09-01",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Black Lips w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260901.html"
+  },
+  {
     "title": "Asian Man Records 30 Anniversary Celebration",
     "date": "2026-09-02",
     "time": "9:00 PM",
@@ -625,6 +559,17 @@
     "genre": "live music",
     "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20260905.html"
+  },
+  {
+    "title": "The 2nd Annual Michael Madfes Memorial BBQ",
+    "date": "2026-09-06",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The 2nd Annual Michael Madfes Memorial BBQ w/ Helms Alee, Disastroid, Thornpusher — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260906.html"
   },
   {
     "title": "Mad Caddies",
@@ -768,6 +713,17 @@
     "genre": "live music",
     "description": "Casa Sue�o w/ Ray Yeh, Rituals of Mine — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261008.html"
+  },
+  {
+    "title": "Bit Brigade Performs \"Mega Man II\" + \"Castlevania\" + \"Tetris\" LIVE",
+    "date": "2026-10-09",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Bit Brigade Performs \"Mega Man II\" + \"Castlevania\" + \"Tetris\" LIVE w/ Bit Brigade, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261009.html"
   },
   {
     "title": "Wolves of Glendale",
