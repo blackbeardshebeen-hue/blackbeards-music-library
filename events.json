@@ -1,93 +1,5 @@
 [
   {
-    "title": "Floral",
-    "date": "2026-07-14",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Floral w/ Gumby's Junk, Quarter Conscious — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260714.html"
-  },
-  {
-    "title": "Yoshi's Jazz Showcase — Late Night",
-    "date": "2026-07-15",
-    "time": "9:30 PM",
-    "venue": "Yoshi's Oakland",
-    "address": "510 Embarcadero W, Oakland, CA 94607",
-    "city": "oakland",
-    "genre": "blues",
-    "description": "Late-night jazz showcase at Yoshi's — Oakland's premier jazz and blues destination.",
-    "link": "https://www.yoshis.com"
-  },
-  {
-    "title": "Wife",
-    "date": "2026-07-15",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Wife w/ Teenage Sex, Flounder, Triple Thousand, Toxic Rhelm, members of, George Crustanza, Doc and the Parasites, Drugs, , and more — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260715.html"
-  },
-  {
-    "title": "The Probable Claws Tour",
-    "date": "2026-07-16",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Probable Claws Tour w/ Sincere Engineer, Ways Away, SMUG LLC — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260716.html"
-  },
-  {
-    "title": "The Chapel — Indie Spotlight",
-    "date": "2026-07-17",
-    "time": "8:00 PM",
-    "venue": "The Chapel",
-    "address": "777 Valencia St, San Francisco, CA 94110",
-    "city": "san francisco",
-    "genre": "indie",
-    "description": "An indie music showcase at The Chapel featuring up-and-coming Bay Area artists.",
-    "link": "https://www.thechapelsf.com"
-  },
-  {
-    "title": "My Dog Jack",
-    "date": "2026-07-17",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "My Dog Jack w/ Joe Kaplow, Rob Summerlin — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260717.html"
-  },
-  {
-    "title": "The Good Luck Thrift Store Outfit",
-    "date": "2026-07-18",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Good Luck Thrift Store Outfit w/ Noelle and the Deserters, Honey Run — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260718.html"
-  },
-  {
-    "title": "Cornerstone Berkeley — Punk Night",
-    "date": "2026-07-19",
-    "time": "8:00 PM",
-    "venue": "Cornerstone Berkeley",
-    "address": "2367 Shattuck Ave, Berkeley, CA 94704",
-    "city": "berkeley",
-    "genre": "punk",
-    "description": "High-energy punk night at Cornerstone Berkeley. Local bands and touring acts.",
-    "link": "https://cornerstoneberkeley.com"
-  },
-  {
     "title": "Rhythmix — Roots & Soul Evening",
     "date": "2026-07-22",
     "time": "7:00 PM",
@@ -638,6 +550,17 @@
     "link": "http://www.bottomofthehill.com/20260918.html"
   },
   {
+    "title": "Spiritual Cramp",
+    "date": "2026-09-19",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Spiritual Cramp w/ The She's, Judy — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260919.html"
+  },
+  {
     "title": "Cola",
     "date": "2026-09-23",
     "time": "9:00 PM",
@@ -658,6 +581,28 @@
     "genre": "live music",
     "description": "The Sam Chase & the Untraditional w/ Ginger Molasses — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20260924.html"
+  },
+  {
+    "title": "Face to Face",
+    "date": "2026-09-25",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Face to Face w/ Get Dead, The Last Gang — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260925.html"
+  },
+  {
+    "title": "Lagwagon",
+    "date": "2026-09-26",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Lagwagon w/ Dead to Me, Toy Guitar — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260926.html"
   },
   {
     "title": "The Quiet Men",
@@ -735,6 +680,17 @@
     "genre": "live music",
     "description": "Wolves of Glendale w/ TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261013.html"
+  },
+  {
+    "title": "Imperial Teen",
+    "date": "2026-10-15",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Imperial Teen w/ Kids on a Crime Spree, Crows, of, of, Poundsign, pennywhistle park, Track Star, Poundsign, pennywhistle park, Track Star — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261015.html"
   },
   {
     "title": "The Seshen",
