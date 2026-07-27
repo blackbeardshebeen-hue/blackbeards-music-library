@@ -1,104 +1,5 @@
 [
   {
-    "title": "Rhythmix — Roots & Soul Evening",
-    "date": "2026-07-22",
-    "time": "7:00 PM",
-    "venue": "Rhythmix Cultural Works",
-    "address": "2513 Blanding Ave, Alameda, CA 94501",
-    "city": "alameda",
-    "genre": "blues",
-    "description": "An intimate evening of roots and soul music at Rhythmix Cultural Works, Alameda's beloved community venue.",
-    "link": "https://www.rhythmix.org"
-  },
-  {
-    "title": "Pigeon Pit",
-    "date": "2026-07-22",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Pigeon Pit w/ Propolis, Pacing, -------Star 99, off the bill — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260722.html"
-  },
-  {
-    "title": "Bear vs Shark",
-    "date": "2026-07-23",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Bear vs Shark w/ awakebutstillinbed — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260723.html"
-  },
-  {
-    "title": "Fox Theater — Rock Revival",
-    "date": "2026-07-24",
-    "time": "8:00 PM",
-    "venue": "Fox Theater Oakland",
-    "address": "1807 Telegraph Ave, Oakland, CA 94612",
-    "city": "oakland",
-    "genre": "rock",
-    "description": "Rock revival night at the iconic Fox Theater in Oakland. Classic sounds, modern energy.",
-    "link": "https://www.thefoxoakland.com"
-  },
-  {
-    "title": "Scissors For Lefty",
-    "date": "2026-07-24",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Scissors For Lefty w/ My First Earthquake, Stefan Aronsen — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260724.html"
-  },
-  {
-    "title": "Bottom of the Hill — Local Bands Night",
-    "date": "2026-07-25",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "indie",
-    "description": "Local bands showcase at Bottom of the Hill — SF's beloved indie rock venue in Potrero Hill.",
-    "link": "https://www.bottomofthehill.com"
-  },
-  {
-    "title": "KXSF Benefit Show",
-    "date": "2026-07-25",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "KXSF Benefit Show w/ MCM and the Monster, The Boneless Ones, Barbara Manning — live at Bottom of the Hill, SF.",
-    "link": "https://www.bottomofthehill.com/calendar.html"
-  },
-  {
-    "title": "Berkeley Farmers Market Live Music",
-    "date": "2026-07-26",
-    "time": "10:00 AM",
-    "venue": "Center Street Farmers Market",
-    "address": "Center St & Martin Luther King Jr Way, Berkeley, CA 94704",
-    "city": "berkeley",
-    "genre": "free",
-    "description": "Free live music at the Berkeley Farmers Market every Saturday morning. Local performers, fresh produce.",
-    "link": "https://www.ecologycenter.org/farmers-market"
-  },
-  {
-    "title": "Parts and Labor",
-    "date": "2026-07-26",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Parts and Labor w/ Evicshen, HLLLYH, ex-, The Mae Shi — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260726.html"
-  },
-  {
     "title": "Jesse Malin",
     "date": "2026-07-28",
     "time": "9:00 PM",
@@ -220,6 +121,17 @@
     "link": "http://www.bottomofthehill.com/20260808.html"
   },
   {
+    "title": "Goof",
+    "date": "2026-08-09",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Goof w/ Spurts, Suver — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260809.html"
+  },
+  {
     "title": "Qualia",
     "date": "2026-08-11",
     "time": "9:00 PM",
@@ -229,6 +141,17 @@
     "genre": "live music",
     "description": "Qualia w/ Cave Clove, See Night (solo) — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20260811.html"
+  },
+  {
+    "title": "Thrown-Out Bones",
+    "date": "2026-08-12",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Thrown-Out Bones w/ Dear Banshee, Mitch Rocket — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260812.html"
   },
   {
     "title": "Caravan 222",
@@ -526,6 +449,28 @@
     "genre": "live music",
     "description": "Bratmobile w/ A La Tata, formerly — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20260912.html"
+  },
+  {
+    "title": "The Spits",
+    "date": "2026-09-14",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Spits w/ The Fleshies, The Pranks, Fuzz — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260914.html"
+  },
+  {
+    "title": "The Spits",
+    "date": "2026-09-15",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Spits w/ The Fleshies, Garras Sucias, Fuzz — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260915.html"
   },
   {
     "title": "Unsane",
