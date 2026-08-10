@@ -1,71 +1,5 @@
 [
   {
-    "title": "Widowspeak",
-    "date": "2026-08-04",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Widowspeak w/ Dead Gowns — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260804.html"
-  },
-  {
-    "title": "Thunder Boys",
-    "date": "2026-08-05",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Thunder Boys w/ The Pranks, Adam Faucett — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260805.html"
-  },
-  {
-    "title": "Prewn",
-    "date": "2026-08-06",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Prewn w/ Whitney's Playland, The New Trust — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260806.html"
-  },
-  {
-    "title": "Kid Congo and the Pink Monkey Birds",
-    "date": "2026-08-07",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Kid Congo and the Pink Monkey Birds w/ The Wind-Ups, Universal Beat — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260807.html"
-  },
-  {
-    "title": "MC Chris",
-    "date": "2026-08-08",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "MC Chris w/ 25th anniversary, Mega Ran — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260808.html"
-  },
-  {
-    "title": "Goof",
-    "date": "2026-08-09",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Goof w/ Spurts, Suver — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260809.html"
-  },
-  {
     "title": "Qualia",
     "date": "2026-08-11",
     "time": "9:00 PM",
@@ -374,6 +308,17 @@
     "link": "http://www.bottomofthehill.com/20260909.html"
   },
   {
+    "title": "Fartbarf",
+    "date": "2026-09-10",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Fartbarf w/ Diesel Dudes, Edgar — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260910.html"
+  },
+  {
     "title": "Bratmobile",
     "date": "2026-09-11",
     "time": "9:00 PM",
@@ -539,6 +484,28 @@
     "link": "http://www.bottomofthehill.com/20260929.html"
   },
   {
+    "title": "Cult Strange",
+    "date": "2026-09-30",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Cult Strange w/ Vague Lanes, The Ink Bats — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260930.html"
+  },
+  {
+    "title": "of Montreal",
+    "date": "2026-10-01",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "of Montreal w/ Healing Potpourri — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261001.html"
+  },
+  {
     "title": "Deerhoof",
     "date": "2026-10-02",
     "time": "9:00 PM",
@@ -572,6 +539,17 @@
     "link": "http://www.bottomofthehill.com/20261004.html"
   },
   {
+    "title": "The Rat Utopia Experiment",
+    "date": "2026-10-05",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Rat Utopia Experiment w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261005.html"
+  },
+  {
     "title": "Casa Sue�o",
     "date": "2026-10-08",
     "time": "9:00 PM",
@@ -592,6 +570,17 @@
     "genre": "live music",
     "description": "Bit Brigade Performs \"Mega Man II\" + \"Castlevania\" + \"Tetris\" LIVE w/ Bit Brigade, TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261009.html"
+  },
+  {
+    "title": "Juicebumps",
+    "date": "2026-10-10",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Juicebumps w/ Fake Fruit, Diesel Dudes — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261010.html"
   },
   {
     "title": "Wolves of Glendale",
@@ -856,5 +845,16 @@
     "genre": "live music",
     "description": "Andre Nickatina w/ plus special guests, plus special guests, plus special guests — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261211.html"
+  },
+  {
+    "title": "Hot Lunch",
+    "date": "2026-12-12",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Hot Lunch w/ Drunk Horse, Hightower — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261212.html"
   }
 ]
