@@ -1,71 +1,5 @@
 [
   {
-    "title": "Qualia",
-    "date": "2026-08-11",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Qualia w/ Cave Clove, See Night (solo) — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260811.html"
-  },
-  {
-    "title": "Thrown-Out Bones",
-    "date": "2026-08-12",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Thrown-Out Bones w/ Dear Banshee, Mitch Rocket — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260812.html"
-  },
-  {
-    "title": "Caravan 222",
-    "date": "2026-08-13",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Caravan 222 w/ Country Risqu�, The Ugly — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260813.html"
-  },
-  {
-    "title": "-------Plosivs",
-    "date": "2026-08-14",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "-------Plosivs w/ off the bill, Tijuana Panthers, TBA, Minus Numbers — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260814.html"
-  },
-  {
-    "title": "Dillinger Four",
-    "date": "2026-08-15",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Dillinger Four w/ Off With Their Heads, Middle Aged Queers — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260815.html"
-  },
-  {
-    "title": "Dillinger Four",
-    "date": "2026-08-16",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Dillinger Four w/ Off With Their Heads, Mermaid Island — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260816.html"
-  },
-  {
     "title": "Ida",
     "date": "2026-08-18",
     "time": "9:00 PM",
@@ -583,6 +517,17 @@
     "link": "http://www.bottomofthehill.com/20261010.html"
   },
   {
+    "title": "Let's Go Bowling",
+    "date": "2026-10-11",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Let's Go Bowling w/ Reducers SF, The Odd Numbers, Soulciter — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261011.html"
+  },
+  {
     "title": "Wolves of Glendale",
     "date": "2026-10-13",
     "time": "9:00 PM",
@@ -825,6 +770,28 @@
     "link": "http://www.bottomofthehill.com/20261121.html"
   },
   {
+    "title": "Verst",
+    "date": "2026-11-22",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Verst w/ Browntown West, Sweet Chariot — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261122.html"
+  },
+  {
+    "title": "Dr. Know",
+    "date": "2026-11-27",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Dr. Know w/ Switch Crooks, East Bay Underground — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261127.html"
+  },
+  {
     "title": "Emo Night Karaoke",
     "date": "2026-12-02",
     "time": "9:00 PM",
@@ -834,6 +801,17 @@
     "genre": "live music",
     "description": "Emo Night Karaoke live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261202.html"
+  },
+  {
+    "title": "Sonny & His Rhinestone Sunsets",
+    "date": "2026-12-05",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Sonny & His Rhinestone Sunsets w/ Kelly McFarling, Noelle & the Deserters — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261205.html"
   },
   {
     "title": "Andre Nickatina",
