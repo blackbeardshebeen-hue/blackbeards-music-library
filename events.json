@@ -1,82 +1,5 @@
 [
   {
-    "title": "Ida",
-    "date": "2026-08-18",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Ida w/ Tara Jane O'Neil, Storey Littleton — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260818.html"
-  },
-  {
-    "title": "Silkworm",
-    "date": "2026-08-19",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Silkworm w/ Nina Nastasia — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260819.html"
-  },
-  {
-    "title": "SF Bay Pop Fest -------individual shows on sale 4/10",
-    "date": "2026-08-20",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "SF Bay Pop Fest -------individual shows on sale 4/10 w/ SF Bay Pop Fest -------individual shows on sale 4/10, SF Bay Pop Fest — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/2026082023.html"
-  },
-  {
-    "title": "SF Bay Pop Fest",
-    "date": "2026-08-20",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, SF Bay Pop Fest — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/2026082023.html"
-  },
-  {
-    "title": "SF Bay Pop Fest",
-    "date": "2026-08-21",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, The Aislers Set, Kids On a Crime Spree, Lightheaded, Wifey — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260821.html"
-  },
-  {
-    "title": "SF Bay Pop Fest",
-    "date": "2026-08-22",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, Dear Nora, Jeanines, The Kitchenettes, Pillow Fight — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260822.html"
-  },
-  {
-    "title": "SF Bay Pop Fest",
-    "date": "2026-08-23",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "SF Bay Pop Fest w/ SF Bay Pop Fest, The Umbrellas, Artsick, WUT, Remedy & Wren — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260823.html"
-  },
-  {
     "title": "Brainstory",
     "date": "2026-08-25",
     "time": "9:00 PM",
@@ -308,6 +231,17 @@
     "link": "http://www.bottomofthehill.com/20260915.html"
   },
   {
+    "title": "Unity",
+    "date": "2026-09-16",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Unity w/ Quaaludes, Yeoubi, / MOONHUNTI — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260916.html"
+  },
+  {
     "title": "Unsane",
     "date": "2026-09-17",
     "time": "9:00 PM",
@@ -396,6 +330,17 @@
     "link": "http://www.bottomofthehill.com/20260926.html"
   },
   {
+    "title": "\"Cats, Claws, and Rock'n'Roll\"",
+    "date": "2026-09-27",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "\"Cats, Claws, and Rock'n'Roll\" w/ \"Cats, Claws, and Rock'n'Roll\", Remedy 7 — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20260927.html"
+  },
+  {
     "title": "Stephan Jenkins",
     "date": "2026-09-28",
     "time": "9:00 PM",
@@ -482,6 +427,17 @@
     "genre": "live music",
     "description": "The Rat Utopia Experiment w/ TBA, TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261005.html"
+  },
+  {
+    "title": "The Spiral Electric",
+    "date": "2026-10-07",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Spiral Electric w/ Fake Your Own Death, Silent Pictures — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261007.html"
   },
   {
     "title": "Casa Sue�o",
@@ -583,6 +539,17 @@
     "link": "http://www.bottomofthehill.com/20261018.html"
   },
   {
+    "title": "Kepi Ghoulie Electric",
+    "date": "2026-10-21",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Kepi Ghoulie Electric w/ The Bloodtypes, Pussy Velour — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261021.html"
+  },
+  {
     "title": "Fabio Frizzi",
     "date": "2026-10-22",
     "time": "9:00 PM",
@@ -647,6 +614,17 @@
     "genre": "live music",
     "description": "Temptation w/ Dead Souls, Flippy Floppy — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261030.html"
+  },
+  {
+    "title": "The Mummies",
+    "date": "2026-10-31",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Mummies w/ Balzac, Big Nate — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261031.html"
   },
   {
     "title": "Sex Mex",
@@ -790,6 +768,17 @@
     "genre": "live music",
     "description": "Dr. Know w/ Switch Crooks, East Bay Underground — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261127.html"
+  },
+  {
+    "title": "The Inciters",
+    "date": "2026-11-28",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Inciters w/ The Fit, / Dion Garcia — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261128.html"
   },
   {
     "title": "Emo Night Karaoke",
