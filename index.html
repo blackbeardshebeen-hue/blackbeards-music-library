@@ -1,223 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackbeard's Little Music Library</title>
-    <link rel="stylesheet" href="assets/theme.css">
-    <style>
-        .art-island    { background: linear-gradient(135deg,#1a8a8a,#0a5050); }
-        .art-raccoon   { background: linear-gradient(135deg,#6a3abf,#2a6a3a); }
-        .art-walking   { background: linear-gradient(135deg,#4a6a2a,#2a1a0a); }
-        .art-loud      { background: linear-gradient(135deg,#c0183a,#c05010); }
-        .art-garage    { background: linear-gradient(135deg,#505050,#802020); }
-        .art-saturdaze { background: linear-gradient(135deg,#c09020,#c05010); }
-        .playlist-card { text-decoration: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackbeard's Shebeen — Pirate Radio</title>
+  <meta property="og:title" content="Blackbeard's Shebeen — Pirate Radio">
+  <meta property="og:description" content="Pirate radio broadcasting from Alameda, CA. Tune in when the flag is flying.">
+  <meta property="og:image" content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+  <meta property="og:url" content="https://blackbeards-music-library.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Blackbeard's Shebeen">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blackbeard's Shebeen — Pirate Radio">
+  <meta name="twitter:description" content="Pirate radio broadcasting from Alameda, CA. Tune in when the flag is flying.">
+  <meta name="twitter:image" content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/theme.css">
+  <style>
+    /* ── Radio Station styles ─────────────────────────── */
+    .radio-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon-64.png">
+    .radio-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .radio-header .jolly-roger {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      filter: invert(1);
+      opacity: 0.92;
+      margin-bottom: 18px;
+    }
+    body.day-mode .radio-header .jolly-roger { filter: none; }
 
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website">
-    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
-    <meta property="og:title"       content="Blackbeard's Little Music Library">
-    <meta property="og:description" content="A neighborhood collection of sound, anchored in Alameda. Pull up a chair and chart a course through the playlists.">
-    <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/">
-    <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    .station-name {
+      font-family: 'UnifrakturMaguntia', cursive;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 8px;
+      letter-spacing: 0.01em;
+    }
+    .station-sub {
+      font-size: 0.82em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin: 0 0 6px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    body.day-mode .station-sub { color: rgba(0,0,0,0.45); }
 
-    <!-- Twitter card -->
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Blackbeard's Little Music Library">
-    <meta name="twitter:description" content="A neighborhood collection of sound, anchored in Alameda. Pull up a chair and chart a course through the playlists.">
-    <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
+    /* Mixlr player */
+    .radio-player {
+      margin-bottom: 36px;
+    }
+    .radio-player iframe {
+      border-radius: 10px;
+      display: block;
+    }
+    .radio-note {
+      font-size: 0.76em;
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    body.day-mode .radio-note { color: rgba(0,0,0,0.35); }
+
+    /* On the tape */
+    .on-the-tape {
+      margin-bottom: 32px;
+    }
+    .tape-eyebrow {
+      font-size: 0.68em;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red-bright, #c4182a);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .tape-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .tape-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.18);
+    }
+    body.day-mode .tape-card {
+      background: rgba(0,0,0,0.04);
+      border-color: rgba(0,0,0,0.1);
+    }
+    body.day-mode .tape-card:hover {
+      background: rgba(0,0,0,0.08);
+    }
+    .tape-info { flex: 1; }
+    .tape-title {
+      font-size: 1.05em;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .tape-desc {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+    }
+    body.day-mode .tape-desc { color: rgba(0,0,0,0.5); }
+    .tape-cta {
+      font-size: 0.85em;
+      color: var(--red-bright, #c4182a);
+      white-space: nowrap;
+    }
+
+    /* Station nav links */
+    .station-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+    .station-link {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      text-decoration: none;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85em;
+      font-weight: 600;
+      transition: background 0.15s, color 0.15s;
+    }
+    .station-link:hover {
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+    }
+    body.day-mode .station-link {
+      border-color: rgba(0,0,0,0.15);
+      color: rgba(0,0,0,0.65);
+    }
+    body.day-mode .station-link:hover {
+      background: rgba(0,0,0,0.05);
+      color: #000;
+    }
+
+    /* Request line rename */
+    .request-line-title {
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
 <body>
-    <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
 
-    <!-- Full-page floating flag background -->
-    <div class="flag-bg" aria-hidden="true">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="side-nav" id="side-nav" aria-hidden="true">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+    <ul>
+      <li><a href="index.html">🏴 Radio</a></li>
+      <li><a href="heavy-rotation.html">🔁 Heavy Rotation</a></li>
+      <li><a href="island-bliss.html">🌴 Island Bliss</a></li>
+      <li><a href="raccoon-jams.html">🦝 Raccoon Jams</a></li>
+      <li><a href="walking.html">👟 Walking</a></li>
+      <li><a href="new-loud.html">🔊 New Loud</a></li>
+      <li><a href="dads-garage.html">🔧 Dad's Garage</a></li>
+      <li><a href="saturdaze.html">☕ Saturdaze</a></li>
+      <li><a href="events.html">📅 Local Shows</a></li>
+      <li><a href="discoveries.html">🔍 Discoveries</a></li>
+      <li><a href="about.html">⚓ About</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <button class="day-toggle" id="day-toggle" aria-label="Toggle day mode">DAY</button>
+
+  <main class="radio-wrap">
+
+    <!-- Station identity -->
+    <header class="radio-header anim-entry">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg"
+           alt="Blackbeard's Jolly Roger" class="jolly-roger">
+      <h1 class="station-name">Blackbeard's Shebeen</h1>
+      <p class="station-sub">Pirate Radio · Alameda, CA</p>
+      <p class="est-label">Est. 2020</p>
+    </header>
+
+    <!-- Mixlr player -->
+    <div class="radio-player anim-entry">
+      <iframe src="https://mixlr.com/users/radioblackbeards/embed"
+              frameborder="0" scrolling="no" width="100%" height="160"
+              allow="autoplay" title="Blackbeard's Shebeen Live Radio"></iframe>
+      <p class="radio-note">Tune in when the flag is flying. Dead air means we'll be back.</p>
     </div>
 
-    <img class="jolly-roger"
-         src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg"
-         alt="Blackbeard's Jolly Roger — skeleton with hourglass and spear through a heart"
-         width="200">
-
-    <div class="container">
-        <div class="header">
-            <h1>Blackbeard's Little Music Library</h1>
-            <p class="subtitle">A neighborhood collection of sound, anchored in Alameda</p>
-            <p class="est-label">Est. 2020</p>
+    <!-- On the tape: Heavy Rotation -->
+    <div class="on-the-tape anim-entry">
+      <div class="tape-eyebrow">On the Tape</div>
+      <a href="heavy-rotation.html" class="tape-card">
+        <div class="tape-info">
+          <div class="tape-title">Heavy Rotation</div>
+          <div class="tape-desc">What's been on repeat at Blackbeard's — the crew can't stop listening</div>
         </div>
-        <div class="welcome">
-            <p>Pull up a seat and chart a course through the library. These playlists are here for the whole crew — share freely, no walking the plank required.</p>
-        </div>
-
-        <div class="surprise-wrap">
-            <button class="surprise-btn" id="surprise-btn">
-                <span class="surprise-icon">⚓</span> Surprise Me
-            </button>
-        </div>
-
-        <div class="captains-pick">
-            <div class="cp-label">Heavy Rotation</div>
-            <a class="cp-body" href="heavy-rotation.html">
-                <div class="cp-art" style="background: linear-gradient(135deg,#8a0f1a,#c4182a)"></div>
-                <div class="cp-text">
-                    <div class="cp-title">Heavy Rotation</div>
-                    <div class="cp-desc">What's been on repeat at Blackbeard's — the crew can't stop listening</div>
-                </div>
-            </a>
-            <a class="cp-go" href="heavy-rotation.html">Listen Now</a>
-        </div>
-
-        <div class="playlists">
-            <div class="section-title">The Playlists</div>
-            <div class="playlist-grid">
-                <div class="playlist-card">
-                    <div class="art art-island"></div>
-                    <a class="info" href="island-bliss.html">
-                        <div class="title-row">Island Bliss</div>
-                        <div class="desc">Steel drums, sea breeze &amp; slow steel-string grooves for kicking back</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Island Bliss', 'island-bliss.html', event)">↗</button>
-                </div>
-                <div class="playlist-card">
-                    <div class="art art-raccoon"></div>
-                    <a class="info" href="raccoon-jams.html">
-                        <div class="title-row">Raccoon Jams</div>
-                        <div class="desc">Scrappy, quirky tunes for late-night snack raids and good times</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Raccoon Jams', 'raccoon-jams.html', event)">↗</button>
-                </div>
-                <div class="playlist-card">
-                    <div class="art art-walking"></div>
-                    <a class="info" href="walking.html">
-                        <div class="title-row">Walking</div>
-                        <div class="desc">Steady-beat tracks to match your stride around the block</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Walking', 'walking.html', event)">↗</button>
-                </div>
-                <div class="playlist-card">
-                    <div class="art art-loud"></div>
-                    <a class="info" href="new-loud.html">
-                        <div class="title-row">New Loud</div>
-                        <div class="desc">Fresh, high-energy new releases — turn it up</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('New Loud', 'new-loud.html', event)">↗</button>
-                </div>
-                <div class="playlist-card">
-                    <div class="art art-garage"></div>
-                    <a class="info" href="dads-garage.html">
-                        <div class="title-row">Dad's Garage</div>
-                        <div class="desc">Classic rock and workbench anthems</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist(&quot;Dad's Garage&quot;, 'dads-garage.html', event)">↗</button>
-                </div>
-                <div class="playlist-card">
-                    <div class="art art-saturdaze"></div>
-                    <a class="info" href="saturdaze.html">
-                        <div class="title-row">Saturdaze</div>
-                        <div class="desc">Lazy weekend vibes for slow mornings</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Saturdaze', 'saturdaze.html', event)">↗</button>
-                </div>
-                <div class="playlist-card">
-                    <div class="art" style="background:linear-gradient(135deg,#8a0f1a,#c4182a)"></div>
-                    <a class="info" href="heavy-rotation.html">
-                        <div class="title-row">Heavy Rotation</div>
-                        <div class="desc">What's been on repeat at Blackbeard's — the crew can't stop listening</div>
-                    </a>
-                    <button class="share-btn" title="Share this playlist" onclick="sharePlaylist('Heavy Rotation', 'heavy-rotation.html', event)">↗</button>
-                </div>
-            </div>
-        </div>
-        <!-- Events teaser -->
-        <div class="events-teaser anim-entry">
-            <div class="section-title">Upcoming Shows</div>
-            <div id="home-teaser-list"></div>
-            <a href="events.html" class="teaser-all-link">See all Bay Area shows →</a>
-        </div>
-
-
-
-        <!-- Discoveries teaser -->
-        <div style="position:relative;z-index:1;margin-bottom:28px;">
-            <div class="section-title">Discoveries</div>
-            <a href="discoveries.html" style="
-                display:flex;align-items:center;gap:16px;
-                padding:16px 18px;
-                background:rgba(4,0,0,0.60);
-                border:1px solid rgba(255,255,255,0.09);
-                border-top-color:rgba(255,255,255,0.14);
-                border-radius:14px;
-                text-decoration:none;color:var(--ink);
-                transition:all 0.2s ease;
-                backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-            " onmouseover="this.style.background='rgba(10,2,2,0.80)';this.style.transform='translateY(-2px)'"
-               onmouseout="this.style.background='rgba(4,0,0,0.60)';this.style.transform='translateY(0)'">
-                <div style="flex:1;text-align:center">
-                    <div style="font-weight:700;font-size:0.93em;color:var(--ink-strong)">Artists, Videos &amp; Local Finds</div>
-                    <div style="font-size:0.77em;color:var(--ink-soft);margin-top:3px">Artists I love, YouTube picks, and Alameda's own</div>
-                </div>
-                <span style="color:var(--accent);font-size:1em;font-weight:700">→</span>
-            </a>
-        </div>
-
-        <div class="suggestion-box">
-            <div class="section-title" style="justify-content:center;">Drop a Line</div>
-            <p>Got a song recommendation? A playlist idea? Want to share what you're listening to?</p>
-
-            <form class="suggestion-form" action="https://api.web3forms.com/submit" method="POST" name="suggestion" method="POST" novalidate>
-                <input type="hidden" name="access_key" value="8a6d25d0-1e80-4568-af3a-b2b553439765">
-                <input type="hidden" name="subject" value="New message — Blackbeard's Library">
-                <input type="hidden" name="form-name" value="suggestion">
-                <p class="form-honey"><label>Skip this: <input name="bot-field"></label></p>
-                <textarea name="message" class="form-input form-textarea" placeholder="What are you listening to? Drop a song, a vibe, a recommendation..." required></textarea>
-                <button type="submit" class="form-submit">Send It</button>
-            </form>
-
-            <div class="form-success" id="form-success" hidden>
-                <div class="form-success-icon">✦</div>
-                <p>Message received — thanks, crew.</p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Share the music, share the joy.</p>
-            <p style="margin-top: 8px;">Note: some playlists may contain explicit lyrics. Listener discretion advised.</p>
-            <p style="margin-top: 10px;"><a href="about.html">About this Library</a></p>
-        </div>
+        <span class="tape-cta">Listen →</span>
+      </a>
     </div>
 
-    <script src="assets/site.js"></script>
+    <!-- Station links -->
+    <div class="station-links anim-entry">
+      <a href="events.html" class="station-link">📅 Local Shows</a>
+      <a href="discoveries.html" class="station-link">🔍 Discoveries</a>
+      <a href="about.html" class="station-link">⚓ About</a>
+    </div>
 
-    <script>
-    (function(){
-      var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      fetch('events.json').then(function(r){return r.json();}).then(function(data){
-        var today=new Date();today.setHours(0,0,0,0);
-        var upcoming=data.filter(function(e){return new Date(e.date+'T00:00:00')>=today;})
-          .sort(function(a,b){return a.date.localeCompare(b.date);}).slice(0,3);
-        var list=document.getElementById('home-teaser-list');
-        if(!list)return;
-        list.innerHTML=upcoming.map(function(ev){
-          var d=new Date(ev.date+'T00:00:00');
-          return '<a class="teaser-item" href="events.html">'+
-            '<div class="teaser-date"><span class="teaser-mon">'+MONTHS[d.getMonth()]+'</span><span class="teaser-day">'+d.getDate()+'</span></div>'+
-            '<div class="teaser-info"><div class="teaser-title">'+ev.title+'</div><div class="teaser-venue">'+ev.venue+' · '+ev.city+'</div></div>'+
-            '<span class="teaser-arrow">→</span>'+
-          '</a>';
-        }).join('');
-      }).catch(function(){});
-    })();
-    </script>
+    <!-- Events teaser -->
+    <div class="events-teaser anim-entry">
+      <div class="section-title">Upcoming Shows</div>
+      <div id="home-teaser-list"></div>
+      <a href="events.html" class="teaser-all-link">See all Bay Area shows →</a>
+    </div>
+
+    <!-- Request line -->
+    <div class="suggestion-box anim-entry">
+      <div class="section-title">The Request Line</div>
+      <p class="suggestion-sub">Drop a song, a vibe, or anything you're into. Brian might just put it on.</p>
+      <form class="suggestion-form" name="drop-a-line" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="drop-a-line">
+        <p style="display:none"><label>Skip this: <input name="bot-field"></label></p>
+        <textarea name="message" placeholder="What are you listening to? Drop a song, a vibe, a recommendation..." rows="3" required></textarea>
+        <button type="submit" class="form-submit">Send It</button>
+      </form>
+      <p class="form-success" id="form-success" style="display:none">Message received — thanks, crew.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Share the music, share the joy.</p>
+    <p class="footer-note">Note: some playlists may contain explicit lyrics. Listener discretion advised.</p>
+    <a href="about.html" class="footer-link">About this Library</a>
+  </footer>
+
+  <script src="assets/site.js"></script>
+
+  <script>
+  // Events teaser
+  (function(){
+    var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    fetch('events.json').then(function(r){return r.json();}).then(function(data){
+      var today=new Date();today.setHours(0,0,0,0);
+      var upcoming=data.filter(function(e){return new Date(e.date+'T00:00:00')>=today;})
+        .sort(function(a,b){return a.date.localeCompare(b.date);}).slice(0,3);
+      var list=document.getElementById('home-teaser-list');
+      if(!list)return;
+      list.innerHTML=upcoming.map(function(ev){
+        var d=new Date(ev.date+'T00:00:00');
+        return '<a class="teaser-item" href="events.html">'+
+          '<div class="teaser-date"><span class="teaser-mon">'+MONTHS[d.getMonth()]+'</span><span class="teaser-day">'+d.getDate()+'</span></div>'+
+          '<div class="teaser-info"><div class="teaser-title">'+ev.title+'</div><div class="teaser-venue">'+ev.venue+' \xb7 '+ev.city+'</div></div>'+
+          '<span class="teaser-arrow">→</span>'+
+        '</a>';
+      }).join('');
+    }).catch(function(){});
+  })();
+
+  // Form success handling
+  (function(){
+    var form = document.querySelector('.suggestion-form');
+    var success = document.getElementById('form-success');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(data).toString()
+      }).then(function(){
+        form.style.display = 'none';
+        if(success) success.style.display = 'block';
+      }).catch(function(){
+        if(success) success.style.display = 'block';
+      });
+    });
+  })();
+  </script>
 
 </body>
 </html>
