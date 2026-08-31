@@ -1,71 +1,5 @@
 [
   {
-    "title": "Brainstory",
-    "date": "2026-08-25",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Brainstory w/ BOLERO!, Radio Veloso — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260825.html"
-  },
-  {
-    "title": "The Hot Takes",
-    "date": "2026-08-26",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Hot Takes w/ The DisRespectors, Neon Ships — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260826.html"
-  },
-  {
-    "title": "Nerf Herder",
-    "date": "2026-08-27",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Nerf Herder w/ playing greatest hits, Pulsars, Dog Party — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260827.html"
-  },
-  {
-    "title": "Nerf Herder",
-    "date": "2026-08-28",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Nerf Herder w/ playing S/T album, and more!, Ridel High, The Kegels — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260828.html"
-  },
-  {
-    "title": "Arnocorps",
-    "date": "2026-08-29",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Arnocorps w/ 25th anniversary, FleXx Bronco, 25th anniversary, The Memphis Murder Men — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260829.html"
-  },
-  {
-    "title": "Tom Kenny & the Hi Seas",
-    "date": "2026-08-30",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Tom Kenny & the Hi Seas w/ Michael Michael Motorcycle, Cape Fury — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260830.html"
-  },
-  {
     "title": "Summer Salt",
     "date": "2026-08-31",
     "time": "9:00 PM",
@@ -429,6 +363,17 @@
     "link": "http://www.bottomofthehill.com/20261005.html"
   },
   {
+    "title": "zzzahara",
+    "date": "2026-10-06",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "zzzahara w/ Faerybabyy, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261006.html"
+  },
+  {
     "title": "The Spiral Electric",
     "date": "2026-10-07",
     "time": "9:00 PM",
@@ -702,6 +647,17 @@
     "genre": "live music",
     "description": "Hit The Lights w/ Forever Came Calling, Fox Royale — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261110.html"
+  },
+  {
+    "title": "lowercase",
+    "date": "2026-11-11",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "lowercase w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261111.html"
   },
   {
     "title": "Jon Spencer",
