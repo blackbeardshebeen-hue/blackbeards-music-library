@@ -59,14 +59,150 @@
     }
     body.day-mode .station-sub { color: rgba(0,0,0,0.45); }
 
-    /* Mixlr player */
+    /* World clocks */
+    .world-clocks {
+      margin-bottom: 40px;
+    }
+    .clocks-eyebrow {
+      font-size: 0.68em;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    body.day-mode .clocks-eyebrow { color: rgba(0,0,0,0.35); }
+    .clock-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .clock-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .clock-face {
+      width: 88px;
+      height: 88px;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    }
+    .clock-bg {
+      fill: #1a1008;
+      stroke: #6b4c1e;
+      stroke-width: 3;
+    }
+    body.day-mode .clock-bg {
+      fill: #f5efe0;
+      stroke: #8b6914;
+    }
+    .clock-tick {
+      stroke: rgba(255,255,255,0.25);
+      stroke-width: 1;
+    }
+    body.day-mode .clock-tick { stroke: rgba(0,0,0,0.25); }
+    .clock-tick-major {
+      stroke: rgba(255,255,255,0.6);
+      stroke-width: 2;
+    }
+    body.day-mode .clock-tick-major { stroke: rgba(0,0,0,0.6); }
+    .hand {
+      stroke-linecap: round;
+      transform-origin: 50px 50px;
+    }
+    .hour-hand {
+      stroke: rgba(255,255,255,0.9);
+      stroke-width: 3.5;
+    }
+    body.day-mode .hour-hand { stroke: #1a1008; }
+    .min-hand {
+      stroke: rgba(255,255,255,0.85);
+      stroke-width: 2.5;
+    }
+    body.day-mode .min-hand { stroke: #1a1008; }
+    .sec-hand {
+      stroke: #c4182a;
+      stroke-width: 1.5;
+    }
+    .clock-center {
+      fill: #c4182a;
+    }
+    .clock-city {
+      font-size: 0.72em;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+    }
+    body.day-mode .clock-city { color: rgba(0,0,0,0.5); }
+    .clock-time {
+      font-size: 0.65em;
+      color: rgba(255,255,255,0.3);
+      font-family: 'DM Sans', sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+    body.day-mode .clock-time { color: rgba(0,0,0,0.3); }
+
+    /* Tuner panel */
     .radio-player {
       margin-bottom: 36px;
     }
-    .radio-player iframe {
-      border-radius: 10px;
+    .tuner-link {
       display: block;
+      text-decoration: none;
+      color: inherit;
     }
+    .tuner-panel {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      background: rgba(196,24,42,0.08);
+      border: 1px solid rgba(196,24,42,0.3);
+      border-radius: 12px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .tuner-link:hover .tuner-panel {
+      background: rgba(196,24,42,0.14);
+      border-color: rgba(196,24,42,0.5);
+    }
+    .tuner-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #c4182a;
+      flex-shrink: 0;
+      box-shadow: 0 0 8px rgba(196,24,42,0.7);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(196,24,42,0.7); }
+      50% { opacity: 0.5; box-shadow: 0 0 3px rgba(196,24,42,0.3); }
+    }
+    .tuner-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .tuner-status {
+      font-size: 0.72em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c4182a;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .tuner-label {
+      font-size: 0.95em;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+    body.day-mode .tuner-label { color: rgba(0,0,0,0.8); }
     .radio-note {
       font-size: 0.76em;
       color: rgba(255,255,255,0.35);
@@ -205,12 +341,24 @@
       <p class="est-label">Est. 2020</p>
     </header>
 
-    <!-- Mixlr player -->
+    <!-- World clocks -->
+    <div class="world-clocks anim-entry">
+      <div class="clocks-eyebrow">On the Air Worldwide</div>
+      <div class="clock-row" id="clock-row"></div>
+    </div>
+
+    <!-- Tuner panel -->
     <div class="radio-player anim-entry">
-      <iframe src="https://mixlr.com/users/radioblackbeards/embed"
-              frameborder="0" scrolling="no" width="100%" height="160"
-              allow="autoplay" title="Blackbeard's Shebeen Live Radio"></iframe>
-      <p class="radio-note">Tune in when the flag is flying. Dead air means we'll be back.</p>
+      <a href="https://mixlr.com/radioblackbeards" target="_blank" rel="noopener" class="tuner-link">
+        <div class="tuner-panel">
+          <div class="tuner-dot"></div>
+          <div class="tuner-text">
+            <span class="tuner-status">Tune In</span>
+            <span class="tuner-label">Blackbeard's Shebeen — Live on Mixlr →</span>
+          </div>
+        </div>
+      </a>
+      <p class="radio-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
     </div>
 
     <!-- On the tape: Heavy Rotation -->
@@ -263,6 +411,89 @@
   <script src="assets/site.js"></script>
 
   <script>
+  // World clocks
+  (function(){
+    var CITIES = [
+      { label: 'Alameda',  tz: 'America/Los_Angeles' },
+      { label: 'New York', tz: 'America/New_York' },
+      { label: 'London',   tz: 'Europe/London' },
+      { label: 'Tokyo',    tz: 'Asia/Tokyo' },
+    ];
+
+    function makeTicks() {
+      var s = '';
+      for (var i = 0; i < 60; i++) {
+        var angle = i * 6;
+        var isMaj = i % 5 === 0;
+        var r1 = isMaj ? 38 : 41;
+        var r2 = 46;
+        var a = (angle - 90) * Math.PI / 180;
+        var x1 = 50 + r1 * Math.cos(a);
+        var y1 = 50 + r1 * Math.sin(a);
+        var x2 = 50 + r2 * Math.cos(a);
+        var y2 = 50 + r2 * Math.sin(a);
+        s += '<line class="' + (isMaj ? 'clock-tick-major' : 'clock-tick') + '" x1="' + x1.toFixed(1) + '" y1="' + y1.toFixed(1) + '" x2="' + x2.toFixed(1) + '" y2="' + y2.toFixed(1) + '"/>';
+      }
+      return s;
+    }
+
+    var row = document.getElementById('clock-row');
+    if (!row) return;
+
+    var clocks = CITIES.map(function(c) {
+      var div = document.createElement('div');
+      div.className = 'clock-item';
+      div.innerHTML =
+        '<svg class="clock-face" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">' +
+          '<circle cx="50" cy="50" r="48" class="clock-bg"/>' +
+          makeTicks() +
+          '<line class="hand hour-hand" id="h-' + c.label + '" x1="50" y1="50" x2="50" y2="24"/>' +
+          '<line class="hand min-hand"  id="m-' + c.label + '" x1="50" y1="50" x2="50" y2="14"/>' +
+          '<line class="hand sec-hand"  id="s-' + c.label + '" x1="50" y1="50" x2="50" y2="10"/>' +
+          '<circle cx="50" cy="50" r="2.5" class="clock-center"/>' +
+        '</svg>' +
+        '<div class="clock-city">' + c.label + '</div>' +
+        '<div class="clock-time" id="t-' + c.label + '"></div>';
+      row.appendChild(div);
+      return c;
+    });
+
+    function updateClocks() {
+      var now = Date.now();
+      CITIES.forEach(function(c) {
+        var d = new Date(now);
+        var parts = new Intl.DateTimeFormat('en-US', {
+          timeZone: c.tz, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false
+        }).formatToParts(d);
+        var map = {};
+        parts.forEach(function(p){ map[p.type] = parseInt(p.value, 10); });
+        var h = map.hour % 12, m = map.minute, s = map.second;
+
+        var hDeg = h * 30 + m * 0.5;
+        var mDeg = m * 6 + s * 0.1;
+        var sDeg = s * 6;
+
+        var hEl = document.getElementById('h-' + c.label);
+        var mEl = document.getElementById('m-' + c.label);
+        var sEl = document.getElementById('s-' + c.label);
+        var tEl = document.getElementById('t-' + c.label);
+
+        if (hEl) hEl.style.transform = 'rotate(' + hDeg + 'deg)';
+        if (mEl) mEl.style.transform = 'rotate(' + mDeg + 'deg)';
+        if (sEl) sEl.style.transform = 'rotate(' + sDeg + 'deg)';
+        if (tEl) {
+          var hStr = (map.hour % 12 || 12);
+          var mStr = String(map.minute).padStart(2,'0');
+          var ampm = map.hour >= 12 ? 'PM' : 'AM';
+          tEl.textContent = hStr + ':' + mStr + ' ' + ampm;
+        }
+      });
+    }
+
+    updateClocks();
+    setInterval(updateClocks, 1000);
+  })();
+
   // Events teaser
   (function(){
     var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
