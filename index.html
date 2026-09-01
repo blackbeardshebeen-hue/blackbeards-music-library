@@ -158,10 +158,8 @@
       color: inherit;
     }
     .tuner-panel {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      padding: 22px 24px;
+      text-align: center;
+      padding: 28px 24px;
       background: rgba(196,24,42,0.08);
       border: 1px solid rgba(196,24,42,0.3);
       border-radius: 12px;
@@ -171,9 +169,16 @@
       background: rgba(196,24,42,0.14);
       border-color: rgba(196,24,42,0.5);
     }
+    .tuner-signal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
     .tuner-dot {
-      width: 14px;
-      height: 14px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background: #c4182a;
       flex-shrink: 0;
@@ -184,11 +189,6 @@
       0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(196,24,42,0.7); }
       50% { opacity: 0.5; box-shadow: 0 0 3px rgba(196,24,42,0.3); }
     }
-    .tuner-text {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
     .tuner-status {
       font-size: 0.72em;
       letter-spacing: 3px;
@@ -198,7 +198,7 @@
       font-family: 'DM Sans', sans-serif;
     }
     .tuner-label {
-      font-size: 0.95em;
+      font-size: 0.92em;
       font-weight: 600;
       color: rgba(255,255,255,0.85);
     }
@@ -378,11 +378,11 @@
     <div class="radio-player anim-entry">
       <a href="https://radioblackbeards.mixlr.com" target="_blank" rel="noopener" class="tuner-link">
         <div class="tuner-panel">
-          <div class="tuner-dot"></div>
-          <div class="tuner-text">
+          <div class="tuner-signal">
+            <div class="tuner-dot"></div>
             <span class="tuner-status">Tune In</span>
-            <span class="tuner-label">Blackbeard's Shebeen — Live on Mixlr →</span>
           </div>
+          <div class="tuner-label">Blackbeard's Shebeen — Live on Mixlr →</div>
         </div>
       </a>
       <p class="radio-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
@@ -441,10 +441,10 @@
   // World clocks
   (function(){
     var CITIES = [
-      { label: 'Alameda',  tz: 'America/Los_Angeles' },
-      { label: 'New York', tz: 'America/New_York' },
-      { label: 'London',   tz: 'Europe/London' },
-      { label: 'Tokyo',    tz: 'Asia/Tokyo' },
+      { label: 'Alameda',      tz: 'America/Los_Angeles' },
+      { label: 'Charles City', tz: 'America/Chicago' },
+      { label: 'New York',     tz: 'America/New_York' },
+      { label: 'Ocracoke',     tz: 'America/New_York' },
     ];
 
     function makeTicks() {
