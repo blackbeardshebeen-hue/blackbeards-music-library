@@ -265,6 +265,33 @@
       white-space: nowrap;
     }
 
+    /* Alignment fixes */
+    .suggestion-box { text-align: left; }
+    .suggestion-box .section-title { text-align: left; }
+    .suggestion-sub {
+      font-size: 0.85em;
+      color: rgba(255,255,255,0.45);
+      margin: 0 0 14px;
+      line-height: 1.5;
+    }
+    body.day-mode .suggestion-sub { color: rgba(0,0,0,0.45); }
+    .suggestion-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .suggestion-form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    .suggestion-form .form-submit {
+      align-self: flex-start;
+    }
+    .tape-eyebrow { text-align: left; }
+    .radio-note { text-align: left; margin-top: 10px; }
+    .tuner-label { font-size: 0.88em; }
+
     /* Station nav links */
     .station-links {
       display: flex;
