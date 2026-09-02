@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saturdaze — Blackbeard's Little Music Library</title>
+    <title>Saturdaze — Blackbeard's Shebeen</title>
     <link rel="stylesheet" href="assets/theme.css">
     <style>
         .art-island    { background: linear-gradient(135deg,#1a8a8a,#0a5050); }
@@ -21,8 +21,8 @@
 
     <!-- Open Graph -->
     <meta property="og:type"        content="website">
-    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
-    <meta property="og:title"       content="Saturdaze — Blackbeard's Little Music Library">
+    <meta property="og:site_name"   content="Blackbeard's Shebeen">
+    <meta property="og:title"       content="Saturdaze — Blackbeard's Shebeen">
     <meta property="og:description" content="Lazy weekend vibes for slow mornings.">
     <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/saturdaze.html">
     <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
@@ -31,11 +31,26 @@
 
     <!-- Twitter card -->
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Saturdaze — Blackbeard's Little Music Library">
+    <meta name="twitter:title"       content="Saturdaze — Blackbeard's Shebeen">
     <meta name="twitter:description" content="Lazy weekend vibes for slow mornings.">
     <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
 </head>
 <body>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="side-nav" id="side-nav" aria-hidden="true">
+        <button class="nav-close" id="nav-close" aria-label="Close menu">&#10005;</button>
+        <ul>
+            <li><a href="index.html">&#127988; Radio</a></li>
+            <li><a href="heavy-rotation.html">&#128257; Heavy Rotation</a></li>
+            <li><a href="events.html">&#128197; Local Shows</a></li>
+            <li><a href="discoveries.html">&#128269; Discoveries</a></li>
+            <li><a href="about.html">&#9875; About</a></li>
+        </ul>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
     <!-- Full-page floating flag background -->
     <div class="flag-bg" aria-hidden="true">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
@@ -45,7 +60,7 @@
     <div class="container wide">
         <div class="header">
             <div class="hero-art art-saturdaze"></div>
-            <h1>Blackbeard's Little Music Library</h1>
+            <h1>Blackbeard's Shebeen</h1>
             <p class="subtitle">Saturdaze</p>
             <p class="desc-line">Lazy weekend vibes for slow mornings</p>
         </div>
@@ -59,7 +74,7 @@
             </iframe>
         </div>
         <div class="page-actions">
-            <a href="index.html" class="back-btn">← Back to the Library</a>
+            <a href="index.html" class="back-btn">← Back to the Station</a>
             <button class="share-link-btn" onclick="sharePlaylist('Saturdaze', 'saturdaze.html', event)">Share</button>
         </div>
         <div class="footer">
