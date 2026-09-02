@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discoveries — Blackbeard's Little Music Library</title>
+    <title>Discoveries — Blackbeard's Shebeen</title>
     <link rel="stylesheet" href="assets/theme.css">
     <style>
         /* ---- Section headers ---- */
@@ -117,8 +117,8 @@
 
     <!-- Open Graph -->
     <meta property="og:type"        content="website">
-    <meta property="og:site_name"   content="Blackbeard's Little Music Library">
-    <meta property="og:title"       content="Discoveries — Blackbeard's Little Music Library">
+    <meta property="og:site_name"   content="Blackbeard's Shebeen">
+    <meta property="og:title"       content="Discoveries — Blackbeard's Shebeen">
     <meta property="og:description" content="Artists I love, YouTube picks, and the best of Alameda's own.">
     <meta property="og:url"         content="https://blackbeards-music-library.pages.dev/discoveries.html">
     <meta property="og:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
@@ -127,11 +127,26 @@
 
     <!-- Twitter card -->
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Discoveries — Blackbeard's Little Music Library">
+    <meta name="twitter:title"       content="Discoveries — Blackbeard's Shebeen">
     <meta name="twitter:description" content="Artists I love, YouTube picks, and the best of Alameda's own.">
     <meta name="twitter:image"       content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
 </head>
 <body>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="side-nav" id="side-nav" aria-hidden="true">
+        <button class="nav-close" id="nav-close" aria-label="Close menu">&#10005;</button>
+        <ul>
+            <li><a href="index.html">&#127988; Radio</a></li>
+            <li><a href="heavy-rotation.html">&#128257; Heavy Rotation</a></li>
+            <li><a href="events.html">&#128197; Local Shows</a></li>
+            <li><a href="discoveries.html">&#128269; Discoveries</a></li>
+            <li><a href="about.html">&#9875; About</a></li>
+        </ul>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
     <!-- Full-page floating flag background -->
     <div class="flag-bg" aria-hidden="true">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
@@ -253,7 +268,7 @@
         </div>
 
         <div class="page-actions">
-            <a href="index.html" class="back-btn">← Back to the Library</a>
+            <a href="index.html" class="back-btn">← Back to the Station</a>
         </div>
         <div class="footer">
             <p>Share the music, share the joy.</p>
