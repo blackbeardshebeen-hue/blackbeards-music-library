@@ -413,6 +413,29 @@
   <script src="assets/site.js"></script>
 
   <script>
+  // Formspree AJAX handler — runs in capture phase to override site.js
+  document.addEventListener('submit', function(e) {
+    var form = e.target;
+    if (!form.classList.contains('suggestion-form')) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    var success = document.getElementById('form-success');
+    fetch('https://formspree.io/f/xoeqddad', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if (r.ok) {
+        form.style.display = 'none';
+        if (success) { success.style.display = 'block'; }
+      } else {
+        alert('Something went wrong — try again in a moment.');
+      }
+    }).catch(function() {
+      alert('Could not send — check your connection and try again.');
+    });
+  }, true);
+
   // World clocks
   (function(){
     var CITIES = [
