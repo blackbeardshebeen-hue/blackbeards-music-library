@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bay Area Events — Blackbeard's Little Music Library</title>
+    <title>Bay Area Events — Blackbeard's Shebeen</title>
     <link rel="stylesheet" href="assets/theme.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon-64.png">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Blackbeard's Little Music Library">
-    <meta property="og:title" content="Bay Area Events — Blackbeard's Little Music Library">
+    <meta property="og:site_name" content="Blackbeard's Shebeen">
+    <meta property="og:title" content="Bay Area Events — Blackbeard's Shebeen">
     <meta property="og:description" content="Bay Area shows worth leaving the house for.">
     <meta property="og:url" content="https://blackbeards-music-library.pages.dev/events.html">
     <meta property="og:image" content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
@@ -95,13 +95,28 @@
     </style>
 </head>
 <body>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="side-nav" id="side-nav" aria-hidden="true">
+        <button class="nav-close" id="nav-close" aria-label="Close menu">&#10005;</button>
+        <ul>
+            <li><a href="index.html">&#127988; Radio</a></li>
+            <li><a href="heavy-rotation.html">&#128257; Heavy Rotation</a></li>
+            <li><a href="events.html">&#128197; Local Shows</a></li>
+            <li><a href="discoveries.html">&#128269; Discoveries</a></li>
+            <li><a href="about.html">&#9875; About</a></li>
+        </ul>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
     <div class="flag-bg" aria-hidden="true">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pirate_Flag_of_Blackbeard_%28Edward_Teach%29.svg" alt="">
     </div>
     <button id="theme-toggle-btn" class="theme-toggle" title="Toggle day/night" aria-label="Toggle day and night theme">Day</button>
     <div class="container wide">
         <div class="events-header">
-            <h1>Blackbeard's Little Music Library</h1>
+            <h1>Blackbeard's Shebeen</h1>
             <p class="subtitle">Bay Area Events</p>
             <p class="tagline">Shows worth leaving the house for.</p>
         </div>
@@ -136,7 +151,7 @@
         <div id="events-root"><div class="events-loading">Loading shows…</div></div>
         <p class="events-edit-hint">&#9875; Events managed via events.json in the GitHub repo</p>
         <div class="events-back page-actions">
-            <a href="index.html" class="back-btn">&larr; Back to the Library</a>
+            <a href="index.html" class="back-btn">&larr; Back to the Station</a>
         </div>
         <div class="footer"><p>Share the music, share the joy.</p></div>
     </div>
