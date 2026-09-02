@@ -40,8 +40,8 @@ async function sharePlaylist(title, url, evt) {
     if (evt) evt.preventDefault();
     const fullUrl = new URL(url, window.location.href).href;
     const shareData = {
-        title: `${title} — Blackbeard's Little Music Library`,
-        text: `Check out the "${title}" playlist on Blackbeard's Little Music Library!`,
+        title: `${title} — Blackbeard's Shebeen`,
+        text: `Check out the "${title}" playlist on Blackbeard's Shebeen!`,
         url: fullUrl
     };
     if (navigator.share) {
@@ -150,16 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== Side nav (auto-injected on every page) =====
 document.addEventListener('DOMContentLoaded', () => {
     const ALL_PAGES = [
-        { href: 'index.html',          label: 'Home',           group: null },
-        { href: 'heavy-rotation.html', label: 'Heavy Rotation', group: 'Playlists' },
-        { href: 'island-bliss.html',   label: 'Island Bliss',   group: null },
-        { href: 'raccoon-jams.html',   label: 'Raccoon Jams',   group: null },
-        { href: 'walking.html',        label: 'Walking',        group: null },
-        { href: 'new-loud.html',       label: 'New Loud',       group: null },
-        { href: 'dads-garage.html',    label: "Dad's Garage",   group: null },
-        { href: 'saturdaze.html',      label: 'Saturdaze',      group: null },
-        { href: 'discoveries.html',    label: 'Discoveries',    group: 'Explore' },
-        { href: 'events.html',         label: 'Local Events',   group: null },
+        { href: 'index.html',          label: 'Radio',          group: null },
+        { href: 'heavy-rotation.html', label: 'Heavy Rotation', group: null },
+        { href: 'events.html',         label: 'Local Shows',    group: null },
+        { href: 'discoveries.html',    label: 'Discoveries',    group: null },
         { href: 'about.html',          label: 'About',          group: null },
     ];
 
@@ -194,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `
             <div class="nav-header">
-                <span class="nav-brand">The Library</span>
+                <span class="nav-brand">Blackbeard's Shebeen</span>
                 <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
             </div>
             <div class="nav-search-wrap">
