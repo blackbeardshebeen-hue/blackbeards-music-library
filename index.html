@@ -265,6 +265,30 @@
       white-space: nowrap;
     }
 
+    /* Off-air state */
+    .tuner-panel.off-air {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.1);
+    }
+    .tuner-link:hover .tuner-panel.off-air {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.16);
+    }
+    .tuner-panel.off-air .tuner-dot {
+      background: rgba(255,255,255,0.25);
+      box-shadow: none;
+      animation: none;
+    }
+    .tuner-panel.off-air .tuner-status {
+      color: rgba(255,255,255,0.4);
+    }
+    body.day-mode .tuner-panel.off-air .tuner-status { color: rgba(0,0,0,0.4); }
+    .tuner-panel.off-air .tuner-label {
+      color: rgba(255,255,255,0.55);
+      font-weight: 400;
+    }
+    body.day-mode .tuner-panel.off-air .tuner-label { color: rgba(0,0,0,0.5); }
+
     /* Alignment fixes */
     .suggestion-box { text-align: left; }
     .suggestion-box .section-title { text-align: left; }
@@ -333,6 +357,22 @@
 </head>
 <body>
 
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="side-nav" id="side-nav" aria-hidden="true">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+    <ul>
+      <li><a href="index.html">🏴 Radio</a></li>
+      <li><a href="heavy-rotation.html">🔁 Heavy Rotation</a></li>
+      <li><a href="events.html">📅 Local Shows</a></li>
+      <li><a href="discoveries.html">🔍 Discoveries</a></li>
+      <li><a href="about.html">⚓ About</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
   <button class="day-toggle" id="day-toggle" aria-label="Toggle day mode">DAY</button>
 
   <main class="radio-wrap">
@@ -355,12 +395,12 @@
     <!-- Tuner panel -->
     <div class="radio-player anim-entry">
       <a href="https://radioblackbeards.mixlr.com" target="_blank" rel="noopener" class="tuner-link">
-        <div class="tuner-panel">
+        <div class="tuner-panel off-air" id="tuner-panel">
           <div class="tuner-signal">
             <div class="tuner-dot"></div>
-            <span class="tuner-status">Tune In</span>
+            <span class="tuner-status" id="tuner-status">Checking signal…</span>
           </div>
-          <div class="tuner-label">Blackbeard's Shebeen — Live on Mixlr →</div>
+          <div class="tuner-label" id="tuner-label">Blackbeard's Shebeen</div>
         </div>
       </a>
       <p class="radio-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
@@ -419,6 +459,39 @@
       alert('Could not send — check your connection and try again.');
     });
   }, true);
+
+  // Live status — polls Mixlr channel API
+  (function(){
+    var API = 'https://apicdn.mixlr.com/v3/channel_view/radioblackbeards';
+    var panel  = document.getElementById('tuner-panel');
+    var status = document.getElementById('tuner-status');
+    var label  = document.getElementById('tuner-label');
+    if (!panel) return;
+
+    function setOnAir() {
+      panel.classList.remove('off-air');
+      status.textContent = 'On Air';
+      label.textContent = "Blackbeard's Shebeen is broadcasting — listen now →";
+    }
+    function setOffAir() {
+      panel.classList.add('off-air');
+      status.textContent = 'Off Air';
+      label.textContent = 'Dead air for now — check back soon';
+    }
+
+    function check() {
+      fetch(API, { cache: 'no-store' })
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          var live = j && j.data && j.data.attributes && j.data.attributes.live;
+          if (live) { setOnAir(); } else { setOffAir(); }
+        })
+        .catch(function(){ setOffAir(); });
+    }
+
+    check();
+    setInterval(check, 60000); // re-check every minute
+  })();
 
   // World clocks
   (function(){
