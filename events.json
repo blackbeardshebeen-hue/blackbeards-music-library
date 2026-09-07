@@ -1,82 +1,5 @@
 [
   {
-    "title": "Summer Salt",
-    "date": "2026-08-31",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Summer Salt w/ TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260831.html"
-  },
-  {
-    "title": "Black Lips",
-    "date": "2026-09-01",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Black Lips w/ TBA, TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260901.html"
-  },
-  {
-    "title": "Asian Man Records 30 Anniversary Celebration",
-    "date": "2026-09-02",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260902.html"
-  },
-  {
-    "title": "Asian Man Records 30 Anniversary Celebration",
-    "date": "2026-09-03",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260903.html"
-  },
-  {
-    "title": "Asian Man Records 30 Anniversary Celebration",
-    "date": "2026-09-04",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260904.html"
-  },
-  {
-    "title": "Asian Man Records 30 Anniversary Celebration",
-    "date": "2026-09-05",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Asian Man Records 30 Anniversary Celebration w/ Asian Man Records 30 Anniversary Celebration, TBA, TBA, TBA, TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260905.html"
-  },
-  {
-    "title": "The 2nd Annual Michael Madfes Memorial BBQ",
-    "date": "2026-09-06",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The 2nd Annual Michael Madfes Memorial BBQ w/ Helms Alee, Disastroid, Thornpusher — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260906.html"
-  },
-  {
     "title": "Mad Caddies",
     "date": "2026-09-07",
     "time": "9:00 PM",
@@ -429,6 +352,17 @@
     "link": "http://www.bottomofthehill.com/20261011.html"
   },
   {
+    "title": "Triclops!",
+    "date": "2026-10-12",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Triclops! w/ Wife, Gumby's Junk — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261012.html"
+  },
+  {
     "title": "Wolves of Glendale",
     "date": "2026-10-13",
     "time": "9:00 PM",
@@ -438,6 +372,17 @@
     "genre": "live music",
     "description": "Wolves of Glendale w/ TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261013.html"
+  },
+  {
+    "title": "Ee",
+    "date": "2026-10-14",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Ee w/ Punxsutawney, Spa — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261014.html"
   },
   {
     "title": "Imperial Teen",
@@ -658,6 +603,17 @@
     "genre": "live music",
     "description": "lowercase w/ TBA, TBA — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261111.html"
+  },
+  {
+    "title": "Maus Haus",
+    "date": "2026-11-12",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Maus Haus w/ Battlehooch, Otoliths — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261112.html"
   },
   {
     "title": "Jon Spencer",
