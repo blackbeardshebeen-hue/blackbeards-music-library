@@ -211,6 +211,12 @@
       font-style: italic;
     }
     body.day-mode .radio-note { color: rgba(0,0,0,0.35); }
+    .shebeen-audio {
+      display: block;
+      width: 100%;
+      margin-top: 14px;
+      accent-color: var(--red-bright, #c4182a);
+    }
 
     /* On the tape */
     .on-the-tape {
@@ -394,15 +400,18 @@
 
     <!-- Tuner panel -->
     <div class="radio-player anim-entry">
-      <a href="https://radioblackbeards.mixlr.com" target="_blank" rel="noopener" class="tuner-link">
-        <div class="tuner-panel off-air" id="tuner-panel">
-          <div class="tuner-signal">
-            <div class="tuner-dot"></div>
-            <span class="tuner-status" id="tuner-status">Checking signal…</span>
-          </div>
-          <div class="tuner-label" id="tuner-label">Blackbeard's Shebeen</div>
+      <div class="tuner-panel off-air" id="tuner-panel">
+        <div class="tuner-signal">
+          <div class="tuner-dot"></div>
+          <span class="tuner-status" id="tuner-status">Checking signal…</span>
         </div>
-      </a>
+        <div class="tuner-label" id="tuner-label">Blackbeard's Shebeen</div>
+      </div>
+      <audio id="shebeen-audio" class="shebeen-audio" controls preload="none">
+        <source src="https://radio.blackbeardshebeen.com/stream" type="audio/mpeg">
+        Your browser doesn't support inline audio — the stream URL is
+        https://radio.blackbeardshebeen.com/stream
+      </audio>
       <p class="radio-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
     </div>
 
@@ -460,9 +469,10 @@
     });
   }, true);
 
-  // Live status — polls Mixlr channel API
+  // Live status — polls our own Icecast server's status-json.xsl.
+  // Self-hosted: no third party in the loop, no plan limits.
   (function(){
-    var API = 'https://apicdn.mixlr.com/v3/channel_view/radioblackbeards';
+    var STATUS_URL = 'https://radio.blackbeardshebeen.com/status-json.xsl';
     var panel  = document.getElementById('tuner-panel');
     var status = document.getElementById('tuner-status');
     var label  = document.getElementById('tuner-label');
@@ -471,7 +481,7 @@
     function setOnAir() {
       panel.classList.remove('off-air');
       status.textContent = 'On Air';
-      label.textContent = "Blackbeard's Shebeen is broadcasting — listen now →";
+      label.textContent = "Blackbeard's Shebeen is broadcasting — hit play below";
     }
     function setOffAir() {
       panel.classList.add('off-air');
@@ -480,17 +490,18 @@
     }
 
     function check() {
-      fetch(API, { cache: 'no-store' })
+      fetch(STATUS_URL, { cache: 'no-store' })
         .then(function(r){ return r.json(); })
         .then(function(j){
-          var live = j && j.data && j.data.attributes && j.data.attributes.live;
+          var src = j && j.icestats && j.icestats.source;
+          var live = Array.isArray(src) ? src.length > 0 : !!src;
           if (live) { setOnAir(); } else { setOffAir(); }
         })
         .catch(function(){ setOffAir(); });
     }
 
     check();
-    setInterval(check, 60000); // re-check every minute
+    setInterval(check, 30000); // re-check every 30s
   })();
 
   // World clocks
