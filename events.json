@@ -1,71 +1,5 @@
 [
   {
-    "title": "Mad Caddies",
-    "date": "2026-09-07",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Mad Caddies w/ Diesel Boy, TBA — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260907.html"
-  },
-  {
-    "title": "The Kofy Brown Band",
-    "date": "2026-09-09",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Kofy Brown Band w/ Skip The Needle, Black Gold Sun — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260909.html"
-  },
-  {
-    "title": "Fartbarf",
-    "date": "2026-09-10",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Fartbarf w/ Diesel Dudes, Edgar — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260910.html"
-  },
-  {
-    "title": "Bratmobile",
-    "date": "2026-09-11",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Bratmobile w/ The Okmonics — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260911.html"
-  },
-  {
-    "title": "Bratmobile",
-    "date": "2026-09-12",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Bratmobile w/ A La Tata, formerly — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260912.html"
-  },
-  {
-    "title": "Hex Pest",
-    "date": "2026-09-13",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Hex Pest w/ The Queen & I, The Pleasure Routine — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260913.html"
-  },
-  {
     "title": "The Spits",
     "date": "2026-09-14",
     "time": "9:00 PM",
@@ -669,6 +603,17 @@
     "genre": "live music",
     "description": "Verst w/ Browntown West, Sweet Chariot — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261122.html"
+  },
+  {
+    "title": "Pedro the Lion",
+    "date": "2026-11-23",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Pedro the Lion w/ TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261123.html"
   },
   {
     "title": "Dr. Know",
