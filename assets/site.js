@@ -152,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ALL_PAGES = [
         { href: 'index.html',          label: 'Radio',          group: null },
         { href: 'heavy-rotation.html', label: 'Heavy Rotation', group: null },
-        { href: 'events.html',         label: 'Local Shows',    group: null },
         { href: 'discoveries.html',    label: 'Discoveries',    group: null },
         { href: 'about.html',          label: 'About',          group: null },
     ];
