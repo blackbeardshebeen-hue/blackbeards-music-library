@@ -24,7 +24,7 @@
     .radio-wrap {
       max-width: 680px;
       margin: 0 auto;
-      padding: 60px 24px 80px;
+      padding: 28px 24px 80px;
     }
 
     .station-name {
@@ -298,6 +298,30 @@
       white-space: nowrap;
     }
 
+    /* Alignment fixes */
+    .suggestion-box { text-align: left; scroll-margin-top: 90px; }
+    .suggestion-box .section-title { text-align: left; }
+    .suggestion-sub {
+      font-size: 0.85em;
+      color: rgba(255,255,255,0.45);
+      margin: 0 0 14px;
+      line-height: 1.5;
+    }
+    body.day-mode .suggestion-sub { color: rgba(0,0,0,0.45); }
+    .suggestion-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .suggestion-form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    .suggestion-form .form-submit {
+      align-self: flex-start;
+    }
+
     /* Station nav links */
     .station-links {
       display: flex;
@@ -345,6 +369,7 @@
       <li><a href="log.html">📜 Captain's Log</a></li>
       <li><a href="heavy-rotation.html">🔁 Heavy Rotation</a></li>
       <li><a href="discoveries.html">🔍 Discoveries</a></li>
+      <li><a href="about.html">⚓ About</a></li>
     </ul>
   </nav>
   <div class="nav-overlay" id="nav-overlay"></div>
@@ -390,15 +415,24 @@
         <div class="hero-explore">
           <a href="heavy-rotation.html">Heavy Rotation</a>
           <a href="discoveries.html">Discoveries</a>
+          <a href="about.html">About</a>
+          <a href="#request-line">Drop Me a Line</a>
         </div>
       </div>
     </div>
 
-  </main>
+    <!-- Request line -->
+    <div class="suggestion-box anim-entry" id="request-line">
+      <div class="section-title">The Request Line</div>
+      <p class="suggestion-sub">Drop a song, a vibe, or anything you're into. Brian might just put it on.</p>
+      <form class="suggestion-form" action="https://formspree.io/f/xoeqddad" method="POST">
+        <textarea name="message" placeholder="What are you listening to? Drop a song, a vibe, a recommendation..." rows="3" required></textarea>
+        <button type="submit" class="form-submit">Send It</button>
+      </form>
+      <p class="form-success" id="form-success" style="display:none">Message received — thanks, crew.</p>
+    </div>
 
-  <footer class="site-footer">
-    <p class="footer-note">Note: some playlists may contain explicit lyrics. Listener discretion advised.</p>
-  </footer>
+  </main>
 
   <script src="assets/site.js"></script>
   <script src="assets/log.js"></script>
@@ -423,6 +457,29 @@
         });
       }
     })();
+
+  // Formspree AJAX handler — runs in capture phase to override site.js
+  document.addEventListener('submit', function(e) {
+    var form = e.target;
+    if (!form.classList.contains('suggestion-form')) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    var success = document.getElementById('form-success');
+    fetch('https://formspree.io/f/xoeqddad', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if (r.ok) {
+        form.style.display = 'none';
+        if (success) { success.style.display = 'block'; }
+      } else {
+        alert('Something went wrong — try again in a moment.');
+      }
+    }).catch(function() {
+      alert('Could not send — check your connection and try again.');
+    });
+  }, true);
 
   // On-air status + play/pause — polls our own Icecast server's status-json.xsl
   // and drives the merged hero button (dot/status/sub text + actual playback).
