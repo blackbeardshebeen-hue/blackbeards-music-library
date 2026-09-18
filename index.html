@@ -7,7 +7,7 @@
   <meta property="og:title" content="Blackbeard's Shebeen — Pirate Radio">
   <meta property="og:description" content="Pirate radio broadcasting from Alameda, CA. Tune in when the flag is flying.">
   <meta property="og:image" content="https://blackbeards-music-library.pages.dev/assets/og-image.png">
-  <meta property="og:url" content="https://blackbeards-music-library.pages.dev/">
+  <meta property="og:url" content="https://blackbeardshebeen.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Blackbeard's Shebeen">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,18 +25,6 @@
       max-width: 680px;
       margin: 0 auto;
       padding: 60px 24px 80px;
-    }
-
-    .radio-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .radio-header .jolly-roger {
-      width: 110px;
-      height: 110px;
-      object-fit: contain;
-      opacity: 0.92;
-      margin-bottom: 18px;
     }
 
     .station-name {
@@ -57,164 +45,205 @@
     }
     body.day-mode .station-sub { color: rgba(0,0,0,0.45); }
 
-    /* World clocks */
-    .world-clocks {
-      margin-bottom: 40px;
-    }
-    .clocks-eyebrow {
-      font-size: 0.68em;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      margin-bottom: 16px;
+    /* ── Hero: logo + name + merged on-air/play control + micro clocks ── */
+    .hero-onair {
       text-align: center;
-    }
-    body.day-mode .clocks-eyebrow { color: rgba(0,0,0,0.35); }
-    .clock-row {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .clock-item {
+      margin-bottom: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 8px;
     }
-    .clock-face {
-      width: 88px;
-      height: 88px;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    .hero-logo {
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+      margin-bottom: 6px;
+      cursor: pointer;
     }
-    .clock-bg {
-      fill: #1a1008;
-      stroke: #6b4c1e;
-      stroke-width: 3;
+    .onair-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 24px 8px 8px;
+      border-radius: 36px;
+      cursor: pointer;
+      background: rgba(196,24,42,0.12);
+      border: 1px solid rgba(196,24,42,0.32);
+      transition: background 0.15s ease, border-color 0.15s ease;
+      margin-top: 8px;
+      font-family: inherit;
+      -webkit-appearance: none;
+      appearance: none;
     }
-    body.day-mode .clock-bg {
-      fill: #f5efe0;
-      stroke: #8b6914;
+    .onair-play:hover { background: rgba(196,24,42,0.2); }
+    .onair-play.off-air {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.14);
     }
-    .clock-tick {
-      stroke: rgba(255,255,255,0.25);
-      stroke-width: 1;
+    body.day-mode .onair-play.off-air {
+      background: rgba(0,0,0,0.04);
+      border-color: rgba(0,0,0,0.14);
     }
-    body.day-mode .clock-tick { stroke: rgba(0,0,0,0.25); }
-    .clock-tick-major {
-      stroke: rgba(255,255,255,0.6);
-      stroke-width: 2;
-    }
-    body.day-mode .clock-tick-major { stroke: rgba(0,0,0,0.6); }
-    .hand {
-      stroke-linecap: round;
-      transform-origin: 50px 50px;
-    }
-    .hour-hand {
-      stroke: rgba(255,255,255,0.9);
-      stroke-width: 3.5;
-    }
-    body.day-mode .hour-hand { stroke: #1a1008; }
-    .min-hand {
-      stroke: rgba(255,255,255,0.85);
-      stroke-width: 2.5;
-    }
-    body.day-mode .min-hand { stroke: #1a1008; }
-    .sec-hand {
-      stroke: #c4182a;
-      stroke-width: 1.5;
-    }
-    .clock-center {
-      fill: #c4182a;
-    }
-    .clock-city {
-      font-size: 0.72em;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-    }
-    body.day-mode .clock-city { color: rgba(0,0,0,0.5); }
-    .clock-time {
-      font-size: 0.65em;
-      color: rgba(255,255,255,0.3);
-      font-family: 'DM Sans', sans-serif;
-      font-variant-numeric: tabular-nums;
-    }
-    body.day-mode .clock-time { color: rgba(0,0,0,0.3); }
-
-    /* Tuner panel */
-    .radio-player {
-      margin-bottom: 36px;
-    }
-    .tuner-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-    .tuner-panel {
-      text-align: center;
-      padding: 28px 24px;
-      background: rgba(196,24,42,0.08);
-      border: 1px solid rgba(196,24,42,0.3);
-      border-radius: 12px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .tuner-link:hover .tuner-panel {
-      background: rgba(196,24,42,0.14);
-      border-color: rgba(196,24,42,0.5);
-    }
-    .tuner-signal {
+    .onair-play .play-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--red-bright, #e63946);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 8px;
+      color: #fff;
+      font-size: 0.85rem;
     }
-    .tuner-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #c4182a;
-      flex-shrink: 0;
-      box-shadow: 0 0 8px rgba(196,24,42,0.7);
-      animation: pulse-dot 2s ease-in-out infinite;
+    .onair-play.off-air .play-circle { background: rgba(255,255,255,0.18); }
+    body.day-mode .onair-play.off-air .play-circle { background: rgba(0,0,0,0.16); }
+    .onair-play .onair-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.3;
+      text-align: left;
     }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(196,24,42,0.7); }
-      50% { opacity: 0.5; box-shadow: 0 0 3px rgba(196,24,42,0.3); }
-    }
-    .tuner-status {
-      font-size: 0.72em;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #c4182a;
+    .onair-play .onair-status {
+      font-size: 0.72rem;
       font-weight: 700;
-      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--red-bright, #e63946);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .tuner-label {
-      font-size: 0.92em;
-      font-weight: 600;
-      color: rgba(255,255,255,0.85);
+    .onair-play.off-air .onair-status { color: rgba(255,255,255,0.45); }
+    body.day-mode .onair-play.off-air .onair-status { color: rgba(0,0,0,0.45); }
+    .onair-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red-bright, #e63946);
+      box-shadow: 0 0 8px rgba(230,57,70,0.7);
+      animation: pulse-dot 2s ease-in-out infinite;
+      flex-shrink: 0;
     }
-    body.day-mode .tuner-label { color: rgba(0,0,0,0.8); }
-    .radio-note {
+    .onair-play.off-air .onair-dot { background: rgba(255,255,255,0.3); box-shadow: none; animation: none; }
+    body.day-mode .onair-play.off-air .onair-dot { background: rgba(0,0,0,0.25); }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(230,57,70,0.7); }
+      50% { opacity: 0.5; box-shadow: 0 0 3px rgba(230,57,70,0.3); }
+    }
+    .onair-play .onair-sub {
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.5);
+    }
+    body.day-mode .onair-play .onair-sub { color: rgba(0,0,0,0.45); }
+
+    .hero-clocks-micro {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 320px;
+      margin-top: 4px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+      font-variant-numeric: tabular-nums;
+    }
+    body.day-mode .hero-clocks-micro { color: rgba(0,0,0,0.4); }
+    .hero-clocks-micro b { color: rgba(255,255,255,0.75); font-weight: 600; }
+    body.day-mode .hero-clocks-micro b { color: rgba(0,0,0,0.68); }
+    .hero-clocks-micro .sep { opacity: 0.35; }
+
+    .shebeen-audio { display: none; }
+
+    .hero-note {
       font-size: 0.76em;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.32);
       text-align: center;
-      margin-top: 10px;
+      margin: 4px 0 0;
       font-style: italic;
     }
-    body.day-mode .radio-note { color: rgba(0,0,0,0.35); }
-    .shebeen-audio {
+    body.day-mode .hero-note { color: rgba(0,0,0,0.32); }
+
+    /* ── Two-panel body: Captain's Log + Explore ──────────── */
+    .hero-panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 560px) {
+      .hero-panels { grid-template-columns: 1fr; }
+    }
+    .hero-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-top-color: var(--card-border-top);
+      border-radius: 14px;
+      padding: 22px 22px 20px;
+    }
+    .hero-panel .panel-title {
+      font-family: 'UnifrakturMaguntia', cursive;
+      font-size: 1.3rem;
+      color: var(--ink-strong, #fff);
+      margin: 0 0 14px;
+    }
+    .hero-panel .log-date {
+      font-size: 0.68rem;
+      color: var(--red-bright, #e63946);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .hero-panel .log-text {
+      font-size: 0.88rem;
+      color: var(--ink, #ddd4d4);
+      line-height: 1.65;
+      margin: 0 0 10px;
+    }
+    body.day-mode .hero-panel .log-text { color: rgba(0,0,0,0.72); }
+    .hero-panel .log-photo {
       display: block;
       width: 100%;
-      margin-top: 14px;
-      accent-color: var(--red-bright, #c4182a);
+      border-radius: 10px;
+      margin: 4px 0 10px;
+      max-height: 220px;
+      object-fit: cover;
     }
+    .hero-panel .log-more {
+      font-size: 0.78rem;
+      color: var(--red-bright, #e63946);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(230,57,70,0.4);
+    }
+    .hero-panel .log-more:hover { border-color: var(--red-bright, #e63946); }
+    .hero-explore {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .hero-explore a {
+      display: block;
+      text-align: center;
+      padding: 14px 8px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--card-border);
+      font-size: 0.8rem;
+      color: var(--ink, #ddd4d4);
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .hero-explore a:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); }
+    body.day-mode .hero-explore a {
+      background: rgba(0,0,0,0.03);
+      color: rgba(0,0,0,0.72);
+      border-color: rgba(0,0,0,0.1);
+    }
+    body.day-mode .hero-explore a:hover { background: rgba(0,0,0,0.06); }
 
     /* On the tape */
     .on-the-tape {
@@ -269,32 +298,8 @@
       white-space: nowrap;
     }
 
-    /* Off-air state */
-    .tuner-panel.off-air {
-      background: rgba(255,255,255,0.03);
-      border-color: rgba(255,255,255,0.1);
-    }
-    .tuner-link:hover .tuner-panel.off-air {
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(255,255,255,0.16);
-    }
-    .tuner-panel.off-air .tuner-dot {
-      background: rgba(255,255,255,0.25);
-      box-shadow: none;
-      animation: none;
-    }
-    .tuner-panel.off-air .tuner-status {
-      color: rgba(255,255,255,0.4);
-    }
-    body.day-mode .tuner-panel.off-air .tuner-status { color: rgba(0,0,0,0.4); }
-    .tuner-panel.off-air .tuner-label {
-      color: rgba(255,255,255,0.55);
-      font-weight: 400;
-    }
-    body.day-mode .tuner-panel.off-air .tuner-label { color: rgba(0,0,0,0.5); }
-
     /* Alignment fixes */
-    .suggestion-box { text-align: left; }
+    .suggestion-box { text-align: left; scroll-margin-top: 90px; }
     .suggestion-box .section-title { text-align: left; }
     .suggestion-sub {
       font-size: 0.85em;
@@ -317,8 +322,6 @@
       align-self: flex-start;
     }
     .tape-eyebrow { text-align: left; }
-    .radio-note { text-align: center; margin-top: 10px; }
-    .tuner-label { font-size: 0.88em; }
 
     /* Station nav links */
     .station-links {
@@ -369,6 +372,7 @@
     <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
     <ul>
       <li><a href="index.html">🏴 Radio</a></li>
+      <li><a href="log.html">📜 Captain's Log</a></li>
       <li><a href="heavy-rotation.html">🔁 Heavy Rotation</a></li>
       <li><a href="discoveries.html">🔍 Discoveries</a></li>
       <li><a href="about.html">⚓ About</a></li>
@@ -380,42 +384,51 @@
 
   <main class="radio-wrap">
 
-    <!-- Station identity -->
-    <header class="radio-header anim-entry">
+    <!-- Hero: identity + merged on-air/play control + micro clocks -->
+    <header class="hero-onair anim-entry">
       <img src="assets/jolly-roger-heart.jpg"
-           alt="Blackbeard's Jolly Roger" class="jolly-roger">
+           alt="Blackbeard's Jolly Roger" class="jolly-roger hero-logo">
       <h1 class="station-name">Blackbeard's Shebeen</h1>
-      <p class="station-sub">Pirate Radio · Alameda, CA</p>
-      <p class="est-label">Est. 2020</p>
-    </header>
+      <p class="station-sub">Pirate Radio · Alameda, CA · Est. 2020</p>
 
-    <!-- World clocks -->
-    <div class="world-clocks anim-entry">
-      <div class="clocks-eyebrow">On the Air Worldwide</div>
-      <div class="clock-row" id="clock-row"></div>
-    </div>
+      <button class="onair-play off-air" id="onair-play" aria-label="Play the live stream">
+        <span class="play-circle" id="play-icon">▶</span>
+        <span class="onair-label">
+          <span class="onair-status"><span class="onair-dot"></span><span id="onair-status-text">Checking signal…</span></span>
+          <span class="onair-sub" id="onair-sub-text">Tap to listen</span>
+        </span>
+      </button>
 
-    <!-- Tuner panel -->
-    <div class="radio-player anim-entry">
-      <div class="tuner-panel off-air" id="tuner-panel">
-        <div class="tuner-signal">
-          <div class="tuner-dot"></div>
-          <span class="tuner-status" id="tuner-status">Checking signal…</span>
-        </div>
-        <div class="tuner-label" id="tuner-label">Blackbeard's Shebeen</div>
-      </div>
-      <audio id="shebeen-audio" class="shebeen-audio" controls preload="none">
+      <div class="hero-clocks-micro" id="hero-clocks"></div>
+      <p class="hero-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
+
+      <audio id="shebeen-audio" class="shebeen-audio" preload="none">
         <source src="https://radio.blackbeardshebeen.com/stream" type="audio/mpeg">
         Your browser doesn't support inline audio — the stream URL is
         https://radio.blackbeardshebeen.com/stream
       </audio>
-      <p class="radio-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
+    </header>
+
+    <!-- Captain's Log + Explore -->
+    <div class="hero-panels anim-entry">
+      <div class="hero-panel">
+        <div class="panel-title">Captain's Log</div>
+        <div id="cl-latest"><div class="log-text">Loading the log…</div></div>
+        <a href="log.html" class="log-more">Read the full log →</a>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-title">Explore</div>
+        <div class="hero-explore">
+          <a href="heavy-rotation.html">Heavy Rotation</a>
+          <a href="discoveries.html">Discoveries</a>
+          <a href="about.html">About</a>
+          <a href="#request-line">Drop Me a Line</a>
+        </div>
+      </div>
     </div>
 
-
-
     <!-- Request line -->
-    <div class="suggestion-box anim-entry">
+    <div class="suggestion-box anim-entry" id="request-line">
       <div class="section-title">The Request Line</div>
       <p class="suggestion-sub">Drop a song, a vibe, or anything you're into. Brian might just put it on.</p>
       <form class="suggestion-form" action="https://formspree.io/f/xoeqddad" method="POST">
@@ -434,6 +447,7 @@
   </footer>
 
   <script src="assets/site.js"></script>
+  <script src="assets/log.js"></script>
 
   <script>
     // Day/night toggle (reuses the same 'bb-theme' key the other pages use,
@@ -479,27 +493,35 @@
     });
   }, true);
 
-  // Live status — polls our own Icecast server's status-json.xsl.
+  // On-air status + play/pause — polls our own Icecast server's status-json.xsl
+  // and drives the merged hero button (dot/status/sub text + actual playback).
   // Self-hosted: no third party in the loop, no plan limits.
   (function(){
     var STATUS_URL = 'https://radio.blackbeardshebeen.com/status-json.xsl';
-    var panel  = document.getElementById('tuner-panel');
-    var status = document.getElementById('tuner-status');
-    var label  = document.getElementById('tuner-label');
-    if (!panel) return;
+    var btn        = document.getElementById('onair-play');
+    var statusText = document.getElementById('onair-status-text');
+    var subText    = document.getElementById('onair-sub-text');
+    var playIcon   = document.getElementById('play-icon');
+    var audio      = document.getElementById('shebeen-audio');
+    if (!btn) return;
+
+    var isLive = false;
+    var isPlaying = false;
 
     function setOnAir() {
-      panel.classList.remove('off-air');
-      status.textContent = 'On Air';
-      label.textContent = "Blackbeard's Shebeen is broadcasting — hit play below";
+      isLive = true;
+      btn.classList.remove('off-air');
+      statusText.textContent = 'On Air';
+      if (!isPlaying) subText.textContent = 'Tap to listen';
     }
     function setOffAir() {
-      panel.classList.add('off-air');
-      status.textContent = 'Off Air';
-      label.textContent = 'Dead air for now — check back soon';
+      isLive = false;
+      btn.classList.add('off-air');
+      statusText.textContent = 'Off Air';
+      if (!isPlaying) subText.textContent = 'Dead air for now — check back soon';
     }
 
-    function check() {
+    function checkStatus() {
       fetch(STATUS_URL, { cache: 'no-store' })
         .then(function(r){ return r.json(); })
         .then(function(j){
@@ -510,90 +532,57 @@
         .catch(function(){ setOffAir(); });
     }
 
-    check();
-    setInterval(check, 30000); // re-check every 30s
-  })();
+    checkStatus();
+    setInterval(checkStatus, 30000);
 
-  // World clocks
-  (function(){
-    var CITIES = [
-      { label: 'Alameda',      tz: 'America/Los_Angeles' },
-      { label: 'Charles City', tz: 'America/Chicago' },
-      { label: 'Ocracoke',     tz: 'America/New_York' },
-    ];
-
-    function makeTicks() {
-      var s = '';
-      for (var i = 0; i < 60; i++) {
-        var angle = i * 6;
-        var isMaj = i % 5 === 0;
-        var r1 = isMaj ? 38 : 41;
-        var r2 = 46;
-        var a = (angle - 90) * Math.PI / 180;
-        var x1 = 50 + r1 * Math.cos(a);
-        var y1 = 50 + r1 * Math.sin(a);
-        var x2 = 50 + r2 * Math.cos(a);
-        var y2 = 50 + r2 * Math.sin(a);
-        s += '<line class="' + (isMaj ? 'clock-tick-major' : 'clock-tick') + '" x1="' + x1.toFixed(1) + '" y1="' + y1.toFixed(1) + '" x2="' + x2.toFixed(1) + '" y2="' + y2.toFixed(1) + '"/>';
-      }
-      return s;
-    }
-
-    var row = document.getElementById('clock-row');
-    if (!row) return;
-
-    var clocks = CITIES.map(function(c) {
-      var div = document.createElement('div');
-      div.className = 'clock-item';
-      div.innerHTML =
-        '<svg class="clock-face" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">' +
-          '<circle cx="50" cy="50" r="48" class="clock-bg"/>' +
-          makeTicks() +
-          '<line class="hand hour-hand" id="h-' + c.label + '" x1="50" y1="50" x2="50" y2="24"/>' +
-          '<line class="hand min-hand"  id="m-' + c.label + '" x1="50" y1="50" x2="50" y2="14"/>' +
-          '<line class="hand sec-hand"  id="s-' + c.label + '" x1="50" y1="50" x2="50" y2="10"/>' +
-          '<circle cx="50" cy="50" r="2.5" class="clock-center"/>' +
-        '</svg>' +
-        '<div class="clock-city">' + c.label + '</div>' +
-        '<div class="clock-time" id="t-' + c.label + '"></div>';
-      row.appendChild(div);
-      return c;
-    });
-
-    function updateClocks() {
-      var now = Date.now();
-      CITIES.forEach(function(c) {
-        var d = new Date(now);
-        var parts = new Intl.DateTimeFormat('en-US', {
-          timeZone: c.tz, hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false
-        }).formatToParts(d);
-        var map = {};
-        parts.forEach(function(p){ map[p.type] = parseInt(p.value, 10); });
-        var h = map.hour % 12, m = map.minute, s = map.second;
-
-        var hDeg = h * 30 + m * 0.5;
-        var mDeg = m * 6 + s * 0.1;
-        var sDeg = s * 6;
-
-        var hEl = document.getElementById('h-' + c.label);
-        var mEl = document.getElementById('m-' + c.label);
-        var sEl = document.getElementById('s-' + c.label);
-        var tEl = document.getElementById('t-' + c.label);
-
-        if (hEl) hEl.style.transform = 'rotate(' + hDeg + 'deg)';
-        if (mEl) mEl.style.transform = 'rotate(' + mDeg + 'deg)';
-        if (sEl) sEl.style.transform = 'rotate(' + sDeg + 'deg)';
-        if (tEl) {
-          var hStr = (map.hour % 12 || 12);
-          var mStr = String(map.minute).padStart(2,'0');
-          var ampm = map.hour >= 12 ? 'PM' : 'AM';
-          tEl.textContent = hStr + ':' + mStr + ' ' + ampm;
+    if (audio) {
+      btn.addEventListener('click', function(){
+        if (!isPlaying) {
+          audio.play().then(function(){
+            isPlaying = true;
+            playIcon.textContent = '❚❚';
+            subText.textContent = 'Playing…';
+          }).catch(function(){
+            subText.textContent = 'Could not start playback';
+          });
+        } else {
+          audio.pause();
+          isPlaying = false;
+          playIcon.textContent = '▶';
+          subText.textContent = isLive ? 'Tap to listen' : 'Dead air for now — check back soon';
         }
       });
+      audio.addEventListener('ended', function(){ isPlaying = false; playIcon.textContent = '▶'; });
+      audio.addEventListener('pause', function(){ isPlaying = false; playIcon.textContent = '▶'; });
     }
+  })();
 
-    updateClocks();
-    setInterval(updateClocks, 1000);
+  // Micro world clocks — tucked under the on-air/play control
+  (function(){
+    var CITIES = [
+      { label: 'Alameda, CA',      tz: 'America/Los_Angeles' },
+      { label: 'Charles City, IA', tz: 'America/Chicago' },
+      { label: 'Ocracoke Island',  tz: 'America/New_York' },
+    ];
+    var wrap = document.getElementById('hero-clocks');
+    if (!wrap) return;
+
+    wrap.innerHTML = CITIES.map(function(c, i){
+      return (i > 0 ? '<span class="sep">·</span>' : '') +
+        '<span><b>' + c.label + '</b> <span id="hc-' + i + '"></span></span>';
+    }).join('');
+
+    function update() {
+      CITIES.forEach(function(c, i){
+        var el = document.getElementById('hc-' + i);
+        if (!el) return;
+        el.textContent = new Intl.DateTimeFormat('en-US', {
+          timeZone: c.tz, hour: 'numeric', minute: 'numeric', hour12: true
+        }).format(new Date());
+      });
+    }
+    update();
+    setInterval(update, 30000);
   })();
 
   </script>

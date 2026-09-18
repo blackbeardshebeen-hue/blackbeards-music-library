@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const ALL_PAGES = [
         { href: 'index.html',          label: 'Radio',          group: null },
+        { href: 'log.html',            label: "Captain's Log",  group: null },
         { href: 'heavy-rotation.html', label: 'Heavy Rotation', group: null },
         { href: 'discoveries.html',    label: 'Discoveries',    group: null },
         { href: 'about.html',          label: 'About',          group: null },
