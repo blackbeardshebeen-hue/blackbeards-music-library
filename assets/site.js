@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { href: 'log.html',            label: "Captain's Log",  group: null },
         { href: 'heavy-rotation.html', label: 'Heavy Rotation', group: null },
         { href: 'discoveries.html',    label: 'Discoveries',    group: null },
-        { href: 'about.html',          label: 'About',          group: null },
     ];
 
     // Current page for active highlight
