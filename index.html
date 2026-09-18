@@ -436,6 +436,26 @@
   <script src="assets/site.js"></script>
 
   <script>
+    // Day/night toggle (reuses the same 'bb-theme' key the other pages use,
+    // so the choice carries over site-wide, just applied as body.day-mode
+    // here since this page's CSS was built around that class)
+    (function(){
+      var btn = document.getElementById('day-toggle');
+      var stored = localStorage.getItem('bb-theme');
+      function apply(isDay){
+        document.body.classList.toggle('day-mode', isDay);
+        if (btn) btn.textContent = isDay ? 'NIGHT' : 'DAY';
+      }
+      apply(stored === 'day');
+      if (btn) {
+        btn.addEventListener('click', function(){
+          var isDay = !document.body.classList.contains('day-mode');
+          apply(isDay);
+          localStorage.setItem('bb-theme', isDay ? 'day' : 'night');
+        });
+      }
+    })();
+
   // Formspree AJAX handler — runs in capture phase to override site.js
   document.addEventListener('submit', function(e) {
     var form = e.target;
