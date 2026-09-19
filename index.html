@@ -158,6 +158,19 @@
 
     .shebeen-audio { display: none; }
 
+    .player-link {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.38);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding-bottom: 1px;
+      margin-top: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .player-link:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.35); }
+    body.day-mode .player-link { color: rgba(0,0,0,0.38); border-color: rgba(0,0,0,0.12); }
+    body.day-mode .player-link:hover { color: rgba(0,0,0,0.7); border-color: rgba(0,0,0,0.35); }
+
 
     /* ── Two-panel body: Captain's Log + Explore ──────────── */
     .hero-panels {
@@ -401,6 +414,7 @@
       </button>
 
       <div class="hero-clocks-micro" id="hero-clocks"></div>
+      <a class="player-link" href="https://radio.blackbeardshebeen.com/stream">Open in your player ↗</a>
 
       <audio id="shebeen-audio" class="shebeen-audio" preload="none">
         <source src="https://radio.blackbeardshebeen.com/stream" type="audio/mpeg">
@@ -498,18 +512,43 @@
 
     var isLive = false;
     var isPlaying = false;
+    var listeners = 0;
+
+    // Icecast reports a single source object, or an array when several
+    // mountpoints are live — handle both and total them up.
+    function countListeners(src) {
+      if (!src) return 0;
+      var arr = Array.isArray(src) ? src : [src];
+      return arr.reduce(function(n, s){
+        var v = parseInt(s && s.listeners, 10);
+        return n + (isNaN(v) ? 0 : v);
+      }, 0);
+    }
+
+    function earsLine() {
+      if (!isLive || listeners < 1) return '';
+      return ' · ' + listeners + ' listening';
+    }
+
+    function refreshSub() {
+      if (isPlaying) { subText.textContent = 'Playing…' + earsLine(); return; }
+      subText.textContent = isLive
+        ? 'Tap to listen' + earsLine()
+        : 'Dead air for now — check back soon';
+    }
 
     function setOnAir() {
       isLive = true;
       btn.classList.remove('off-air');
       statusText.textContent = 'On Air';
-      if (!isPlaying) subText.textContent = 'Tap to listen';
+      refreshSub();
     }
     function setOffAir() {
       isLive = false;
+      listeners = 0;
       btn.classList.add('off-air');
       statusText.textContent = 'Off Air';
-      if (!isPlaying) subText.textContent = 'Dead air for now — check back soon';
+      refreshSub();
     }
 
     function checkStatus() {
@@ -518,7 +557,7 @@
         .then(function(j){
           var src = j && j.icestats && j.icestats.source;
           var live = Array.isArray(src) ? src.length > 0 : !!src;
-          if (live) { setOnAir(); } else { setOffAir(); }
+          if (live) { listeners = countListeners(src); setOnAir(); } else { setOffAir(); }
         })
         .catch(function(){ setOffAir(); });
     }
@@ -532,7 +571,7 @@
           audio.play().then(function(){
             isPlaying = true;
             playIcon.textContent = '❚❚';
-            subText.textContent = 'Playing…';
+            refreshSub();
           }).catch(function(){
             subText.textContent = 'Could not start playback';
           });
@@ -540,7 +579,7 @@
           audio.pause();
           isPlaying = false;
           playIcon.textContent = '▶';
-          subText.textContent = isLive ? 'Tap to listen' : 'Dead air for now — check back soon';
+          refreshSub();
         }
       });
       audio.addEventListener('ended', function(){ isPlaying = false; playIcon.textContent = '▶'; });
