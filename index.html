@@ -158,14 +158,6 @@
 
     .shebeen-audio { display: none; }
 
-    .hero-note {
-      font-size: 0.76em;
-      color: rgba(255,255,255,0.32);
-      text-align: center;
-      margin: 4px 0 0;
-      font-style: italic;
-    }
-    body.day-mode .hero-note { color: rgba(0,0,0,0.32); }
 
     /* ── Two-panel body: Captain's Log + Explore ──────────── */
     .hero-panels {
@@ -301,13 +293,6 @@
     /* Alignment fixes */
     .suggestion-box { text-align: left; scroll-margin-top: 90px; }
     .suggestion-box .section-title { text-align: left; }
-    .suggestion-sub {
-      font-size: 0.85em;
-      color: rgba(255,255,255,0.45);
-      margin: 0 0 14px;
-      line-height: 1.5;
-    }
-    body.day-mode .suggestion-sub { color: rgba(0,0,0,0.45); }
     .suggestion-form {
       display: flex;
       flex-direction: column;
@@ -319,7 +304,7 @@
       resize: vertical;
     }
     .suggestion-form .form-submit {
-      align-self: flex-start;
+      align-self: center;
     }
 
     /* Station nav links */
@@ -394,7 +379,6 @@
       </button>
 
       <div class="hero-clocks-micro" id="hero-clocks"></div>
-      <p class="hero-note">Broadcasting when the flag is flying. Dead air means we'll be back.</p>
 
       <audio id="shebeen-audio" class="shebeen-audio" preload="none">
         <source src="https://radio.blackbeardshebeen.com/stream" type="audio/mpeg">
@@ -422,7 +406,6 @@
     <!-- Request line -->
     <div class="suggestion-box anim-entry" id="request-line">
       <div class="section-title">The Request Line</div>
-      <p class="suggestion-sub">Drop a song, a vibe, or anything you're into. Brian might just put it on.</p>
       <form class="suggestion-form" action="https://formspree.io/f/xoeqddad" method="POST">
         <textarea name="message" placeholder="What are you listening to? Drop a song, a vibe, a recommendation..." rows="3" required></textarea>
         <button type="submit" class="form-submit">Send It</button>
