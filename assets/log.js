@@ -1,34 +1,73 @@
 (function(){
 var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-function parseLocalDate(s){var p=s.split('-').map(Number);return new Date(p[0],p[1]-1,p[2]);}
 function fmtShort(d){return MONTHS[d.getMonth()]+' '+d.getDate();}
 function fmtLong(d){return MONTHS[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();}
 
-function entryHTML(ev, full){
-  var d = parseLocalDate(ev.date);
-  var dateLabel = full ? fmtLong(d) : fmtShort(d);
-  var photo = ev.photo ? '<img class="log-photo" src="'+ev.photo+'" alt="" loading="lazy">' : '';
-  var link = ev.link ? '<a class="log-link log-more" href="'+ev.link+'" target="_blank" rel="noopener">'+(ev.linkLabel||'More →')+'</a>' : '';
-  return '<div class="log-entry'+(full?' log-entry-full anim-entry':'')+'">'+
-    '<div class="log-date">'+dateLabel+'</div>'+
-    photo+
-    '<p class="log-text">'+ev.text+'</p>'+
-    link+
-  '</div>';
+// Plain-text log format — one entry per block, blocks separated by a line
+// of three or more dashes ( --- ). Each entry is a set of "Label: value"
+// lines; order doesn't matter and Link/Link label/Photo are all optional.
+//
+//   Date: September 19, 2026
+//   Text: Whatever you want to say. Can span
+//   multiple lines if you want.
+//   Link: https://example.com
+//   Link label: More info
+//   Photo: https://example.com/photo.jpg
+//   ---
+function parseLog(raw){
+  raw = raw.replace(/\r\n/g, '\n');
+  var blocks = raw.split(/^-{3,}\s*$/m).map(function(b){ return b.trim(); }).filter(Boolean);
+  var entries = blocks.map(function(block){
+    var lines = block.split('\n');
+    var entry = { date: null, text: '', link: null, linkLabel: null, photo: null };
+    var mode = null, sawTextLabel = false, loose = [];
+    lines.forEach(function(line){
+      var m;
+      if ((m = line.match(/^Date:\s*(.+)$/i))) { entry.date = m[1].trim(); mode = null; }
+      else if ((m = line.match(/^Text:\s*(.*)$/i))) { entry.text = m[1]; mode = 'text'; sawTextLabel = true; }
+      else if ((m = line.match(/^Link label:\s*(.+)$/i))) { entry.linkLabel = m[1].trim(); mode = null; }
+      else if ((m = line.match(/^Link:\s*(.+)$/i))) { entry.link = m[1].trim(); mode = null; }
+      else if ((m = line.match(/^Photo:\s*(.+)$/i))) { entry.photo = m[1].trim(); mode = null; }
+      else if (mode === 'text' && line.trim()) { entry.text += (entry.text ? '\n' : '') + line; }
+      else if (line.trim()) { loose.push(line.trim()); }
+    });
+    // Forgiving fallback: if there's no "Text:" label, treat whatever plain
+    // lines are in the block as the entry text, so a bare note still shows up.
+    if (!sawTextLabel && loose.length) {
+      if (!entry.date && !isNaN(new Date(loose[0]))) { entry.date = loose.shift(); }
+      entry.text = loose.join('\n');
+    }
+    entry.text = entry.text.trim();
+    entry._d = entry.date ? new Date(entry.date) : new Date(0);
+    return entry;
+  }).filter(function(e){ return e.text; });
+  entries.sort(function(a, b){ return b._d - a._d; });
+  return entries;
 }
 
-function sortNewestFirst(data){
-  return data.slice().sort(function(a,b){ return parseLocalDate(b.date) - parseLocalDate(a.date); });
+function entryHTML(ev, full){
+  var hasDate = ev.date && ev._d && !isNaN(ev._d);
+  var dateLabel = hasDate ? (full ? fmtLong(ev._d) : fmtShort(ev._d)) : '';
+  var photo = ev.photo ? '<img class="log-photo" src="'+ev.photo+'" alt="" loading="lazy">' : '';
+  var link = ev.link ? '<a class="log-link log-more" href="'+ev.link+'" target="_blank" rel="noopener">'+(ev.linkLabel||'More →')+'</a>' : '';
+  var textHTML = ev.text.split('\n').filter(Boolean).map(function(p){ return '<p class="log-text">'+p+'</p>'; }).join('');
+  return '<div class="log-entry'+(full?' log-entry-full anim-entry':'')+'">'+
+    (dateLabel ? '<div class="log-date">'+dateLabel+'</div>' : '')+
+    photo+
+    textHTML+
+    link+
+  '</div>';
 }
 
 // Homepage teaser — latest entry only
 function initHome(){
   var root = document.getElementById('cl-latest');
   if (!root) return;
-  fetch('captains-log.json').then(function(r){ return r.json(); }).then(function(data){
-    if (!data || !data.length) { root.innerHTML = '<p class="log-text">Nothing logged yet — check back soon.</p>'; return; }
-    root.innerHTML = entryHTML(sortNewestFirst(data)[0], false);
+  fetch('captains-log.txt', { cache: 'no-store' }).then(function(r){ return r.text(); }).then(function(raw){
+    var entries = parseLog(raw);
+    if (!entries.length) { root.innerHTML = '<p class="log-text">Nothing logged yet — check back soon.</p>'; return; }
+    root.innerHTML = entryHTML(entries[0], false);
   }).catch(function(){
     root.innerHTML = '<p class="log-text">Could not load the log right now.</p>';
   });
@@ -38,12 +77,13 @@ function initHome(){
 function initFull(){
   var root = document.getElementById('log-root');
   if (!root) return;
-  fetch('captains-log.json').then(function(r){ return r.json(); }).then(function(data){
-    if (!data || !data.length) {
+  fetch('captains-log.txt', { cache: 'no-store' }).then(function(r){ return r.text(); }).then(function(raw){
+    var entries = parseLog(raw);
+    if (!entries.length) {
       root.innerHTML = '<div class="events-empty"><span class="skull">☠️</span><p>No entries yet — check back soon.</p></div>';
       return;
     }
-    root.innerHTML = sortNewestFirst(data).map(function(ev){ return entryHTML(ev, true); }).join('');
+    root.innerHTML = entries.map(function(ev){ return entryHTML(ev, true); }).join('');
     requestAnimationFrame(function(){
       root.querySelectorAll('.log-entry-full.anim-entry').forEach(function(el, i){
         setTimeout(function(){ el.classList.add('visible'); }, i * 60);
