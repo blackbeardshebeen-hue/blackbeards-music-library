@@ -205,6 +205,28 @@
       max-height: 220px;
       object-fit: cover;
     }
+    /* Captain's Log scroll history — older entries stream in as you scroll */
+    #cl-latest {
+      max-height: 300px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 10px;
+      margin-bottom: 12px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(230,57,70,0.4) transparent;
+    }
+    #cl-latest::-webkit-scrollbar { width: 6px; }
+    #cl-latest::-webkit-scrollbar-track { background: rgba(255,255,255,0.04); border-radius: 3px; }
+    #cl-latest::-webkit-scrollbar-thumb { background: rgba(230,57,70,0.4); border-radius: 3px; }
+    #cl-latest::-webkit-scrollbar-thumb:hover { background: rgba(230,57,70,0.65); }
+    body.day-mode #cl-latest::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
+    #cl-latest .log-entry + .log-entry {
+      border-top: 1px solid var(--card-border);
+      margin-top: 14px;
+      padding-top: 14px;
+    }
+    #cl-latest .log-entry:last-child .log-text:last-child { margin-bottom: 0; }
+
     .hero-panel .log-more {
       font-size: 0.78rem;
       color: var(--red-bright, #e63946);
@@ -416,7 +438,7 @@
   </main>
 
   <script src="assets/site.js"></script>
-  <script src="assets/log.js?v=2"></script>
+  <script src="assets/log.js?v=3"></script>
 
   <script>
     // Day/night toggle (reuses the same 'bb-theme' key the other pages use,

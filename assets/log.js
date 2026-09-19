@@ -60,14 +60,43 @@ function entryHTML(ev, full){
   '</div>';
 }
 
-// Homepage teaser — latest entry only
+// Homepage panel — newest entry first, older ones stream in as you scroll
 function initHome(){
   var root = document.getElementById('cl-latest');
   if (!root) return;
   fetch('captains-log.txt', { cache: 'no-store' }).then(function(r){ return r.text(); }).then(function(raw){
     var entries = parseLog(raw);
     if (!entries.length) { root.innerHTML = '<p class="log-text">Nothing logged yet — check back soon.</p>'; return; }
-    root.innerHTML = entryHTML(entries[0], false);
+
+    var BATCH = 4;
+    var shown = 0;
+    root.innerHTML = '';
+
+    function renderMore(){
+      var next = entries.slice(shown, shown + BATCH);
+      if (!next.length) return;
+      next.forEach(function(ev){
+        var holder = document.createElement('div');
+        holder.innerHTML = entryHTML(ev, false);
+        while (holder.firstChild) { root.appendChild(holder.firstChild); }
+      });
+      shown += next.length;
+      if (shown >= entries.length) { root.classList.add('log-end'); }
+    }
+
+    renderMore();
+
+    // Keep filling while there's room — covers tall panels on big screens
+    // where the first batch doesn't create a scrollbar to scroll against.
+    var guard = 0;
+    while (shown < entries.length && root.scrollHeight <= root.clientHeight && guard++ < 20) {
+      renderMore();
+    }
+
+    root.addEventListener('scroll', function(){
+      if (shown >= entries.length) return;
+      if (root.scrollTop + root.clientHeight >= root.scrollHeight - 48) { renderMore(); }
+    });
   }).catch(function(){
     root.innerHTML = '<p class="log-text">Could not load the log right now.</p>';
   });
