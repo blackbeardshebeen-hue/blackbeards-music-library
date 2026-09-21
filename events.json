@@ -1,82 +1,5 @@
 [
   {
-    "title": "The Spits",
-    "date": "2026-09-14",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Spits w/ The Fleshies, The Pranks, Fuzz — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260914.html"
-  },
-  {
-    "title": "The Spits",
-    "date": "2026-09-15",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Spits w/ The Fleshies, Garras Sucias, Fuzz — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260915.html"
-  },
-  {
-    "title": "Unity",
-    "date": "2026-09-16",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Unity w/ Quaaludes, Yeoubi, / MOONHUNTI — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260916.html"
-  },
-  {
-    "title": "Unsane",
-    "date": "2026-09-17",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Unsane w/ CNTS, Facet — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260917.html"
-  },
-  {
-    "title": "Steel Pole Bath Tub",
-    "date": "2026-09-18",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Steel Pole Bath Tub w/ Ovarian Trolley, Wife — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260918.html"
-  },
-  {
-    "title": "Spiritual Cramp",
-    "date": "2026-09-19",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Spiritual Cramp w/ The She's, Judy — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260919.html"
-  },
-  {
-    "title": "Built Like Alaska",
-    "date": "2026-09-20",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Built Like Alaska w/ Talking Ghosts, Poor Image — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260920.html"
-  },
-  {
     "title": "Cola",
     "date": "2026-09-23",
     "time": "9:00 PM",
@@ -385,6 +308,28 @@
     "link": "http://www.bottomofthehill.com/20261022.html"
   },
   {
+    "title": "K.Flay",
+    "date": "2026-10-23",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "K.Flay live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261023.html"
+  },
+  {
+    "title": "K.Flay",
+    "date": "2026-10-24",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "K.Flay live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261024.html"
+  },
+  {
     "title": "Castle",
     "date": "2026-10-25",
     "time": "9:00 PM",
@@ -449,6 +394,17 @@
     "genre": "live music",
     "description": "The Mummies w/ Balzac, Big Nate — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261031.html"
+  },
+  {
+    "title": "The Mutants",
+    "date": "2026-11-01",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Mutants w/ Short Dogs Grow, Fuzz Attack — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261101.html"
   },
   {
     "title": "Sex Mex",
@@ -572,6 +528,17 @@
     "link": "http://www.bottomofthehill.com/20261114.html"
   },
   {
+    "title": "Mild Universe",
+    "date": "2026-11-18",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Mild Universe w/ Joel Robinow, System Exclusive — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261118.html"
+  },
+  {
     "title": "Earthless",
     "date": "2026-11-20",
     "time": "9:00 PM",
@@ -680,5 +647,16 @@
     "genre": "live music",
     "description": "Hot Lunch w/ Drunk Horse, Hightower — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261212.html"
+  },
+  {
+    "title": "Swingin' Utters",
+    "date": "2026-12-23",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Swingin' Utters w/ Western Addiction, Seized Up — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261223.html"
   }
 ]
