@@ -1,60 +1,5 @@
 [
   {
-    "title": "Cola",
-    "date": "2026-09-23",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Cola w/ Artificial Go — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260923.html"
-  },
-  {
-    "title": "The Sam Chase & the Untraditional",
-    "date": "2026-09-24",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Sam Chase & the Untraditional w/ Ginger Molasses — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260924.html"
-  },
-  {
-    "title": "Face to Face",
-    "date": "2026-09-25",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Face to Face w/ Get Dead, The Last Gang — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260925.html"
-  },
-  {
-    "title": "Lagwagon",
-    "date": "2026-09-26",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Lagwagon w/ Dead to Me, Toy Guitar — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260926.html"
-  },
-  {
-    "title": "\"Cats, Claws, and Rock'n'Roll\"",
-    "date": "2026-09-27",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "\"Cats, Claws, and Rock'n'Roll\" w/ \"Cats, Claws, and Rock'n'Roll\", Remedy 7 — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260927.html"
-  },
-  {
     "title": "Stephan Jenkins",
     "date": "2026-09-28",
     "time": "9:00 PM",
@@ -528,6 +473,28 @@
     "link": "http://www.bottomofthehill.com/20261114.html"
   },
   {
+    "title": "Finish Ticket",
+    "date": "2026-11-15",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Finish Ticket w/ Picture Atlantic, Field Medic — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261115.html"
+  },
+  {
+    "title": "Finish Ticket",
+    "date": "2026-11-16",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Finish Ticket w/ Picture Atlantic, Field Medic — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261116.html"
+  },
+  {
     "title": "Mild Universe",
     "date": "2026-11-18",
     "time": "9:00 PM",
@@ -605,6 +572,17 @@
     "link": "http://www.bottomofthehill.com/20261128.html"
   },
   {
+    "title": "The Clarke Nova",
+    "date": "2026-11-29",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "The Clarke Nova w/ The Floorists, Very Paranoia — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261129.html"
+  },
+  {
     "title": "Emo Night Karaoke",
     "date": "2026-12-02",
     "time": "9:00 PM",
@@ -625,6 +603,17 @@
     "genre": "live music",
     "description": "Sonny & His Rhinestone Sunsets w/ Kelly McFarling, Noelle & the Deserters — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261205.html"
+  },
+  {
+    "title": "Makeout Reef",
+    "date": "2026-12-08",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Makeout Reef w/ Lovers Peak — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261208.html"
   },
   {
     "title": "Andre Nickatina",
