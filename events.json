@@ -1,82 +1,5 @@
 [
   {
-    "title": "Stephan Jenkins",
-    "date": "2026-09-28",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Stephan Jenkins w/ of, Third Eye Blind, Emily Afton — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260928.html"
-  },
-  {
-    "title": "The Quiet Men",
-    "date": "2026-09-29",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "The Quiet Men w/ Greg Hoy & the Boys, Fast & Vengefully — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260929.html"
-  },
-  {
-    "title": "Cult Strange",
-    "date": "2026-09-30",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Cult Strange w/ Vague Lanes, The Ink Bats — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20260930.html"
-  },
-  {
-    "title": "of Montreal",
-    "date": "2026-10-01",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "of Montreal w/ Healing Potpourri — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20261001.html"
-  },
-  {
-    "title": "Deerhoof",
-    "date": "2026-10-02",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Deerhoof w/ Greyhound, Etch — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20261002.html"
-  },
-  {
-    "title": "Deerhoof",
-    "date": "2026-10-03",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Deerhoof w/ Las Sucias, Otioxi — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20261003.html"
-  },
-  {
-    "title": "Acid Mothers Temple",
-    "date": "2026-10-04",
-    "time": "9:00 PM",
-    "venue": "Bottom of the Hill",
-    "address": "1233 17th St, San Francisco, CA 94107",
-    "city": "san francisco",
-    "genre": "live music",
-    "description": "Acid Mothers Temple w/ Cotton Casino, Magick Potion, The Green Door, Krisa Cupcake — live at Bottom of the Hill, SF.",
-    "link": "http://www.bottomofthehill.com/20261004.html"
-  },
-  {
     "title": "The Rat Utopia Experiment",
     "date": "2026-10-05",
     "time": "9:00 PM",
@@ -506,6 +429,17 @@
     "link": "http://www.bottomofthehill.com/20261118.html"
   },
   {
+    "title": "Ruby Ibarra",
+    "date": "2026-11-19",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Ruby Ibarra w/ Carl Angelo, Amihan — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261119.html"
+  },
+  {
     "title": "Earthless",
     "date": "2026-11-20",
     "time": "9:00 PM",
@@ -594,6 +528,17 @@
     "link": "http://www.bottomofthehill.com/20261202.html"
   },
   {
+    "title": "Hazzard's Cure",
+    "date": "2026-12-03",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Hazzard's Cure w/ Genghis Bong and friends, Supernaut — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261203.html"
+  },
+  {
     "title": "Sonny & His Rhinestone Sunsets",
     "date": "2026-12-05",
     "time": "9:00 PM",
@@ -636,6 +581,28 @@
     "genre": "live music",
     "description": "Hot Lunch w/ Drunk Horse, Hightower — live at Bottom of the Hill, SF.",
     "link": "http://www.bottomofthehill.com/20261212.html"
+  },
+  {
+    "title": "Christopher Owens",
+    "date": "2026-12-17",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Christopher Owens w/ TBA, TBA — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261217.html"
+  },
+  {
+    "title": "Voodoo Dolly",
+    "date": "2026-12-21",
+    "time": "9:00 PM",
+    "venue": "Bottom of the Hill",
+    "address": "1233 17th St, San Francisco, CA 94107",
+    "city": "san francisco",
+    "genre": "live music",
+    "description": "Voodoo Dolly w/ The Reptile House, Debased — live at Bottom of the Hill, SF.",
+    "link": "http://www.bottomofthehill.com/20261221.html"
   },
   {
     "title": "Swingin' Utters",
